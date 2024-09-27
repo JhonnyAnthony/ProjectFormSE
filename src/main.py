@@ -12,19 +12,6 @@ client_id = '60390fd9-539d-4b94-b595-6b7d5ab57f48'
 client_secret = 'nxj8Q~l5Ym799LxBI0xIzpJ3LF4oY8mQRuXV4a7q'
 SCOPE = ["User.ReadBasic.All"]
 
-def token():
-    # Get access token
-    url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
-    payload = {
-        'grant_type': 'client_credentials',
-        'client_id': client_id,
-        'client_secret': client_secret,
-        'scope': 'https://graph.microsoft.com/.default'
-    }
-    response = requests.post(url, data=payload)
-    access_token = response.json().get('access_token')
-    print(access_token)
-    login()
 
 def forms_call():
     # Fetch form responses
@@ -37,6 +24,25 @@ def forms_call():
 
     print(form_responses)
 
+def token():
+    # Get access token
+    url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+    payload = {
+        'grant_type': 'client_credentials',
+        'client_id': client_id,
+        'client_secret': client_secret,
+        'scope': 'https://graph.microsoft.com/.default'
+    }
+    response = requests.post(url, data=payload)
+    access_token = response.json().get('access_token')
+    print(access_token)
+    
+
+client = ConfidentialClientApplication (client_id=client_id, client_credential=client_secret)
+authorization_url = client.get_authorization_request_url(SCOPE)
+print(authorization_url)
+webbrowser.open(authorization_url)
+
 def login():
     # Technically we could use empty list [] as scopes to do just sign in,
     # here we choose to also collect end user consent upfront
@@ -46,7 +52,7 @@ def login():
     # return render_template("login.html", auth_url=session["flow"]["auth_uri"], version=msal.__version__)
 
 def _build_msal_app(cache=None, authority=None):
-    return msal.ConfidentialClientApplication(
+    return ConfidentialClientApplication(
         client_id.CLIENT_ID, authority=authority or client_id.AUTHORITY,
         client_credential=client_id.CLIENT_SECRET, token_cache=cache)
 
