@@ -1,14 +1,6 @@
 import requests
 import webbrowser
 from msal import ConfidentialClientApplication
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import keyring
-import logging
-from selenium.common.exceptions import WebDriverException
 
 # Replace these variables with your actual values
 tenant_id = 'e220d369-e6a8-4126-83ef-b4b6bbfd9367'
@@ -39,6 +31,7 @@ def fetch_form_responses(access_token):
     url = f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/items/{form_id}/workbook/worksheets"
     response = requests.get(url, headers=headers)
     form_responses = response.json()
+    print(form_responses)
 
 def main():
     # Get token and fetch form responses
@@ -47,9 +40,10 @@ def main():
 
     # Authorization URL for further actions if needed
 
-    client = ConfidentialClientApplication(client_id=client_id, client_credential=client_secret, authority=f"https://login.microsoftonline.com/{tenant_id}/")
+    client = ConfidentialClientApplication(client_id=client_id, client_credential=client_secret, authority=f"https://login.microsoftonline.com/{tenant_id}")
     authorization_url = client.get_authorization_request_url(SCOPE)
-    print(authorization_url)
+    print(SCOPE)
     webbrowser.open(authorization_url)
+    fetch_form_responses
     print("chegou aqui")
 main()
