@@ -1,49 +1,43 @@
-import requests
-import webbrowser
 from msal import ConfidentialClientApplication
+import requests
+import os
+from dotenv import load_dotenv, dotenv_values
+#Ids to variables  
+load_dotenv()
+form_id = os.getenv("MY_FORM_ID")
+tenant_id = os.getenv("MY_TENANT_ID")
+url = f'https://forms.office.com/formapi/DownloadExcelFile.ashx?formid={form_id}'
+# Initialize the ConfidentialClientApplication
+load_dotenv()
+app = ConfidentialClientApplication(
+    authority= f"https://login.microsoftonline.com/{tenant_id}",
+    client_id = os.getenv("MY_CLIENT_ID"),
+    client_credential= os.getenv("MY_CLIENT_SECRET")  # client secret here
+)
 
-# Replace these variables with your actual values
-tenant_id = 'e220d369-e6a8-4126-83ef-b4b6bbfd9367'
-form_id = 'adMg4qjmJkGD77S2u_2TZz69AtZSZ0pLncDHq2Ag8tNUM1ZBQkFZVUFCMEYyNEM0SDJFNUhUTDZBUS4u'
-user_id = 'd602bd3e-6752-4b4a-9dc0-c7ab6020f2d3'
-client_id = '60390fd9-539d-4b94-b595-6b7d5ab57f48'
-client_secret = 'nxj8Q~l5Ym799LxBI0xIzpJ3LF4oY8mQRuXV4a7q'
-SCOPE = ["User.ReadBasic.All"]
+# Acquire token by username and password
+load_dotenv()
+result = app.acquire_token_by_username_password(
+    username= os.getenv("MY_USERNAME"),
+    password= os.getenv("MY_PASSWORD"),
+    scopes=["Files.Read.All"]
+)
 
-def get_token():
-    # Get access token
-    url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
-
-    payload = {
-        'grant_type': 'client_credentials',
-        'client_id': client_id,
-        'client_secret': client_secret,
-        'scope': 'https://graph.microsoft.com/.default'
-    }
-    response = requests.post(url, data=payload)
-    access_token = response.json().get('access_token')
-    return access_token
-
-def fetch_form_responses(access_token):
+# Check if the token was acquired successfully
+if "access_token" in result:
+    print("Access token:", result["access_token"])
+    access_token = result["access_token"]
+    # Set up the headers with the access token
     headers = {
-        'Authorization': f'Bearer {access_token}'
+        "Authorization": f"Bearer {access_token}"
     }
-    url = f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/items/{form_id}/workbook/worksheets"
     response = requests.get(url, headers=headers)
-    form_responses = response.json()
-    print(form_responses)
 
-def main():
-    # Get token and fetch form responses
-    access_token = get_token()
-    fetch_form_responses(access_token)
-
-    # Authorization URL for further actions if needed
-
-    client = ConfidentialClientApplication(client_id=client_id, client_credential=client_secret, authority=f"https://login.microsoftonline.com/{tenant_id}")
-    authorization_url = client.get_authorization_request_url(SCOPE)
-    print(SCOPE)
-    webbrowser.open(authorization_url)
-    fetch_form_responses
-    print("chegou aqui")
-main()
+# Check the response
+    if response.status_code == 200:
+        print("Success:", response.json())
+    else:
+        print("Error:", response.status_code, response.text)
+    
+else:
+    print("Error:", result.get("error"), result.get("error_description"))
