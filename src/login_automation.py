@@ -15,13 +15,8 @@ class LoginAutomation:
 
         # Set up Chrome options to specify the download directory and disable cache and cookies        
         chrome_options = webdriver.ChromeOptions()
-        self.driver = webdriver.Chrome(options=chrome_options)
 
-    def clear_cookies(self):
-        # Clear all cookies
-        self.driver.delete_all_cookies()
-        # Verify cookies are cleared
-        print(clear_cookies(self))  # Should print an empty list
+        self.driver = webdriver.Chrome(options=chrome_options)
 
     def login_and_download(self):
         # Open the login page
@@ -34,7 +29,6 @@ class LoginAutomation:
             # Enter your email
             email_field.send_keys(self.email + Keys.RETURN)
             # Wait for the password input field to be present
-            time.sleep(10)
             password_field = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id="i0118"]'))
             )
@@ -43,7 +37,7 @@ class LoginAutomation:
             print("chegou aqui")
             # Wait for the submit button to be present
             # Wait for a few seconds to ensure the login process completes
-            time.sleep(10)
+            time.sleep(5)
             # Navigate to another link
             download_url = f'https://forms.office.com/formapi/DownloadExcelFile.ashx?formid={self.form_id}&Token=18e6819de29249d68f1ef46c143015fd'
             self.driver.get(download_url)

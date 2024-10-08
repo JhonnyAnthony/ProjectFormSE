@@ -5,11 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 form_id = os.getenv("MY_FORM_ID")
-tenant_id = os.getenv("MY_TENANT_ID")
-url = f'https://forms.office.com/formapi/DownloadExcelFile.ashx?formid={form_id}'
+url = f'https://forms.office.com/formapi/DownloadExcelFile.ashx?formid={os.getenv("MY_FORM_ID")}'
 
 app = ConfidentialClientApplication(
-    authority=f"https://login.microsoftonline.com/{tenant_id}",
+    authority="https://login.microsoftonline.com/e220d369-e6a8-4126-83ef-b4b6bbfd9367",
     client_id=os.getenv("MY_CLIENT_ID"),
     client_credential=os.getenv("MY_CLIENT_SECRET")
 )
@@ -17,7 +16,7 @@ app = ConfidentialClientApplication(
 result = app.acquire_token_by_username_password(
     username=os.getenv("MY_USERNAME"),
     password=os.getenv("MY_PASSWORD"),
-    scopes=["Forms.Read.All", "Forms.Read", "Response.Read.All"]
+    scopes=["Forms.Read.All"]
 )
 
 if "access_token" in result:
@@ -35,4 +34,4 @@ else:
     print("Error:", result.get("error"), result.get("error_description"))
     if result.get("error") == "invalid_grant":
         print("Please visit the following URL to grant consent:")
-        print(f"https://login.microsoftonline.com/{tenant_id}/adminconsent?client_id={os.getenv('MY_CLIENT_ID')}")
+        print(f"https://forms.office.com/formapi/DownloadExcelFile.ashx?formid=adMg4qjmJkGD77S2u_2TZz69AtZSZ0pLncDHq2Ag8tNUM1ZBQkFZVUFCMEYyNEM0SDJFNUhUTDZBUS4u&timezoneOffset=180&__TimezoneId=America/Sao_Paulo&minResponseId=1&maxResponseId=1")
