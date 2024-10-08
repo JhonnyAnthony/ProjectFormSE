@@ -46,7 +46,7 @@ class LoginAutomation:
             print("Element not found")
         finally:
             # Close the browser after a few seconds
-            time.sleep(15)
+            time.sleep(5)
             self.driver.quit()
 
 # Example usage

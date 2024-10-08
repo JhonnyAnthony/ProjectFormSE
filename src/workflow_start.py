@@ -18,15 +18,15 @@ class ValidationAPI:
             "Connection": "Keep-Alive",
         }
 
-    def get_workflow(self, process_id, user_id):
+    def get_workflow(self, process_id):
         soap_envelope = f"""
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
-                    <urn:ProcessID>{process_id}</urn:ProcessID>
+                    <urn:ProcessID>dcl001</urn:ProcessID>
                     <urn:WorkflowTitle>Teste!!</urn:WorkflowTitle>
-                    <urn:UserID>{user_id}</urn:UserID>
+                    <urn:UserID>jhonny.souza</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
         </soapenv:Envelope>
@@ -40,11 +40,9 @@ class ValidationAPI:
         else:
             raise Exception(f"Error: {response.status_code}")
 
-    def print_workflow(self, workflow_id):
+    # Container to armazen RecordID
+    def RecordID(self, record_id):
         root = self.get_workflow(workflow_id)
-      #Print all variables usable
-        for child in root.iter("*"):
-         print(child.tag, child.text)
         if root is not None:
             # Search for the record_id and print it 
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
@@ -54,14 +52,16 @@ class ValidationAPI:
                 print("RecordID not found")
         else:
             print("No response received")
-      
+        # Print every variables and his values
+        # for child in root.iter("*"):
+        #     print(child.tag, child.text)
 
         
 # Usage
 api_id = os.getenv("MY_API_ID")
 user_id = os.getenv("MY_USER_ID")
 url = os.getenv("MY_URL")
-workflow_id = "120034"
+workflow_id = ""
 process_id = os.getenv("MY_PROCESS_ID")
 api = ValidationAPI(api_id, url)
-api.print_workflow(workflow_id)
+api.RecordID(workflow_id)
