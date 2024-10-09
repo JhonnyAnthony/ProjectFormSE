@@ -407,3 +407,5 @@ def responses_variable():
         else:
             raise Exception(f"Error: {response.status_code}")
 responses_variable()
+api = ValidationAPI(api_id=os.getenv("MY_API_ID"), url=os.getenv("MY_URL"))
+responses_variable()
