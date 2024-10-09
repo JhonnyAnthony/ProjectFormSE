@@ -2,14 +2,16 @@ import openpyxl
 import pandas as pd
 import os
 
-def update_excel_path(new_file_name):
+
+# variavel que localiza o arquivo excel
+def find_excel():
     base_path = r'C:\Users\jhonny.souza\Downloads'
-    return os.path.join(base_path, new_file_name)
+    return os.path.join(base_path)
 
-#define o caminho do arquivo
-excel_path = update_excel_path('Entrevista Maio.xlsx')
+#define o onde o arquivo está
+excel_path = find_excel('Entrevista Maio.xlsx')
 
-# Carregar a planilha do Excel
+# Carregar os dados da planilha do Excel
 df = pd.read_excel(excel_path, skiprows=2)
 workbook = openpyxl.load_workbook(excel_path)
 # Obter a primeira planilha
@@ -73,5 +75,5 @@ def responses_variable():
 
             # Print the values
             print(f"mensagem: {id}")
-            
+# retorna a variavel para a execução
 responses_variable()

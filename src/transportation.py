@@ -5,7 +5,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 
-class ValidationAPI:
+class transportation:
    # function to declare api, url variables and doing the authorization
     def __init__(self, api_id, url):
         self.api_id = api_id
@@ -406,6 +406,6 @@ def responses_variable():
             return root
         else:
             raise Exception(f"Error: {response.status_code}")
-responses_variable()
-api = ValidationAPI(api_id=os.getenv("MY_API_ID"), url=os.getenv("MY_URL"))
+
+api = transportation(api_id=os.getenv("MY_API_ID"), url=os.getenv("MY_URL"))
 responses_variable()
