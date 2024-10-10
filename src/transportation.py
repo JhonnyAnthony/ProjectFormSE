@@ -19,7 +19,7 @@ class transportation:
             "Connection": "Keep-Alive",
         }
 def update_excel_path(new_file_name):
-        base_path = r'C:\Users\jhonny.souza\Downloads'
+        base_path = r'C:\Users\adriano.guerra\Downloads'
         return os.path.join(base_path, new_file_name)
 excel_path = update_excel_path('Entrevista Maio.xlsx')
 # Carregar a planilha do Excel
@@ -397,6 +397,12 @@ def responses_variable():
                     </urn:editEntityRecord>
                 </soapenv:Body>
                 </soapenv:Envelope>"""
+        # Save to HTML file
+        html_content = f"<html><body><pre>{soap_envelope}</pre></body></html>"
+        with open("soap_envelope.html", "w") as file:
+            file.write(html_content)
+
+        print("HTML file created successfully.")
         edit_workflow()
         response = requests.post(self.url, data=soap_envelope, headers=self.headers)
       # IF response is 200 -> Working!
