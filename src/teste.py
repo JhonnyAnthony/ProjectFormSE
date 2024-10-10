@@ -33,14 +33,13 @@ class Integration_OneDrive:
             'scope': 'https://graph.microsoft.com/.default'
         }
         response = requests.post(url, data=payload)
+        response.raise_for_status()  # Raise an exception for HTTP errors
         access_token = response.json().get('access_token')
         return access_token
 
-   
     def main(self):
         # Get token and fetch form responses
         access_token = self.get_token()
-        # print(access_token)
         
         headers = {
             'Authorization': f'Bearer {access_token}'
@@ -48,12 +47,20 @@ class Integration_OneDrive:
 
         # Use the access token to make requests to the Microsoft Graph API
         user_id = os.getenv("MY_USER_ID")  # Replace with the actual user ID
-        item_id = os.getenv("MY_ITEM_ID")   
-        response = requests.get(f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/items/{item_id}/workbook/worksheets", headers=headers)
-        print(response.text)
-        # Save the file locally
-        with open('downloaded_file.xlsx', 'wb') as f:
-            f.write(response.content)
+        item_id = os.getenv("MY_ITEM_ID")
+        response = requests.get(f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/root/children", headers=headers)
+
+        
+        if response.status_code == 404:
+            print("Item not found. Please verify the item ID.")
+        elif response.status_code == 403:
+            print("Access denied. Please check your permissions.")
+        else:
+            response.raise_for_status()  # Raise an exception for other HTTP errors
+            print(response.text)
+            # Save the file locally
+            with open('Entrevista de Desligamento 1.xlsx', 'wb') as f:
+                f.write(response.content)
 
 # Create an instance of the class and call the main method
 integration = Integration_OneDrive(client_id, client_secret, authority)

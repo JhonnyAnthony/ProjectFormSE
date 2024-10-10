@@ -2,7 +2,7 @@ from reader_xlsx import ExcelDataReader
 
 
 # Usage
-base_path = r'C:\\Users\\adriano.guerra\\Downloads'
+base_path = r'C:\\Users\\jhonny.souza\\Downloads'
 file_name = 'Entrevista Maio.xlsx'
 reader = ExcelDataReader(file_name, base_path)
 all_row_data = reader.get_all_row_data()
