@@ -1,12 +1,18 @@
 import requests
-import os
-import openpyxl
-import pandas as pd
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 
+<<<<<<< Updated upstream
 class Transportation:
     # Function to declare API, URL variables and perform authorization
+=======
+<<<<<<< HEAD
+class transportation:
+=======
+class Transportation:
+    # Function to declare API, URL variables and perform authorization
+>>>>>>> 6c2cb05c751f76181a7d2e652672da4c5db8f4b9
+>>>>>>> Stashed changes
     def __init__(self, api_id, url):
         self.api_id = api_id
         self.url = url
@@ -19,6 +25,19 @@ class Transportation:
             "Connection": "Keep-Alive",
         }
 <<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+    def edit_workflow(self, id, nome, data_admissao, data_demissao, cargo, iniciativa_desligamento, motivo_desligamento, avalia_fgm,
+                             dms_consideracoes_01, avalia_estrutura_fgm, dms_consideracoes_02, avalia_ambiente_fgm, dms_consideracoes_03, avalia_setor, dms_consideracoes_04,
+                             vale_transporte, vale_refeicao, plano_saude_medico, plano_saude_odontologico, convenio_farmacia, convenio_odonto, presente_aniversario,
+                             vacina, seguro_vida, bolsa_estudo, dms_consideracoes_05, avalia_atuacao_cargo, dms_consideracoes_06, avalia_recursos, dms_consideracoes_07,
+                             avalia_gestao, dms_consideracoes_08, avalia_comunicacao_interna, avalia_endomarketing, avalia_treinamentos, avalia_recrutamento_interno,
+                             avalia_suporte_folhas, avalia_segurança_trabalho, avalia_canal_ouvidoria, avalia_ccq, avalia_Onboarding, dms_consideracoes_09, voltaria_para_fgm,
+                             dms_consideracoes_10, indicaria_fgm, dms_consideracoes_11, mensagem_fgm):
+=======
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
     def edit_workflow(self, id,nome,data_admissao,data_demissao,cargo,iniciativa_desligamento,motivo_desligamento,avalia_fgm,
         dms_consideracoes_01, avalia_estrutura_fgm,dms_consideracoes_02,avalia_ambiente_fgm,dms_consideracoes_03,avalia_setor,dms_consideracoes_04,
         vale_transporte,vale_refeicao,plano_saude_medico,plano_saude_odontologico,convenio_farmacia,convenio_odonto,presente_aniversario,
@@ -26,6 +45,10 @@ class Transportation:
         avalia_gestao,dms_consideracoes_08,avalia_comunicacao_interna,avalia_endomarketing,avalia_treinamentos,avalia_recrutamento_interno,
         avalia_suporte_folhas,avalia_segurança_trabalho,avalia_canal_ouvidoria,avalia_ccq,avalia_Onboarding,dms_consideracoes_09,voltaria_para_fgm ,
         dms_consideracoes_10,indicaria_fgm,dms_consideracoes_11,mensagem_fgm,setor,presente_nascimento,presente_casamento):
+<<<<<<< Updated upstream
+=======
+>>>>>>> 6c2cb05c751f76181a7d2e652672da4c5db8f4b9
+>>>>>>> Stashed changes
         soap_envelope = f"""<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
                 <soapenv:Header/>
                 <soapenv:Body>
@@ -341,7 +364,13 @@ class Transportation:
             print(root)
             return root
         else:
+<<<<<<< HEAD
             raise Exception(f"Error: {response.status_code}")
+<<<<<<< Updated upstream
+=======
+=======
+            raise Exception(f"Error: {response.status_code}")
+>>>>>>> Stashed changes
     edit_workflow()
 api = transportation(api_id=os.getenv("MY_API_ID"), url=os.getenv("MY_URL"))
 =======
@@ -663,4 +692,8 @@ load_dotenv()
 api_id = os.getenv("MY_API_ID")
 url = os.getenv("MY_URL")
 transport = Transportation(api_id, url)
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+>>>>>>> 6c2cb05c751f76181a7d2e652672da4c5db8f4b9
 >>>>>>> Stashed changes
