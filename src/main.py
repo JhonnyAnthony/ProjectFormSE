@@ -1,22 +1,18 @@
 from reader_xlsx import ExcelDataReader, RowData
-from transportation import transportation
+from transportation import Transportation
 import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
 
-<<<<<<< HEAD
+
 # Get file name and base path from environment variables
 file_name = os.getenv("FILE_NAME")
 base_path = os.getenv("BASE_PATH")
 
 # Create an instance of ExcelDataReader
-=======
-# Usage
-base_path = r'C:\\Users\\jhonny.souza\\Downloads'
-file_name = 'Entrevista Maio.xlsx'
->>>>>>> 6c2cb05c751f76181a7d2e652672da4c5db8f4b9
+
 reader = ExcelDataReader(file_name, base_path)
 
 # Get all row data where the name is not null
@@ -27,7 +23,7 @@ api_id = os.getenv("MY_API_ID")
 url = os.getenv("MY_URL")
 
 # Create an instance of the transportation class
-transport = transportation(api_id, url)
+transport = Transportation(api_id, url)
 
 # Iterate over all_row_data and call edit_workflow for each row
 for row_data in all_row_data:
@@ -78,5 +74,8 @@ for row_data in all_row_data:
         dms_consideracoes_10=row_data.dms_consideracoes_10,
         indicaria_fgm=row_data.indicaria_fgm,
         dms_consideracoes_11=row_data.dms_consideracoes_11,
-        mensagem_fgm=row_data.mensagem_fgm
+        mensagem_fgm=row_data.mensagem_fgm,
+        setor = row_data.setor,
+        presente_nascimento = row_data.presente_nascimento,
+        presente_casamento = row_data.presente_casamento
     )

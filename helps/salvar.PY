@@ -136,3 +136,20 @@
 #                                 <urn:EntityAttributeID>{mensagemparafgm}</urn:EntityAttributeID>
 #                                 <urn:EntityAttributeValue>{%CurrentItem[48]%}</urn:EntityAttributeValue>
 #                                 </urn:EntityAttribute>
+# Save to HTML file
+        # html_content = f"<html><body><pre>{soap_envelope}</pre></body></html>"
+        # with open("soap_envelope.html", "w") as file:
+        #     file.write(html_content)
+        # print("HTML file created successfully.")
+
+    #     response = requests.post(self.url, data=soap_envelope, headers=self.headers)
+    #   # IF response is 200 -> Working!
+    #     if response.status_code == 200:
+    #         root = ET.fromstring(response.content)
+    #         # print(root)
+    #         return root
+    #     else:
+    #         raise Exception(f"Error: {response.status_code}")
+
+    # edit_workflow()
+# api = Transportation(api_id=os.getenv("MY_API_ID"), url=os.getenv("MY_URL"))
