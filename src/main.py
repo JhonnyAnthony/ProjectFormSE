@@ -1,34 +1,41 @@
+import requests
+import xml.etree.ElementTree as ET
+from dotenv import load_dotenv
 from reader_xlsx import ExcelDataReader, RowData
 from transportation import Transportation
+from workflow_start import ValidationAPI
 import os
-from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
-
 
 # Get file name and base path from environment variables
 file_name = os.getenv("FILE_NAME")
 base_path = os.getenv("BASE_PATH")
 
-# Create an instance of ExcelDataReader
+# Get API ID and URL from environment variables
+api_id = os.getenv("MY_API_ID")
+url = os.getenv("MY_URL")
 
+# Create an instance of ValidationAPI with the required arguments
+record = ValidationAPI(api_id, url)
+
+# Call the RecordID function
+record_id = record.RecordID()
+
+# Create an instance of ExcelDataReader
 reader = ExcelDataReader(file_name, base_path)
 
 # Get all row data where the name is not null
 all_row_data = reader.get_all_row_data()
 
-# Get API ID and URL from environment variables
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
-
-# Create an instance of the transportation class
+# Create an instance of the Transportation class
 transport = Transportation(api_id, url)
 
 # Iterate over all_row_data and call edit_workflow for each row
 for row_data in all_row_data:
-    transport.edit_workflow(
-        id=row_data.id,
+    transporte = transport.edit_workflow(
+        record_id=record_id,  # Use the fetched record_id here
         nome=row_data.nome,
         data_admissao=row_data.data_admissao,
         data_demissao=row_data.data_demissao,
@@ -75,7 +82,8 @@ for row_data in all_row_data:
         indicaria_fgm=row_data.indicaria_fgm,
         dms_consideracoes_11=row_data.dms_consideracoes_11,
         mensagem_fgm=row_data.mensagem_fgm,
-        setor = row_data.setor,
-        presente_nascimento = row_data.presente_nascimento,
-        presente_casamento = row_data.presente_casamento
+        setor=row_data.setor,
+        presente_nascimento=row_data.presente_nascimento,
+        presente_casamento=row_data.presente_casamento
     )
+    print(transport)

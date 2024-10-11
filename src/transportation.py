@@ -21,7 +21,8 @@ class Transportation:
 
 
 
-    def edit_workflow(self, id, nome, data_admissao, data_demissao, cargo, iniciativa_desligamento, motivo_desligamento, avalia_fgm,
+
+    def edit_workflow(self, record_id, nome, data_admissao, data_demissao, cargo, iniciativa_desligamento, motivo_desligamento, avalia_fgm,
                              dms_consideracoes_01, avalia_estrutura_fgm, dms_consideracoes_02, avalia_ambiente_fgm, dms_consideracoes_03, avalia_setor, dms_consideracoes_04,
                              vale_transporte, vale_refeicao, plano_saude_medico, plano_saude_odontologico, convenio_farmacia, convenio_odonto, presente_aniversario,
                              vacina, seguro_vida, bolsa_estudo, dms_consideracoes_05, avalia_atuacao_cargo, dms_consideracoes_06, avalia_recursos, dms_consideracoes_07,
@@ -34,8 +35,8 @@ class Transportation:
                 <soapenv:Header/>
                 <soapenv:Body>
                     <urn:editEntityRecord>
-                        <urn:WorkflowID>dcl001</urn:WorkflowID>
-                        <urn:EntityID>{id}</urn:EntityID>
+                        <urn:WorkflowID>{record_id}</urn:WorkflowID>
+                        <urn:EntityID>dcl001</urn:EntityID>
                         <urn:EntityAttributeList>
                             <urn:EntityAttribute>
                             <urn:EntityAttributeID>nomcol</urn:EntityAttributeID>
@@ -332,4 +333,12 @@ class Transportation:
                     </urn:editEntityRecord>
                 </soapenv:Body>
                 </soapenv:Envelope>"""
-        
+        # print(soap_envelope)
+        response = requests.post(self.url, data=soap_envelope, headers=self.headers)
+        if response.status_code == 200:
+                root = ET.fromstring(response.content)
+                print(response.status_code)
+                return root
+        elif response.status_code == 401:
+                print(response.status_code)
+                raise Exception(f"Error: {response.status_code}")

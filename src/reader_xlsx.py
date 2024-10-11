@@ -23,7 +23,7 @@ class ExcelDataReader:
 # Define the RowData class to hold the data for each row
 class RowData:
     def __init__(self, row_idx, sheet):
-        self.id = sheet[f'A{row_idx}'].value
+        self.record_id = sheet[f'A{row_idx}'].value
         self.hora_inicio = sheet[f'B{row_idx}'].value
         self.hora_conclusao = sheet[f'C{row_idx}'].value
         self.email = sheet[f'D{row_idx}'].value
