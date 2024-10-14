@@ -20,14 +20,14 @@ class ValidationAPI:
         }
         self.process_id = os.getenv("MY_PROCESS_ID")
 
-    def get_workflow(self, process_id,nome):
+    def get_workflow(self, process_id):
         soap_envelope = f"""
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Desligamento{nome}</urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Desligamento</urn:WorkflowTitle>
                     <urn:UserID>jhonny.souza</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>

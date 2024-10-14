@@ -46,7 +46,7 @@ class IntegrationOneDrive:
         response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}/workbook/worksheets", headers=headers)
         
         if response.status_code == 403:
-            print("Error 403: Forbidden. Without acess.")
+            print("Error 403: Forbidden. You do not have permission to access this resource.")
             print(response.text)
         elif response.status_code == 404:
             print("Error 404: Not Found. The resource could not be found.")
@@ -65,6 +65,6 @@ class IntegrationOneDrive:
         else:
             print(f"Error {response.status_code}: {response.text}")
 
-
-integration = IntegrationOneDrive(client_id, client_secret, authority)
-integration.main()
+if __name__ == "__main__":
+    integration = IntegrationOneDrive(client_id, client_secret, authority)
+    integration.main()
