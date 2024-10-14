@@ -5,16 +5,19 @@ import os
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
 load_dotenv(dotenv_path)
+# Get API ID and URL from environment variables
+api_id = os.getenv("MY_API_ID")
+url = os.getenv("MY_URL")
 
 class Transportation:
     # Function to declare API, URL variables and perform authorization
-    def __init__(self, api_id, url):
+    def __init__(self, api_id):
         self.api_id = api_id
         self.url = url
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "SOAPAction": "urn:workflow#getWorkflow",
-            "Authorization": api_id,
+            "Authorization": self.api_id,
             "Content-Length": "287",
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
@@ -38,7 +41,7 @@ class Transportation:
                 <soapenv:Body>
                     <urn:editEntityRecord>
                         <urn:WorkflowID>{record_id}</urn:WorkflowID>
-                        <urn:EntityID>dcl001</urn:EntityID>
+                        <urn:EntityID>dlc02</urn:EntityID>
                         <urn:EntityAttributeList>
                             <urn:EntityAttribute>
                             <urn:EntityAttributeID>nomcol</urn:EntityAttributeID>
@@ -335,10 +338,11 @@ class Transportation:
                     </urn:editEntityRecord>
                 </soapenv:Body>
         </soapenv:Envelope>"""
+        print(soap_envelope)
         response = requests.post(self.url, data=soap_envelope, headers=self.headers)
         if response.status_code == 200:
                 root = ET.fromstring(response.content)
-                print(response.status_code)
+                print(response.content)
                 return root
         elif response.status_code == 401:
                 print(response.status_code)
