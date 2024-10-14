@@ -47,9 +47,9 @@ class Integration_OneDrive:
         }
 
         # Use the access token to make requests to the Microsoft Graph API
-        user_id = os.getenv("MY_USER_ID")  # Replace with the actual user ID
+        drive_id = os.getenv("MY_DRIVE_ID") 
         item_id = os.getenv("MY_ITEM_ID")
-        response = requests.get(f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/root/children", headers=headers)
+        response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}/workbook/worksheets", headers=headers)
 
         
         if response.status_code == 404:
