@@ -7,7 +7,8 @@ from workflow_start import ValidationAPI
 import os
 
 # Load environment variables from .env file
-load_dotenv()
+dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
+load_dotenv(dotenv_path)
 
 # Get file name and base path from environment variables
 file_name = os.getenv("FILE_NAME")
@@ -17,11 +18,6 @@ base_path = os.getenv("BASE_PATH")
 api_id = os.getenv("MY_API_ID")
 url = os.getenv("MY_URL")
 
-# Create an instance of ValidationAPI with the required arguments
-record = ValidationAPI(api_id, url)
-
-# Call the RecordID function
-record_id = record.RecordID()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(file_name, base_path)
@@ -29,11 +25,16 @@ reader = ExcelDataReader(file_name, base_path)
 # Get all row data where the name is not null
 all_row_data = reader.get_all_row_data()
 
+
 # Create an instance of the Transportation class
 transport = Transportation(api_id, url)
 
 # Iterate over all_row_data and call edit_workflow for each row
 for row_data in all_row_data:
+    # Create an instance of ValidationAPI with the required arguments
+    record = ValidationAPI(api_id, url)
+    # Call the RecordID function
+    record_id = record.RecordID()
     transporte = transport.edit_workflow(
         record_id=record_id,  # Use the fetched record_id here
         nome=row_data.nome,
@@ -86,4 +87,4 @@ for row_data in all_row_data:
         presente_nascimento=row_data.presente_nascimento,
         presente_casamento=row_data.presente_casamento
     )
-    print(transport)
+    print(transporte)

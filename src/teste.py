@@ -3,7 +3,8 @@ from dotenv import load_dotenv
 import msal
 import requests
 
-load_dotenv()
+dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
+load_dotenv(dotenv_path)
 
 client_id = os.getenv("MY_CLIENT_ID")
 client_secret = os.getenv("MY_CLIENT_SECRET")

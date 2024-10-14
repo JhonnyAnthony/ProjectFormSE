@@ -3,7 +3,8 @@ import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
+load_dotenv(dotenv_path)
 
 class ValidationAPI:
     def __init__(self, api_id, url):
