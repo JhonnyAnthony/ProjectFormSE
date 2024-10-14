@@ -3,34 +3,31 @@ import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 import os
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'src', 'venv', '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
 load_dotenv(dotenv_path)
-EntityID = os.getenv("ENTITYID")
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
 
 class ValidationAPI:
-    def __init__(self, api_id):
+    def __init__(self, api_id, url):
         self.api_id = api_id
         self.url = url
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "SOAPAction": "urn:workflow#getWorkflow",
-            "Authorization": self.api_id,
+            "Authorization": api_id,
             "Content-Length": "287",
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
-        self.EntityID = EntityID
+        self.process_id = os.getenv("MY_PROCESS_ID")
 
-    def get_workflow(self, process_id):
+    def get_workflow(self, process_id,nome):
         soap_envelope = f"""
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Desligamento</urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Desligamento{nome}</urn:WorkflowTitle>
                     <urn:UserID>jhonny.souza</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
@@ -46,7 +43,7 @@ class ValidationAPI:
             raise Exception(f"Error: {response.status_code}")
 
     def RecordID(self):
-        root = self.get_workflow()
+        root = self.get_workflow(self.process_id)
         if root is not None:
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
             if record_id is not None:
@@ -56,4 +53,3 @@ class ValidationAPI:
                 print("RecordID not found")
         else:
             print("No response received")
-
