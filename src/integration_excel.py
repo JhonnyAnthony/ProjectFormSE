@@ -40,10 +40,12 @@ class IntegrationOneDrive:
         headers = {
             'Authorization': f'Bearer {access_token}'
         }
-
+        user_id = os.getenv("MY_USER_ID")
         drive_id = os.getenv("MY_DRIVE_ID")
         item_id = os.getenv("MY_ITEM_ID")
-        response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}/workbook/worksheets", headers=headers)
+        response = requests.get(f"https://graph.microsoft.com/v1.0/users/{user_id}/drives/{drive_id}/items/{item_id}", headers=headers)
+        link = f"https://graph.microsoft.com/v1.0/users/{user_id}/drives/{drive_id}/items/{item_id}/workbook/worksheets"
+        # print (link)
         
         if response.status_code == 403:
             print("Error 403: Forbidden. You do not have permission to access this resource.")
@@ -53,11 +55,11 @@ class IntegrationOneDrive:
             print(response.text)
         elif response.status_code == 200:
             item_details = response.json()
-            print(f"Item Details: {item_details}")
+            # print(f"Item Details: {item_details}")
             download_url = item_details.get('@microsoft.graph.downloadUrl')
             if download_url:
                 file_response = requests.get(download_url)
-                with open('downloaded_file.xlsx', 'wb') as f:
+                with open('Entrevista de Desligamento 1.xlsx', 'wb') as f:
                     f.write(file_response.content)
                 print("File downloaded successfully.")
             else:
