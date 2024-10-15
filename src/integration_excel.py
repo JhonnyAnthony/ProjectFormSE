@@ -3,7 +3,8 @@ from dotenv import load_dotenv
 import msal
 import requests
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'src', 'venv', '.env')
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
 
 client_id = os.getenv("MY_CLIENT_ID")
@@ -33,6 +34,7 @@ class IntegrationOneDrive:
         response = requests.post(url, data=payload)
         response.raise_for_status()
         access_token = response.json().get('access_token')
+        # print(access_token)
         return access_token
 
     def main(self):
@@ -43,7 +45,7 @@ class IntegrationOneDrive:
 
         drive_id = os.getenv("MY_DRIVE_ID")
         item_id = os.getenv("MY_ITEM_ID")
-        response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}/workbook/worksheets", headers=headers)
+        response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}", headers=headers)
         
         if response.status_code == 403:
             print("Error 403: Forbidden. You do not have permission to access this resource.")
@@ -53,11 +55,11 @@ class IntegrationOneDrive:
             print(response.text)
         elif response.status_code == 200:
             item_details = response.json()
-            print(f"Item Details: {item_details}")
+            # print(f"Item Details: {item_details}")
             download_url = item_details.get('@microsoft.graph.downloadUrl')
             if download_url:
                 file_response = requests.get(download_url)
-                with open('downloaded_file.xlsx', 'wb') as f:
+                with open('Entrevista de Desligamento.xlsx', 'wb') as f:
                     f.write(file_response.content)
                 print("File downloaded successfully.")
             else:
