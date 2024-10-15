@@ -1,6 +1,8 @@
 import openpyxl
 import os
 
+file_name = os.getenv("FILE_NAME")
+base_path = os.getenv("BASE_PATH")
 class ExcelDataReader:
     def __init__(self, file_name, base_path):
         self.file_name = file_name
@@ -9,14 +11,14 @@ class ExcelDataReader:
         self.workbook = openpyxl.load_workbook(self.excel_path)
         self.sheet = self.workbook.active
 
-    def update_excel_path(self):
-        return os.path.join(self.base_path, self.file_name)
+    def update_excel_path(base_path,file_name):
+        return os.path.join(base_path, file_name)
 
-    def get_all_row_data(self):
+    def get_all_row_data(sheet):
         row_data_list = []
-        for row in range(2, self.sheet.max_row + 1):  # Iterate over all rows.
-            if self.sheet[f'F{row}'].value is not None:  # Check if the name is not null.
-                row_data_object = RowData(row, self.sheet)
+        for row in range(2, sheet.max_row + 1):  # Iterate over all rows.
+            if sheet[f'F{row}'].value is not None:  # Check if the name is not null.
+                row_data_object = RowData(row, sheet)
                 row_data_list.append(row_data_object)
         return row_data_list
 
