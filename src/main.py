@@ -7,16 +7,15 @@ from datetime import datetime
 import os
 
 # Load environment variables from .env file
-dotenv_path = os.path.join(os.path.dirname(__file__), '..','src', 'venv', '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
 
 # Get file name and base path from environment variables
-file_name = os.getenv("FILE_NAME")
-base_path = os.getenv("BASE_PATH")
+
 api_id = os.getenv("MY_API_ID")
 
 # Create an instance of ExcelDataReader
-reader = ExcelDataReader(file_name, base_path)
+reader = ExcelDataReader
 
 # Get all row data where the name is not null
 all_row_data = reader.get_all_row_data()

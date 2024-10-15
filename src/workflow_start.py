@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 import os
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'src', 'venv', '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
 EntityID = os.getenv("ENTITYID")
 api_id = os.getenv("MY_API_ID")
