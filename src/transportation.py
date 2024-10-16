@@ -46,15 +46,15 @@ class Transportation:
                     <soapenv:Body>
                         <urn:editEntityRecord>
                             <!--You may enter the following 5 items in any order-->
-                            <urn:WorkflowID>?</urn:WorkflowID>
-                            <urn:EntityID>?</urn:EntityID>
+                            <urn:WorkflowID>{EntityID}</urn:WorkflowID>
+                            <urn:EntityID>dlc02</urn:EntityID>
                             <!--Optional:-->
                             <urn:EntityAttributeList>
                                 <!--Zero or more repetitions:-->
                                 <urn:EntityAttribute>
                                 <!--You may enter the following 2 items in any order-->
-                                <urn:EntityAttributeID>?</urn:EntityAttributeID>
-                                <urn:EntityAttributeValue>?</urn:EntityAttributeValue>
+                                <urn:EntityAttributeID>nomcol</urn:EntityAttributeID>
+                                <urn:EntityAttributeValue>jhonnylindo</urn:EntityAttributeValue>
                                 </urn:EntityAttribute>
                             </urn:EntityAttributeList>
                             <!--Optional:-->
