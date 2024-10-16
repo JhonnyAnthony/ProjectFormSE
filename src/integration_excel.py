@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import msal
 import requests
 
-
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
 
@@ -42,7 +41,6 @@ class IntegrationOneDrive:
         headers = {
             'Authorization': f'Bearer {access_token}'
         }
-        user_id = os.getenv("MY_USER_ID")
         drive_id = os.getenv("MY_DRIVE_ID")
         item_id = os.getenv("MY_ITEM_ID")
 

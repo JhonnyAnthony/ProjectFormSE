@@ -13,6 +13,7 @@ class ValidationAPI:
     def __init__(self, api_id):
         self.api_id = api_id
         self.url = url
+        self.EntityID = EntityID
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "SOAPAction": "urn:workflow#getWorkflow",
@@ -21,7 +22,6 @@ class ValidationAPI:
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
-        self.EntityID = EntityID
 
     def get_workflow(self):
         soap_envelope = f"""
@@ -56,3 +56,4 @@ class ValidationAPI:
                 print("RecordID not found")
         else:
             print("No response received")
+

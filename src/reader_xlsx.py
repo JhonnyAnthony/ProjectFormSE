@@ -1,31 +1,31 @@
-import openpyxl
 import os
+import pandas as pd
+from openpyxl import load_workbook
 
-file_name = os.getenv("FILE_NAME")
-base_path = os.getenv("BASE_PATH")
 class ExcelDataReader:
-    def __init__(self, file_name, base_path):
-        self.file_name = file_name
-        self.base_path = base_path
-        self.excel_path = self.update_excel_path()
-        self.workbook = openpyxl.load_workbook(self.excel_path)
-        self.sheet = self.workbook.active
+    def __init__(self, file_path, sheet_name):
+        self.file_path = file_path
+        self.sheet_name = sheet_name
 
-    def update_excel_path(base_path,file_name):
-        return os.path.join(base_path, file_name)
 
-    def get_all_row_data(sheet):
+    def load_data(self):
+        self.df = pd.read_excel(self.file_path, sheet_name=self.sheet_name)
+        workbook = load_workbook(self.file_path)
+        self.sheet = workbook[self.sheet_name]
+
+    def get_all_row_data(self):
         row_data_list = []
-        for row in range(2, sheet.max_row + 1):  # Iterate over all rows.
-            if sheet[f'F{row}'].value is not None:  # Check if the name is not null.
-                row_data_object = RowData(row, sheet)
+        for row in range(2, self.sheet.max_row + 1):  # Iterate over all rows.
+            cell_value = self.sheet[f'F{row}'].value
+            if cell_value is not None and cell_value.strip():  # Check if the name is not null.
+                row_data_object = RowData(self.sheet, row)
                 row_data_list.append(row_data_object)
+
         return row_data_list
 
-# Define the RowData class to hold the data for each row
 class RowData:
-    def __init__(self, row_idx, sheet):
-        self.record_id                          = sheet[f'A{row_idx}'].value
+    def __init__(self, sheet, row_idx):
+        self.EntityID                           = sheet[f'A{row_idx}'].value
         self.hora_inicio                        = sheet[f'B{row_idx}'].value
         self.hora_conclusao                     = sheet[f'C{row_idx}'].value
         self.email                              = sheet[f'D{row_idx}'].value
@@ -78,3 +78,13 @@ class RowData:
         self.indicaria_fgm                      = sheet[f'AZ{row_idx}'].value
         self.dms_consideracoes_11               = sheet[f'BA{row_idx}'].value
         self.mensagem_fgm                       = sheet[f'BB{row_idx}'].value
+    
+        
+
+# Example usage:
+reader = ExcelDataReader('Entrevista de Desligamento.xlsx', 'Sheet1')
+reader.load_data()
+row_data_list = reader.get_all_row_data()
+
+# for row_data in row_data_list:
+#     print(vars(row_data))
