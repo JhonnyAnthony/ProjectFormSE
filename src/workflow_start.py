@@ -5,14 +5,15 @@ import os
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
-EntityID = os.getenv("ENTITYID")
+process_id = os.getenv("PROCESS_ID")
 api_id = os.getenv("MY_API_ID")
 url = os.getenv("MY_URL")
 
 class ValidationAPI:
-    def __init__(self, api_id):
+    def __init__(self):
         self.api_id = api_id
         self.url = url
+        self.process_id = process_id
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "SOAPAction": "urn:workflow#getWorkflow",
@@ -21,7 +22,6 @@ class ValidationAPI:
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
-        self.EntityID = EntityID
 
     def get_workflow(self):
         soap_envelope = f"""
@@ -29,7 +29,7 @@ class ValidationAPI:
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
-                    <urn:ProcessID>{self.EntityID}</urn:ProcessID>
+                    <urn:ProcessID>{self.process_id}</urn:ProcessID>
                     <urn:WorkflowTitle>Desligamento</urn:WorkflowTitle>
                     <urn:UserID>jhonny.souza</urn:UserID>
                 </urn:newWorkflow>
@@ -56,3 +56,6 @@ class ValidationAPI:
                 print("RecordID not found")
         else:
             print("No response received")
+
+if __name__ == "__main__":
+    validation = ValidationAPI
