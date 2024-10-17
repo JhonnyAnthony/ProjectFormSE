@@ -4,6 +4,7 @@ from reader_xlsx import ExcelDataReader
 from transportation import Transportation
 from workflow_start import ValidationAPI
 
+
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
@@ -27,7 +28,9 @@ for row_data in all_row_data:
         # Fetch RecordID for each row if needed
         record_id = validation_api.RecordID()
         # print(record_id)
-        
+        # Convert dates to yyyy-MM-dd format
+        data_admissao = row_data.data_admissao.strftime("%Y-%m-%d")
+        data_demissao = row_data.data_demissao.strftime("%Y-%m-%d")
 
         # Debugging: Print the record_id and row_data to check for duplicates
         # print(f"Processing RecordID: {record_id}, Row Data: {row_data}")
@@ -36,8 +39,8 @@ for row_data in all_row_data:
         transport.edit_workflow(
             record_id=record_id,
             nome=row_data.nome,
-            data_admissao=row_data.data_admissao,
-            data_demissao=row_data.data_demissao,
+            data_admissao=data_admissao,
+            data_demissao=data_demissao,
             cargo=row_data.cargo,
             iniciativa_desligamento=row_data.iniciativa_desligamento,
             motivo_desligamento=row_data.motivo_desligamento,

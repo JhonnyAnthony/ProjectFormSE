@@ -25,10 +25,6 @@ class ExcelDataReader:
 
 class RowData:
     def __init__(self, sheet, row_idx):
-        self.EntityID                           = sheet[f'A{row_idx}'].value
-        self.hora_inicio                        = sheet[f'B{row_idx}'].value
-        self.hora_conclusao                     = sheet[f'C{row_idx}'].value
-        self.email                              = sheet[f'D{row_idx}'].value
         self.nome                               = sheet[f'F{row_idx}'].value
         self.data_admissao                      = sheet[f'G{row_idx}'].value
         self.data_demissao                      = sheet[f'H{row_idx}'].value
