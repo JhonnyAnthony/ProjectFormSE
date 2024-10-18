@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 from openpyxl import load_workbook
 
@@ -15,24 +14,22 @@ class ExcelDataReader:
 
     def get_all_row_data(self):
         row_data_list = []
+    # Start on row 2
         for row in range(2, self.sheet.max_row + 1):  # Iterate over all rows.
+            # Get the value from column F
             cell_value = self.sheet[f'F{row}'].value
-            if cell_value is not None and cell_value.strip():  # Check if the name is not null.
+            if cell_value is not None and cell_value.strip():  # Check if the cell is not empty or whitespace.
                 row_data_object = RowData(self.sheet, row)
                 row_data_list.append(row_data_object)
-
         return row_data_list
+
 
 class RowData:
     def __init__(self, sheet, row_idx):
-        self.EntityID                           = sheet[f'A{row_idx}'].value
-        self.hora_inicio                        = sheet[f'B{row_idx}'].value
-        self.hora_conclusao                     = sheet[f'C{row_idx}'].value
-        self.email                              = sheet[f'D{row_idx}'].value
         self.nome                               = sheet[f'F{row_idx}'].value
         self.data_admissao                      = sheet[f'G{row_idx}'].value
         self.data_demissao                      = sheet[f'H{row_idx}'].value
-        self.setor                              = sheet[f'I{row_idx}'].value
+        self.setor                              = sheet[f'I{row_idx}'].value#nao está funcionando
         self.cargo                              = sheet[f'J{row_idx}'].value
         self.iniciativa_desligamento            = sheet[f'K{row_idx}'].value
         self.motivo_desligamento                = sheet[f'L{row_idx}'].value 
@@ -44,17 +41,17 @@ class RowData:
         self.dms_consideracoes_03               = sheet[f'R{row_idx}'].value
         self.avalia_setor                       = sheet[f'S{row_idx}'].value
         self.dms_consideracoes_04               = sheet[f'T{row_idx}'].value
-        self.vale_transporte                    = sheet[f'U{row_idx}'].value
-        self.vale_refeicao                      = sheet[f'V{row_idx}'].value
+        self.vale_transporte                    = sheet[f'U{row_idx}'].value#nao está funcionando
+        self.vale_refeicao                      = sheet[f'V{row_idx}'].value#nao está funcionando
         self.plano_saude_medico                 = sheet[f'W{row_idx}'].value
         self.plano_saude_odontologico           = sheet[f'X{row_idx}'].value
         self.convenio_farmacia                  = sheet[f'Y{row_idx}'].value
-        self.convenio_odonto                    = sheet[f'Z{row_idx}'].value
+        self.convenio_odonto                    = sheet[f'Z{row_idx}'].value#nao está funcionando
         self.presente_aniversario               = sheet[f'AA{row_idx}'].value
         self.presente_casamento                 = sheet[f'AB{row_idx}'].value
         self.presente_nascimento                = sheet[f'AC{row_idx}'].value
         self.vacina                             = sheet[f'AD{row_idx}'].value
-        self.seguro_vida                        = sheet[f'AE{row_idx}'].value
+        self.seguro_vida                        = sheet[f'AE{row_idx}'].value#nao está funcionando
         self.bolsa_estudo                       = sheet[f'AF{row_idx}'].value
         self.dms_consideracoes_05               = sheet[f'AG{row_idx}'].value
         self.avalia_atuacao_cargo               = sheet[f'AH{row_idx}'].value
@@ -71,20 +68,10 @@ class RowData:
         self.avalia_segurança_trabalho          = sheet[f'AS{row_idx}'].value
         self.avalia_canal_ouvidoria             = sheet[f'AT{row_idx}'].value
         self.avalia_ccq                         = sheet[f'AU{row_idx}'].value
-        self.avalia_Onboarding                  = sheet[f'AV{row_idx}'].value
+        self.avalia_Onboarding                  = sheet[f'AV{row_idx}'].value#nao está funcionando
         self.dms_consideracoes_09               = sheet[f'AW{row_idx}'].value
         self.voltaria_para_fgm                  = sheet[f'AX{row_idx}'].value
         self.dms_consideracoes_10               = sheet[f'AY{row_idx}'].value
-        self.indicaria_fgm                      = sheet[f'AZ{row_idx}'].value
+        self.indicaria_fgm                      = sheet[f'AZ{row_idx}'].value#nao está funcionando
         self.dms_consideracoes_11               = sheet[f'BA{row_idx}'].value
         self.mensagem_fgm                       = sheet[f'BB{row_idx}'].value
-    
-        
-
-# Example usage:
-reader = ExcelDataReader('Entrevista de Desligamento.xlsx', 'Sheet1')
-reader.load_data()
-row_data_list = reader.get_all_row_data()
-
-# for row_data in row_data_list:
-#     print(vars(row_data))

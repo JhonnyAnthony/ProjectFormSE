@@ -39,11 +39,8 @@ class ValidationAPI:
         response = requests.post(self.url, data=soap_envelope, headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
-            print(response.status_code)
+            # print(response.status_code)
             return root
-        elif response.status_code == 401:
-            print(response.status_code)
-            raise Exception(f"Error: {response.status_code}")
 
     def RecordID(self):
         root = self.get_workflow()
@@ -56,6 +53,3 @@ class ValidationAPI:
                 print("RecordID not found")
         else:
             print("No response received")
-
-if __name__ == "__main__":
-    validation = ValidationAPI

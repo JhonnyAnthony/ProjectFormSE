@@ -3,15 +3,18 @@ from dotenv import load_dotenv
 from reader_xlsx import ExcelDataReader
 from transportation import Transportation
 from workflow_start import ValidationAPI
+from datetime import datetime
 
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
 
-
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader('Entrevista de Desligamento.xlsx', 'Sheet1')
 reader.load_data()
+
+
+# # for row_data in row_data_list:
 
 # Get all row data where the name is not null
 all_row_data = reader.get_all_row_data()
@@ -24,10 +27,24 @@ validation_api = ValidationAPI()
 
 for row_data in all_row_data:
     try:
+        # print(vars(row_data))
         # Fetch RecordID for each row if needed
         record_id = validation_api.RecordID()
-        # print(record_id)
+        # record_id = '077294'
         
+
+        if isinstance(row_data.data_admissao, str):
+            data_admissao = datetime.strptime(row_data.data_admissao, "%Y-%m-%d")
+        else:
+            data_admissao = row_data.data_admissao
+        
+        if isinstance(row_data.data_demissao, str):
+            data_demissao = datetime.strptime(row_data.data_demissao, "%Y-%m-%d")
+        else:
+            data_demissao = row_data.data_demissao
+        # Format dates to yyyy-MM-dd
+        formatted_data_admissao = row_data.data_admissao.strftime("%Y-%m-%d")
+        formatted_data_demissao = row_data.data_demissao.strftime("%Y-%m-%d")
 
         # Debugging: Print the record_id and row_data to check for duplicates
         # print(f"Processing RecordID: {record_id}, Row Data: {row_data}")
@@ -36,8 +53,9 @@ for row_data in all_row_data:
         transport.edit_workflow(
             record_id=record_id,
             nome=row_data.nome,
-            data_admissao=row_data.data_admissao,
-            data_demissao=row_data.data_demissao,
+            data_admissao=formatted_data_admissao,
+            data_demissao=formatted_data_demissao,
+            setor=row_data.setor,
             cargo=row_data.cargo,
             iniciativa_desligamento=row_data.iniciativa_desligamento,
             motivo_desligamento=row_data.motivo_desligamento,
@@ -81,15 +99,11 @@ for row_data in all_row_data:
             indicaria_fgm=row_data.indicaria_fgm,
             dms_consideracoes_11=row_data.dms_consideracoes_11,
             mensagem_fgm=row_data.mensagem_fgm,
-            setor=row_data.setor,
             presente_nascimento=row_data.presente_nascimento,
             presente_casamento=row_data.presente_casamento
-
         )
         
     except Exception as e:
-        
         print(f"An error occurred: {e}")
-
         # Log the error and continue with the next row
         continue
