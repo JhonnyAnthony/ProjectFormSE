@@ -59,7 +59,7 @@ class Transportation:
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                     <urn:EntityAttributeID>setor</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue></urn:EntityAttributeValue>
+                                    <urn:EntityAttributeValue>{setor}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                     <urn:EntityAttributeID>cargo</urn:EntityAttributeID>
@@ -158,14 +158,14 @@ class Transportation:
                                     <urn:RelationshipID>valtransp</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{vale_transporte}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
                                     <urn:RelationshipID>valerefrest</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{vale_refeicao}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
@@ -193,7 +193,7 @@ class Transportation:
                                     <urn:RelationshipID>odonto</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{convenio_odonto}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
@@ -228,7 +228,7 @@ class Transportation:
                                     <urn:RelationshipID>segurovida</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{seguro_vida}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
@@ -319,7 +319,7 @@ class Transportation:
                                     <urn:RelationshipID>onboarding</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{avalia_Onboarding}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
@@ -333,7 +333,7 @@ class Transportation:
                                     <urn:RelationshipID>indicafgm</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue></urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                 </urn:RelationshipList>
