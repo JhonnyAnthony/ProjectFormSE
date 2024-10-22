@@ -18,13 +18,12 @@ class ValidationAPI:
             "Content-Type": "text/xml;charset=UTF-8",
             "SOAPAction": "urn:workflow#getWorkflow",
             "Authorization": self.api_id,
-            "Content-Length": "287",
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
 
     def get_workflow(self):
-        soap_envelope = f"""
+        soap_envelope = f'''<?xml version="1.0" encoding="UTF-8"?>
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
@@ -34,13 +33,17 @@ class ValidationAPI:
                     <urn:UserID>jhonny.souza</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
-        </soapenv:Envelope>
-        """
-        response = requests.post(self.url, data=soap_envelope, headers=self.headers)
+        </soapenv:Envelope>'''
+
+        self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
+
+        response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
-            # print(response.status_code)
             return root
+        else:
+            print(f"Error: {response.status_code}")
+            return None
 
     def RecordID(self):
         root = self.get_workflow()

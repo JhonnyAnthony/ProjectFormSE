@@ -37,7 +37,7 @@ class Transportation:
                              avalia_suporte_folhas, avalia_segurança_trabalho, avalia_canal_ouvidoria, avalia_ccq, avalia_Onboarding, dms_consideracoes_09, voltaria_para_fgm,
                              dms_consideracoes_10, dms_consideracoes_11, mensagem_fgm, setor,presente_nascimento,presente_casamento,indicaria_fgm):
 
-        soap_envelope = f"""
+        soap_envelope = f"""<?xml version="1.0" encoding="UTF-8"?>
                     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
                         <soapenv:Header/>
                         <soapenv:Body>
@@ -343,18 +343,16 @@ class Transportation:
             """
         
         # print(soap_envelope)
-        response = requests.post(self.url, data=soap_envelope, headers=self.headers)
-        # print(response.content)
-        
+        self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
+
+        response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
-                
-                root = ET.fromstring(response.content)
-                print(response.content)
-                return response.text
-        elif response.status_code == 401:
-                print(response.status_code)
-                raise Exception(f"Error: {response.status_code}")
+            root = ET.fromstring(response.content)
+            print(response.content)
+            return response.text
         else:
-            return response
-        
-   
+            print(f"Error: {response.status_code}")
+            return None
+                
+                
+  
