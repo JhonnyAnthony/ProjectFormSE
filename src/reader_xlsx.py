@@ -7,7 +7,7 @@ class ExcelDataReader:
         self.sheet_name = sheet_name
 
 
-    def load_data(self):
+    def excel_data(self):
         self.df = pd.read_excel(self.file_path, sheet_name=self.sheet_name)
         workbook = load_workbook(self.file_path)
         self.sheet = workbook[self.sheet_name]

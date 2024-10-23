@@ -6,7 +6,7 @@ class DatabaseDataReader:
     def __init__(self, connection_string):
         self.connection_string = connection_string
 
-    def load_data(self):
+    def load_database(self):
         try:
             self.conn = pyodbc.connect(self.connection_string)
             print("Connection successful!")

@@ -6,6 +6,7 @@ from workflow_start import ValidationAPI
 from datetime import datetime
 from dbconect import DatabaseDataReader
 from integration_excel import IntegrationOneDrive
+from close_workflow import CloseWorkflow
 # Load environment variables from .env file
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
@@ -27,35 +28,32 @@ integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader('Entrevista de Desligamento.xlsx', 'Sheet1')
-reader.load_data()
+reader.excel_data()
 
+# # Connection string
+# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+# db_reader = DatabaseDataReader(connection_string)
+# db_reader.load_database()
+# # Close the connection
+# db_reader.close_connection()
 
-
-# Connection string
-connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-# Create an instance of DatabaseDataReader
-db_reader = DatabaseDataReader(connection_string)
-db_reader.load_data()
-
-# Get all row data
-se_data = db_reader.get_se_row_data()
-
-# Close the connection
-db_reader.close_connection()
-# # for row_data_excel in se_data:
-
-# # Get all row data where the name is not null
+# Get all se row data
+# se_data = db_reader.get_se_row_data()
+# # Get all excel row data
 excel_data = reader.get_excel_row_data()
 
 
-def send_se(row_data_excel):
+
+for row_data_excel in excel_data:
     # Create an instance of Transportation
     transport = Transportation()
 
     # Instantiate the ValidationAPI class
     validation_api = ValidationAPI()
 
-    # While here send to SE
+    # Calls closeworkflow
+    close = CloseWorkflow()
+    # Here send to SE
     try:
         # print(vars(row_data_excel))
         # Fetch RecordID for each row if needed
@@ -132,17 +130,23 @@ def send_se(row_data_excel):
             presente_nascimento         =row_data_excel.presente_nascimento,
             presente_casamento          =row_data_excel.presente_casamento
             )
+        # validation_api.get_workflow(
+        #     nome= row_data_excel.nome
+        # )
+        closer = close.close_workflow(
+            record_id = record_id
+        )
             
     except Exception as e:
         print(f"An error occurred: {e}")
             
-for row_data_excel in excel_data:
-    for row_data_se in se_data:
-        print(f"primeiro valor: {row_data_excel.nome} segundo valor: {row_data_se.nome_colaborador}")
-        if row_data_se.nome_colaborador == row_data_excel.nome:
-            print()
-        else:  
-            # envio_se(row_data_excel)
-            print("chegou aqui")
-            print(row_data_excel.nome)
+# for row_data_excel in excel_data:
+#     for row_data_se in se_data:
+#         print(f"primeiro valor: {row_data_excel.nome} segundo valor: {row_data_se.nome_colaborador}")
+#         if row_data_se.nome_colaborador == row_data_excel.nome:
+#             print()
+#         else:  
+#             # envio_se(row_data_excel)
+#             print("chegou aqui")
+#             print(row_data_excel.nome)
 
