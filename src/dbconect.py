@@ -2,37 +2,58 @@ import os
 from dotenv import load_dotenv
 import pyodbc
 
-# Load environment variables from .env file
-load_dotenv()
+class DatabaseDataReader:
+    def __init__(self, connection_string):
+        self.connection_string = connection_string
 
-# Retrieve the variables
-server = os.getenv('DB_SERVER')
-database = os.getenv('DB_DATABASE')
-username = os.getenv('DB_USER')
-password = os.getenv('DB_PASSWORD')
+    def load_data(self):
+        try:
+            self.conn = pyodbc.connect(self.connection_string)
+            print("Connection successful!")
+            self.cursor = self.conn.cursor()
+        except Exception as e:
+            print(f"Error: {e}")
 
-# Connection string
-connection_string = f'DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+    def get_se_row_data(self):
+        row_data_list = []
+        try:
+            self.cursor.execute("""
+                                SELECT
+                                    T0.NOMCOL AS NOMECOLABORADOR,
+                                    T0.DATAADMISS  AS DATAADMISS,
+                                    T0.DATADEMISS AS DATADEMISS,
+                                    WFP.IDPROCESS AS IDPROCESS
+                                FROM
+                                    DYNDLC02 T0
+                                INNER JOIN
+                                    GNASSOCFORMREG FORMREG
+                                    ON FORMREG.OIDENTITYREG = T0.OID
+                                INNER JOIN
+                                    WFPROCESS WFP
+                                    ON FORMREG.CDASSOC = WFP.CDASSOCREG
+                                WHERE
+                                    WFP.CDPROCESSMODEL = '2518';
+                                """)
 
-# Connect to the database
-try:
-    conn = pyodbc.connect(connection_string)
-    print("Connection successful!")
+            rows = self.cursor.fetchall()
+            for row in rows:
+                row_data_object = RowData(row)
+                row_data_list.append(row_data_object)
+        except Exception as e:
+            print(f"Error: {e}")
+        return row_data_list
 
-    # Create a cursor
-    cursor = conn.cursor()
+    def close_connection(self):
+        self.cursor.close()
+        self.conn.close()
 
-    # Example query
-    cursor.execute("SELECT * FROM your_table_name")
+class RowData:
+    def __init__(self, row):
+        self.nome_colaborador = row.NOMECOLABORADOR
+        self.data_admissao = row.DATAADMISS
+        self.data_demissao = row.DATADEMISS
+        self.id_process = row.IDPROCESS
 
-    # Fetch and print all rows
-    rows = cursor.fetchall()
-    for row in rows:
-        print(row)
 
-    # Close the cursor and connection
-    cursor.close()
-    conn.close()
 
-except Exception as e:
-    print(f"Error: {e}")
+
