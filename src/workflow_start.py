@@ -8,11 +8,12 @@ load_dotenv(dotenv_path)
 process_id = os.getenv("PROCESS_ID")
 api_id = os.getenv("MY_API_ID")
 url = os.getenv("MY_URL")
-
+user = os.getenv("MY_USER")
 class ValidationAPI:
     def __init__(self):
         self.api_id = api_id
         self.url = url
+        self.user = user
         self.process_id = process_id
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
@@ -30,7 +31,7 @@ class ValidationAPI:
                 <urn:newWorkflow>
                     <urn:ProcessID>{self.process_id}</urn:ProcessID>
                     <urn:WorkflowTitle>Desligamento</urn:WorkflowTitle>
-                    <urn:UserID>jhonny.souza</urn:UserID>
+                    <urn:UserID>{self.user}</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
         </soapenv:Envelope>'''

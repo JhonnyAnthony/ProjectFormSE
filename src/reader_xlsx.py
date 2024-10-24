@@ -7,12 +7,12 @@ class ExcelDataReader:
         self.sheet_name = sheet_name
 
 
-    def load_data(self):
+    def excel_data(self):
         self.df = pd.read_excel(self.file_path, sheet_name=self.sheet_name)
         workbook = load_workbook(self.file_path)
         self.sheet = workbook[self.sheet_name]
 
-    def get_all_row_data(self):
+    def get_excel_row_data(self):
         row_data_list = []
     # Start on row 2
         for row in range(2, self.sheet.max_row + 1):  # Iterate over all rows.
@@ -29,7 +29,7 @@ class RowData:
         self.nome                               = sheet[f'F{row_idx}'].value
         self.data_admissao                      = sheet[f'G{row_idx}'].value
         self.data_demissao                      = sheet[f'H{row_idx}'].value
-        self.setor                              = sheet[f'I{row_idx}'].value#nao está funcionando
+        self.setor                              = sheet[f'I{row_idx}'].value
         self.cargo                              = sheet[f'J{row_idx}'].value
         self.iniciativa_desligamento            = sheet[f'K{row_idx}'].value
         self.motivo_desligamento                = sheet[f'L{row_idx}'].value 
@@ -41,17 +41,17 @@ class RowData:
         self.dms_consideracoes_03               = sheet[f'R{row_idx}'].value
         self.avalia_setor                       = sheet[f'S{row_idx}'].value
         self.dms_consideracoes_04               = sheet[f'T{row_idx}'].value
-        self.vale_transporte                    = sheet[f'U{row_idx}'].value#nao está funcionando
-        self.vale_refeicao                      = sheet[f'V{row_idx}'].value#nao está funcionando
+        self.vale_transporte                    = sheet[f'U{row_idx}'].value
+        self.vale_refeicao                      = sheet[f'V{row_idx}'].value
         self.plano_saude_medico                 = sheet[f'W{row_idx}'].value
         self.plano_saude_odontologico           = sheet[f'X{row_idx}'].value
         self.convenio_farmacia                  = sheet[f'Y{row_idx}'].value
-        self.convenio_odonto                    = sheet[f'Z{row_idx}'].value#nao está funcionando
+        self.convenio_odonto                    = sheet[f'Z{row_idx}'].value
         self.presente_aniversario               = sheet[f'AA{row_idx}'].value
         self.presente_casamento                 = sheet[f'AB{row_idx}'].value
         self.presente_nascimento                = sheet[f'AC{row_idx}'].value
         self.vacina                             = sheet[f'AD{row_idx}'].value
-        self.seguro_vida                        = sheet[f'AE{row_idx}'].value#nao está funcionando
+        self.seguro_vida                        = sheet[f'AE{row_idx}'].value
         self.bolsa_estudo                       = sheet[f'AF{row_idx}'].value
         self.dms_consideracoes_05               = sheet[f'AG{row_idx}'].value
         self.avalia_atuacao_cargo               = sheet[f'AH{row_idx}'].value
@@ -68,10 +68,10 @@ class RowData:
         self.avalia_segurança_trabalho          = sheet[f'AS{row_idx}'].value
         self.avalia_canal_ouvidoria             = sheet[f'AT{row_idx}'].value
         self.avalia_ccq                         = sheet[f'AU{row_idx}'].value
-        self.avalia_Onboarding                  = sheet[f'AV{row_idx}'].value#nao está funcionando
+        self.avalia_Onboarding                  = sheet[f'AV{row_idx}'].value
         self.dms_consideracoes_09               = sheet[f'AW{row_idx}'].value
         self.voltaria_para_fgm                  = sheet[f'AX{row_idx}'].value
         self.dms_consideracoes_10               = sheet[f'AY{row_idx}'].value
-        self.indicaria_fgm                      = sheet[f'AZ{row_idx}'].value#nao está funcionando
+        self.indicaria_fgm                      = sheet[f'AZ{row_idx}'].value
         self.dms_consideracoes_11               = sheet[f'BA{row_idx}'].value
         self.mensagem_fgm                       = sheet[f'BB{row_idx}'].value

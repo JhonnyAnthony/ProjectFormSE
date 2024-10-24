@@ -36,7 +36,7 @@ class IntegrationOneDrive:
         # print(access_token)
         return access_token
 
-    def main(self):
+    def download(self):
         access_token = self.get_token()
         headers = {
             'Authorization': f'Bearer {access_token}'
@@ -68,6 +68,3 @@ class IntegrationOneDrive:
         else:
             print(f"Error {response.status_code}: {response.text}")
 
-if __name__ == "__main__":
-    integration = IntegrationOneDrive(client_id, client_secret, authority)
-    integration.main()
