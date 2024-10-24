@@ -22,7 +22,7 @@ class CloseWorkflow:
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "Content-Length": "287",
-            "SOAPAction": "urn:workflow#newWorkflow",
+            "SOAPAction": "urn:workflow#executeActivity",
             "Authorization": self.api_id,
             "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
@@ -34,17 +34,20 @@ class CloseWorkflow:
     def close_workflow(self, record_id):
 
         soap_envelope = f"""<?xml version="1.0" encoding="UTF-8"?>
-                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
-                        <soapenv:Header/>
-                        <soapenv:Body>
-                            <urn:executeActivity>
-                                <urn:WorkflowID>{record_id}</urn:WorkflowID>
-                                <urn:ActivityID>atv01</urn:ActivityID>
-                                <urn:ActionSequence>1</urn:ActionSequence>
-                                <urn:UserID>{self.user}</urn:UserID>
-                            </urn:executeActivity>
-                        </soapenv:Body>
-                    </soapenv:Envelope>
+                            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
+                                <soapenv:Header/>
+                                <soapenv:Body>
+                                    <urn:executeActivity>
+                                        <!--You may enter the following 5 items in any order-->
+                                        <urn:WorkflowID>{record_id}</urn:WorkflowID>
+                                        <urn:ActivityID>atv01</urn:ActivityID>
+                                        <urn:ActionSequence>1</urn:ActionSequence>
+                                        <!--Optional:-->
+                                        <urn:UserID>kemilyn.silveira</urn:UserID>
+                                        <urn:ActivityOrder></urn:ActivityOrder>
+                                    </urn:executeActivity>
+                                </soapenv:Body>
+                            </soapenv:Envelope>
  
             """
         
@@ -60,5 +63,5 @@ class CloseWorkflow:
             print(f"Error: {response.status_code}")
             return None
                 
-                
+        
   

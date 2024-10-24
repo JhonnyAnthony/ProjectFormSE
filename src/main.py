@@ -15,6 +15,8 @@ load_dotenv(dotenv_path)
 server = os.getenv('DB_SERVER')
 database = os.getenv('DB_DATABASE')
 username = os.getenv('DB_USER')
+sheet = os.getenv("SHEET")
+file_name = os.getenv("FILE_NAME")
 password = os.getenv('DB_PASSWORD')
 client_id = os.getenv("MY_CLIENT_ID")
 client_secret = os.getenv("MY_CLIENT_SECRET")
@@ -22,24 +24,15 @@ tenant_id = os.getenv("MY_TENANT_ID")
 link = os.getenv("LINK_AUTHORITY")
 authority = f"{link}{tenant_id}"
 
+
+
 # Downloader excel file
 integration = IntegrationOneDrive(client_id, client_secret, authority)
 integration.download()
 
 # Create an instance of ExcelDataReader
-reader = ExcelDataReader('Entrevista de Desligamento.xlsx', 'Sheet1')
+reader = ExcelDataReader(f'{file_name}', f'{sheet}')
 reader.excel_data()
-
-# # Connection string
-# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-# db_reader = DatabaseDataReader(connection_string)
-# db_reader.load_database()
-# # Close the connection
-# db_reader.close_connection()
-
-# Get all se row data
-# se_data = db_reader.get_se_row_data()
-# # Get all excel row data
 excel_data = reader.get_excel_row_data()
 
 
@@ -50,7 +43,6 @@ for row_data_excel in excel_data:
 
     # Instantiate the ValidationAPI class
     validation_api = ValidationAPI()
-
     # Calls closeworkflow
     close = CloseWorkflow()
     # Here send to SE
@@ -59,8 +51,8 @@ for row_data_excel in excel_data:
         # Fetch RecordID for each row if needed
         record_id = validation_api.RecordID()
         # record_id = '077618'
+        # nome = reader.get_row_data_by_nome(name)
         
-
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
         else:
@@ -76,9 +68,11 @@ for row_data_excel in excel_data:
 
         # Debugging: Print the record_id and row_data_excel to check for duplicates
         # print(f"Processing RecordID: {record_id}, Row Data: {row_data_excel}")
-
+        # validation_api.get_workflow(
+        #     nome = nome
+        # )
         # Call edit_workflow method with the fetched record_id and row data
-        transport.edit_workflow(
+        validation_api,transport.edit_workflow(
             record_id                   =record_id,
             nome                        =row_data_excel.nome,
             data_admissao               =formatted_data_admissao,
@@ -130,13 +124,9 @@ for row_data_excel in excel_data:
             presente_nascimento         =row_data_excel.presente_nascimento,
             presente_casamento          =row_data_excel.presente_casamento
             )
-        # validation_api.get_workflow(
-        #     nome= row_data_excel.nome
+        # closer = close.close_workflow(
+        #     record_id = record_id
         # )
-        closer = close.close_workflow(
-            record_id = record_id
-        )
-            
     except Exception as e:
         print(f"An error occurred: {e}")
             
@@ -150,3 +140,13 @@ for row_data_excel in excel_data:
 #             print("chegou aqui")
 #             print(row_data_excel.nome)
 
+# # Connection string
+# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+# db_reader = DatabaseDataReader(connection_string)
+# db_reader.load_database()
+# # Close the connection
+# db_reader.close_connection()
+
+# Get all se row data
+# se_data = db_reader.get_se_row_data()
+# # Get all excel row data
