@@ -40,7 +40,6 @@ class CloseWorkflow:
  
             """
         
-        # print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:

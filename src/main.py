@@ -19,10 +19,10 @@ def logs():
             os.makedirs(log_directory)
     
         # Get the current date and time
-    current_datetime = datetime.datetime.now()
+    current_datetime = datetime.now()
     
         # Generate a filename based on the current date within the log folder
-    log_filename = os.path.join(log_directory, current_datetime.strftime("%Y-%m-%d") + "_log.txt")
+    log_filename = os.path.join(log_directory, current_datetime.strftime("%Y-%m-%d") + "_log.log")
     
         # Configure logging to output to this filename
     logging.basicConfig(
@@ -31,7 +31,9 @@ def logs():
         datefmt="%Y-%m-%d %H:%M:%S",
         filename=log_filename  # Use the generated filename within the log folder
     )
-
+   
+    # exemple
+    #  logging.error(f"Erro {confirma} colaborador {objMaria.nome}")
 
 
 
@@ -48,7 +50,6 @@ excel_data = reader.get_excel_row_data()
 connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
 db_reader = DatabaseDataReader(connection_string)
 db_reader.load_database()
-# logging.error()
 se_data = db_reader.get_se_row_data()          
 
 for row_data_excel in excel_data:
@@ -56,16 +57,16 @@ for row_data_excel in excel_data:
         if row_data_se.nome_colaborador == row_data_excel.nome:
             None
     # Create an instance of Transportation
-    def call_function():
-        transport = Transportation()
-        # Instantiate the ValidationAPI class
-        validation_api = ValidationAPI()
-        # Calls closeworkflow
-        close = CloseWorkflow()
+
+    transport = Transportation()
+    # Instantiate the ValidationAPI class
+    validation_api = ValidationAPI()
+    # Calls closeworkflow
+    close = CloseWorkflow()
     # Here send to SE
     try:
         # Fetch RecordID for each row if needed
-        record_id = call_function.validation_api.get_workflow(row_data_excel.nome)
+        record_id = validation_api.get_workflow(row_data_excel.nome)
         # record_id = '077618'
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
@@ -81,7 +82,7 @@ for row_data_excel in excel_data:
         formatted_data_demissao = row_data_excel.data_demissao.strftime("%Y-%m-%d")
 
         # Call edit_workflow method with the fetched record_id and row data
-        call_function.transport.edit_workflow(
+        transport.edit_workflow(
             record_id                   =record_id,
             nome                        =row_data_excel.nome,
             data_admissao               =formatted_data_admissao,
@@ -134,12 +135,12 @@ for row_data_excel in excel_data:
             presente_casamento          =row_data_excel.presente_casamento
             )
         # Calls closer_workflow
-        # call_function.closer = close.close_workflow(
-        #     record_id = record_id,
-        #     nome = row_data_excel.nome
-        # )
+        closer = close.close_workflow(
+            record_id = record_id,
+        )
     except Exception as e:
         print(f"An error occurred: {e}")
 
 
 
+logs()
