@@ -1,15 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
-import os
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
-
-
-# Get API ID and URL from environment variables
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
+from config import api_id,url
 
 
 class Transportation:

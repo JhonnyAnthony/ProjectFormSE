@@ -1,17 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
-import os
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
-
-
-# Get API ID and URL from environment variables
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
-user = os.getenv("MY_USER")
-
+from config import api_id,url,user
 
 class CloseWorkflow:
     # Function to declare API, URL variables and perform authorization
@@ -43,7 +32,7 @@ class CloseWorkflow:
                                         <urn:ActivityID>atv01</urn:ActivityID>
                                         <urn:ActionSequence>1</urn:ActionSequence>
                                         <!--Optional:-->
-                                        <urn:UserID>kemilyn.silveira</urn:UserID>
+                                        <urn:UserID>{self.user}</urn:UserID>
                                         <urn:ActivityOrder></urn:ActivityOrder>
                                     </urn:executeActivity>
                                 </soapenv:Body>
@@ -53,7 +42,6 @@ class CloseWorkflow:
         
         # print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
-
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)

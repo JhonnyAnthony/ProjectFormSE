@@ -41,11 +41,9 @@ class DatabaseDataReader:
                 row_data_list.append(row_data_object)
         except Exception as e:
             print(f"Error: {e}")
-        return row_data_list
-
-    def close_connection(self):
         self.cursor.close()
         self.conn.close()
+        return row_data_list
 
 class RowData:
     def __init__(self, row):

@@ -1,15 +1,8 @@
 import os
-from dotenv import load_dotenv
+from config import client_id,client_secret,tenant_id,authority
 import msal
 import requests
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
-
-client_id = os.getenv("MY_CLIENT_ID")
-client_secret = os.getenv("MY_CLIENT_SECRET")
-tenant_id = os.getenv("MY_TENANT_ID")
-authority = f"https://login.microsoftonline.com/{tenant_id}"
 
 class IntegrationOneDrive:
     def __init__(self, client_id, client_secret, authority):
