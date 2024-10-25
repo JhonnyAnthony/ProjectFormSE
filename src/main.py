@@ -36,23 +36,19 @@ reader.excel_data()
 excel_data = reader.get_excel_row_data()
 
 
-
 for row_data_excel in excel_data:
     # Create an instance of Transportation
     transport = Transportation()
-
     # Instantiate the ValidationAPI class
     validation_api = ValidationAPI()
+    
     # Calls closeworkflow
     close = CloseWorkflow()
     # Here send to SE
     try:
-        # print(vars(row_data_excel))
         # Fetch RecordID for each row if needed
-        record_id = validation_api.RecordID()
+        record_id = validation_api.get_workflow(row_data_excel.nome)
         # record_id = '077618'
-        # nome = reader.get_row_data_by_nome(name)
-        
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
         else:
@@ -66,13 +62,8 @@ for row_data_excel in excel_data:
         formatted_data_admissao = row_data_excel.data_admissao.strftime("%Y-%m-%d")
         formatted_data_demissao = row_data_excel.data_demissao.strftime("%Y-%m-%d")
 
-        # Debugging: Print the record_id and row_data_excel to check for duplicates
-        # print(f"Processing RecordID: {record_id}, Row Data: {row_data_excel}")
-        # validation_api.get_workflow(
-        #     nome = nome
-        # )
         # Call edit_workflow method with the fetched record_id and row data
-        validation_api,transport.edit_workflow(
+        transport.edit_workflow(
             record_id                   =record_id,
             nome                        =row_data_excel.nome,
             data_admissao               =formatted_data_admissao,
@@ -124,8 +115,10 @@ for row_data_excel in excel_data:
             presente_nascimento         =row_data_excel.presente_nascimento,
             presente_casamento          =row_data_excel.presente_casamento
             )
+        # Calls closer_workflow
         # closer = close.close_workflow(
-        #     record_id = record_id
+        #     record_id = record_id,
+        #     nome = row_data_excel.nome
         # )
     except Exception as e:
         print(f"An error occurred: {e}")
