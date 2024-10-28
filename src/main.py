@@ -9,33 +9,28 @@ from dbconect import DatabaseDataReader
 from integration_excel import IntegrationOneDrive
 from close_workflow import CloseWorkflow
 
-
 def logs():
     # Define the directory path where logs will be stored
     log_directory = r"C:\Github\ProjectFormSE\Logs"
-    
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
-    
+
         # Get the current date and time
     current_datetime = datetime.now()
-    
-        # Generate a filename based on the current date within the log folder
+
+            # Generate a filename based on the current date within the log folder
     log_filename = os.path.join(log_directory, current_datetime.strftime("%Y-%m-%d") + "_log.log")
-    
-        # Configure logging to output to this filename
+
+            # Configure logging to output to this filename
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
         filename=log_filename  # Use the generated filename within the log folder
     )
-   
-    # exemple
-    #  logging.error(f"Erro {confirma} colaborador {objMaria.nome}")
-
-
+    
+logs()
 
 # Downloader excel file
 integration = IntegrationOneDrive(client_id, client_secret, authority)
@@ -47,15 +42,16 @@ reader.excel_data()
 excel_data = reader.get_excel_row_data()
 
 # Connection string
-connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-db_reader = DatabaseDataReader(connection_string)
-db_reader.load_database()
-se_data = db_reader.get_se_row_data()          
+# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+# db_reader = DatabaseDataReader(connection_string)
+# db_reader.load_database()
+# se_data = db_reader.get_se_row_data()          
 
+counter = 0
 for row_data_excel in excel_data:
-    for row_data_se in se_data:
-        if row_data_se.nome_colaborador == row_data_excel.nome:
-            None
+    # for row_data_se in se_data:
+    #     if row_data_se.nome_colaborador == row_data_excel.nome:
+    #         None
     # Create an instance of Transportation
 
     transport = Transportation()
@@ -65,9 +61,13 @@ for row_data_excel in excel_data:
     close = CloseWorkflow()
     # Here send to SE
     try:
+        counter += 1
+        print(f"Executing Script - Wait Finish!, {counter}: Script Running")
+        logs()
+        
         # Fetch RecordID for each row if needed
         record_id = validation_api.get_workflow(row_data_excel.nome)
-        # record_id = '077618'
+        # record_id = '077939'
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
         else:
@@ -135,12 +135,11 @@ for row_data_excel in excel_data:
             presente_casamento          =row_data_excel.presente_casamento
             )
         # Calls closer_workflow
-        closer = close.close_workflow(
-            record_id = record_id,
-        )
+        # closer = close.close_workflow(
+        #     record_id = record_id,
+        # )
+        
     except Exception as e:
-        print(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e}")
+print("Script Finished!")
 
-
-
-logs()

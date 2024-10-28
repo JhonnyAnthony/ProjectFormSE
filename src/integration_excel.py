@@ -2,6 +2,7 @@ import os
 from config import client_id,client_secret,tenant_id,authority
 import msal
 import requests
+import logging
 
 
 class IntegrationOneDrive:
@@ -41,11 +42,9 @@ class IntegrationOneDrive:
 
         
         if response.status_code == 403:
-            print("Error 403: Forbidden. You do not have permission to access this resource.")
-            print(response.text)
+            logging.error(f"Error 403: {response.text}")
         elif response.status_code == 404:
-            print("Error 404: Not Found. The resource could not be found.")
-            print(response.text)
+           logging.error(f"Error 404: {response.text}")
         elif response.status_code == 200:
             item_details = response.json()
             # print(f"Item Details: {item_details}")
@@ -55,9 +54,9 @@ class IntegrationOneDrive:
                 with open('Entrevista de Desligamento.xlsx', 'wb') as f:
 
                     f.write(file_response.content)
-                print("File downloaded successfully.")
+                logging.info(f"File downloaded successfully.{response.status_code}")
             else:
-                print("Download URL not found.")
+                logging.error(f"Download URL not found.{response.status_code}:{response.text}")
         else:
-            print(f"Error {response.status_code}: {response.text}")
+            logging.error(f"Error {response.status_code}: {response.text}")
 
