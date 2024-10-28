@@ -1,3 +1,5 @@
 venv/
 .env
 helps/
+logs/
+src/__pycache__/

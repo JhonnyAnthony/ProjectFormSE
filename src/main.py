@@ -1,5 +1,6 @@
 import os
-from dotenv import load_dotenv
+import logging
+from config import server,database,username,sheet,file_name,password,client_id,client_secret,authority
 from reader_xlsx import ExcelDataReader
 from transportation import Transportation
 from workflow_start import ValidationAPI
@@ -7,24 +8,29 @@ from datetime import datetime
 from dbconect import DatabaseDataReader
 from integration_excel import IntegrationOneDrive
 from close_workflow import CloseWorkflow
-# Load environment variables from .env file
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
 
-# # Retrieve the variables
-server = os.getenv('DB_SERVER')
-database = os.getenv('DB_DATABASE')
-username = os.getenv('DB_USER')
-sheet = os.getenv("SHEET")
-file_name = os.getenv("FILE_NAME")
-password = os.getenv('DB_PASSWORD')
-client_id = os.getenv("MY_CLIENT_ID")
-client_secret = os.getenv("MY_CLIENT_SECRET")
-tenant_id = os.getenv("MY_TENANT_ID")
-link = os.getenv("LINK_AUTHORITY")
-authority = f"{link}{tenant_id}"
+def logs():
+    # Define the directory path where logs will be stored
+    log_directory = r"C:\Github\ProjectFormSE\Logs"
+        # Create the log directory if it doesn't exist
+    if not os.path.exists(log_directory):
+            os.makedirs(log_directory)
 
+        # Get the current date and time
+    current_datetime = datetime.now()
 
+            # Generate a filename based on the current date within the log folder
+    log_filename = os.path.join(log_directory, current_datetime.strftime("%Y-%m-%d") + "_log.log")
+
+            # Configure logging to output to this filename
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        filename=log_filename  # Use the generated filename within the log folder
+    )
+    
+logs()
 
 # Downloader excel file
 integration = IntegrationOneDrive(client_id, client_secret, authority)
@@ -35,20 +41,33 @@ reader = ExcelDataReader(f'{file_name}', f'{sheet}')
 reader.excel_data()
 excel_data = reader.get_excel_row_data()
 
+# Connection string
+# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+# db_reader = DatabaseDataReader(connection_string)
+# db_reader.load_database()
+# se_data = db_reader.get_se_row_data()          
 
+counter = 0
 for row_data_excel in excel_data:
+    # for row_data_se in se_data:
+    #     if row_data_se.nome_colaborador == row_data_excel.nome:
+    #         None
     # Create an instance of Transportation
+
     transport = Transportation()
     # Instantiate the ValidationAPI class
     validation_api = ValidationAPI()
-    
     # Calls closeworkflow
     close = CloseWorkflow()
     # Here send to SE
     try:
+        counter += 1
+        print(f"Executing Script - Wait Finish!, {counter}: Script Running")
+        logs()
+        
         # Fetch RecordID for each row if needed
         record_id = validation_api.get_workflow(row_data_excel.nome)
-        # record_id = '077618'
+        # record_id = '077939'
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
         else:
@@ -118,28 +137,9 @@ for row_data_excel in excel_data:
         # Calls closer_workflow
         # closer = close.close_workflow(
         #     record_id = record_id,
-        #     nome = row_data_excel.nome
         # )
+        
     except Exception as e:
-        print(f"An error occurred: {e}")
-            
-# for row_data_excel in excel_data:
-#     for row_data_se in se_data:
-#         print(f"primeiro valor: {row_data_excel.nome} segundo valor: {row_data_se.nome_colaborador}")
-#         if row_data_se.nome_colaborador == row_data_excel.nome:
-#             print()
-#         else:  
-#             # envio_se(row_data_excel)
-#             print("chegou aqui")
-#             print(row_data_excel.nome)
+        logging.error(f"An error occurred: {e}")
+print("Script Finished!")
 
-# # Connection string
-# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-# db_reader = DatabaseDataReader(connection_string)
-# db_reader.load_database()
-# # Close the connection
-# db_reader.close_connection()
-
-# Get all se row data
-# se_data = db_reader.get_se_row_data()
-# # Get all excel row data

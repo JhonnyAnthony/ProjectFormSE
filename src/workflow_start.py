@@ -1,16 +1,7 @@
 import requests
 import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
-import os
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
-
-process_id = os.getenv("PROCESS_ID")
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
-user = os.getenv("MY_USER")
-
+from config import process_id,api_id,url,user
+import logging
 class ValidationAPI:
     def __init__(self):
         self.api_id = api_id
@@ -43,11 +34,11 @@ class ValidationAPI:
             root = ET.fromstring(response.content)
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
             if record_id is not None:
-                print(f"RecordID: {record_id.text}")
+                logging.info(f"RecordID: {record_id.text}")
                 return record_id.text
             else:
-                print("RecordID not found")
+                logging.error("RecordID not found")
                 return None
         else:
-            print(f"Error: {response.status_code}")
+            logging.error(f"Error: {response.status_code}")
             return None

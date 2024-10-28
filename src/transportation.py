@@ -1,16 +1,7 @@
 import requests
 import xml.etree.ElementTree as ET
-from dotenv import load_dotenv
-import os
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
-load_dotenv(dotenv_path)
-
-
-# Get API ID and URL from environment variables
-api_id = os.getenv("MY_API_ID")
-url = os.getenv("MY_URL")
-
+from config import api_id,url
+import logging
 
 class Transportation:
     # Function to declare API, URL variables and perform authorization
@@ -348,11 +339,15 @@ class Transportation:
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
-            print(response.content)
+            namespace = {'soap': 'http://schemas.xmlsoap.org/soap/envelope/', 'ns': 'urn:workflow'}
+            status = root.find('.//ns:Status', namespace).text
+            code = root.find('.//ns:Code', namespace).text
+            detail = root.find('.//ns:Detail', namespace).text
+            logging.info(f"Status: {status}, Code: {code}, Detail: {detail} - Transportation")
             return response.text
         else:
-            print(f"Error: {response.status_code}")
-            return None
+            logging.error(f"Error: {response.status_code}")
+        return None
                 
                 
   

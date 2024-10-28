@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import pyodbc
-
+import logging
 class DatabaseDataReader:
     def __init__(self, connection_string):
         self.connection_string = connection_string
@@ -9,10 +9,10 @@ class DatabaseDataReader:
     def load_database(self):
         try:
             self.conn = pyodbc.connect(self.connection_string)
-            print("Connection successful!")
+            logging.INFO(f"Connection successful! ")
             self.cursor = self.conn.cursor()
         except Exception as e:
-            print(f"Error: {e}")
+            logging.error(f"Erro : {e}")
 
     def get_se_row_data(self):
         row_data_list = []
@@ -40,12 +40,10 @@ class DatabaseDataReader:
                 row_data_object = RowData(row)
                 row_data_list.append(row_data_object)
         except Exception as e:
-            print(f"Error: {e}")
-        return row_data_list
-
-    def close_connection(self):
+            logging.error(f"Erro: {e}")
         self.cursor.close()
         self.conn.close()
+        return row_data_list
 
 class RowData:
     def __init__(self, row):
