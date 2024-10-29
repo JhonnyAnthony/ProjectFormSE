@@ -42,32 +42,29 @@ reader.excel_data()
 excel_data = reader.get_excel_row_data()
 
 # Connection string
-# connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-# db_reader = DatabaseDataReader(connection_string)
-# db_reader.load_database()
-# se_data = db_reader.get_se_row_data()          
+connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+db_reader = DatabaseDataReader(connection_string)
+db_reader.load_database()
+se_data = db_reader.get_se_row_data()          
 
 counter = 0
 for row_data_excel in excel_data:
-    # for row_data_se in se_data:
-    #     if row_data_se.nome_colaborador == row_data_excel.nome:
-    #         None
-    # Create an instance of Transportation
+    for row_data_se in se_data:
+        if row_data_se.nome_colaborador == row_data_excel.nome:
+            None
 
-    transport = Transportation()
-    # Instantiate the ValidationAPI class
-    validation_api = ValidationAPI()
-    # Calls closeworkflow
-    close = CloseWorkflow()
-    # Here send to SE
-    try:
+    transport = Transportation() # Create an instance of Transportation
+    validation_api = ValidationAPI() # Instantiate the ValidationAPI class
+    close = CloseWorkflow() # Calls closeworkflow
+    
+    try: # Here send to SE
         counter += 1
         print(f"Executing Script - Wait Finish!, {counter}: Script Running")
         logs()
         
-        # Fetch RecordID for each row if needed
-        record_id = validation_api.get_workflow(row_data_excel.nome)
-        # record_id = '077939'
+        
+        record_id = validation_api.get_workflow(row_data_excel.nome)# Fetch RecordID for each row if needed and put nome in workflow
+        # record_id = '077939' #Just for tests
         if isinstance(row_data_excel.data_admissao, str):
             data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
         else:
@@ -141,5 +138,5 @@ for row_data_excel in excel_data:
         
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-print("Script Finished!")
+print("Script Finished!") #When loop finish stop and print finished
 

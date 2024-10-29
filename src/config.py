@@ -1,3 +1,5 @@
+#This file is to where the variables who armazenate the envs will be called
+
 import os
 from dotenv import load_dotenv
 

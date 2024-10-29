@@ -5,7 +5,7 @@ import requests
 import logging
 
 
-class IntegrationOneDrive:
+class IntegrationOneDrive: #here is to declare token requirements
     def __init__(self, client_id, client_secret, authority):
         self.client_id = client_id
         self.client_secret = client_secret
@@ -15,7 +15,7 @@ class IntegrationOneDrive:
             authority=self.authority,
             client_credential=self.client_secret,
         )
-
+    #Here is where get token
     def get_token(self):
         url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
         payload = {
@@ -27,9 +27,8 @@ class IntegrationOneDrive:
         response = requests.post(url, data=payload)
         response.raise_for_status()
         access_token = response.json().get('access_token')
-        # print(access_token)
         return access_token
-
+    #Here is where the download happes
     def download(self):
         access_token = self.get_token()
         headers = {
@@ -37,26 +36,21 @@ class IntegrationOneDrive:
         }
         drive_id = os.getenv("MY_DRIVE_ID")
         item_id = os.getenv("MY_ITEM_ID")
-
+        # Search for the item on graphs using drive_id and item_id
         response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}", headers=headers)
 
-        
-        if response.status_code == 403:
-            logging.error(f"Error 403: {response.text}")
-        elif response.status_code == 404:
-           logging.error(f"Error 404: {response.text}")
-        elif response.status_code == 200:
+        if response.status_code == 200:
             item_details = response.json()
-            # print(f"Item Details: {item_details}")
+            #Here is where the download happes, when the response get the item it gonna search to download url
             download_url = item_details.get('@microsoft.graph.downloadUrl')
             if download_url:
                 file_response = requests.get(download_url)
                 with open('Entrevista de Desligamento.xlsx', 'wb') as f:
-
                     f.write(file_response.content)
                 logging.info(f"File downloaded successfully.{response.status_code}")
             else:
                 logging.error(f"Download URL not found.{response.status_code}:{response.text}")
+        #If has a error print error code and text
         else:
             logging.error(f"Error {response.status_code}: {response.text}")
 

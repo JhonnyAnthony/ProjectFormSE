@@ -13,15 +13,12 @@ class CloseWorkflow:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#executeActivity",
             "Authorization": self.api_id,
-            "Host": "sesuiteqas.fgm.ind.br",
+            "Host": "sesuiteqas.fgm.ind.br", # here is where the code is pushing
             "Connection": "Keep-Alive",
         }
 
-
-
-
     def close_workflow(self, record_id):
-
+        #soap to create workflow
         soap_envelope = f"""<?xml version="1.0" encoding="UTF-8"?>
                             <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
                                 <soapenv:Header/>
@@ -39,12 +36,12 @@ class CloseWorkflow:
                             </soapenv:Envelope>
  
             """
-        
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
             namespace = {'soap': 'http://schemas.xmlsoap.org/soap/envelope/', 'ns': 'urn:workflow'}
+            # Variables to print status, code and details on logging 
             status = root.find('.//ns:Status', namespace).text
             code = root.find('.//ns:Code', namespace).text
             detail = root.find('.//ns:Detail', namespace).text
@@ -53,6 +50,3 @@ class CloseWorkflow:
         else:
             logging.error(f"Error: {response.status_code}")
             return None
-                
-        
-  

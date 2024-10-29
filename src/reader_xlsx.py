@@ -1,20 +1,20 @@
 import pandas as pd
 from openpyxl import load_workbook
 
-class ExcelDataReader:
+class ExcelDataReader: #Class to declare the variables who get the file path and file name
     def __init__(self, file_path, sheet_name):
         self.file_path = file_path
         self.sheet_name = sheet_name
 
-
-    def excel_data(self):
+    def excel_data(self): # Here get the excel data
         self.df = pd.read_excel(self.file_path, sheet_name=self.sheet_name)
         workbook = load_workbook(self.file_path)
         self.sheet = workbook[self.sheet_name]
 
     def get_excel_row_data(self):
+        #Make a array
         row_data_list = []
-    # Start on row 2
+        # Start on row 2
         for row in range(2, self.sheet.max_row + 1):  # Iterate over all rows.
             # Get the value from column F
             cell_value = self.sheet[f'F{row}'].value
@@ -24,8 +24,8 @@ class ExcelDataReader:
         return row_data_list
 
 
-class RowData:
-    def __init__(self, sheet, row_idx):
+class RowData: # Here declare the variables who will be defined about the row
+    def __init__(self, sheet, row_idx): 
         self.nome                               = sheet[f'F{row_idx}'].value
         self.data_admissao                      = sheet[f'G{row_idx}'].value
         self.data_demissao                      = sheet[f'H{row_idx}'].value

@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 import pyodbc
 import logging
 
@@ -16,7 +14,7 @@ class DatabaseDataReader:
             logging.error(f"Error: {e}")
             if self.conn:
                 self.conn.close()
-
+    #Here get data about dataadmiss, datademiss,idprocess
     def get_se_row_data(self):
         row_data_list = []
         try:
@@ -48,7 +46,7 @@ class DatabaseDataReader:
             self.conn.close()
         return row_data_list
 
-class RowData:
+class RowData: #Declare the variables to be called
     def __init__(self, row):
         self.nome_colaborador = row.NOMECOLABORADOR
         self.data_admissao = row.DATAADMISS
