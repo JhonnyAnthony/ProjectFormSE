@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 import pyodbc
 import logging
+
 class DatabaseDataReader:
     def __init__(self, connection_string):
         self.connection_string = connection_string
@@ -9,10 +10,12 @@ class DatabaseDataReader:
     def load_database(self):
         try:
             self.conn = pyodbc.connect(self.connection_string)
-            logging.INFO(f"Connection successful! ")
+            logging.info("Connection successful!")
             self.cursor = self.conn.cursor()
         except Exception as e:
-            logging.error(f"Erro : {e}")
+            logging.error(f"Error: {e}")
+            if self.conn:
+                self.conn.close()
 
     def get_se_row_data(self):
         row_data_list = []
@@ -34,15 +37,15 @@ class DatabaseDataReader:
                                 WHERE
                                     WFP.CDPROCESSMODEL = '2518';
                                 """)
-
             rows = self.cursor.fetchall()
             for row in rows:
                 row_data_object = RowData(row)
                 row_data_list.append(row_data_object)
         except Exception as e:
-            logging.error(f"Erro: {e}")
-        self.cursor.close()
-        self.conn.close()
+            logging.error(f"Error: {e}")
+        finally:
+            self.cursor.close()
+            self.conn.close()
         return row_data_list
 
 class RowData:
@@ -51,7 +54,3 @@ class RowData:
         self.data_admissao = row.DATAADMISS
         self.data_demissao = row.DATADEMISS
         self.id_process = row.IDPROCESS
-
-
-
-
