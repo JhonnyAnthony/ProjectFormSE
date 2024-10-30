@@ -23,7 +23,6 @@ class ExcelDataReader: #Class to declare the variables who get the file path and
                 row_data_list.append(row_data_object)
         return row_data_list
 
-
 class RowData: # Here declare the variables who will be defined about the row
     def __init__(self, sheet, row_idx): 
         self.nome                               = sheet[f'F{row_idx}'].value

@@ -33,8 +33,8 @@ def logs():
 logs()
 
 # Downloader excel file
-integration = IntegrationOneDrive(client_id, client_secret, authority)
-integration.download()
+# integration = IntegrationOneDrive(client_id, client_secret, authority)
+# integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
@@ -49,9 +49,16 @@ se_data = db_reader.get_se_row_data()
 
 counter = 0
 for row_data_excel in excel_data:
+    nome_duplicado = False
     for row_data_se in se_data:
-        if row_data_se.nome_colaborador == row_data_excel.nome:
-            None
+        if row_data_se.nome_colaborador == row_data_excel.nome and row_data_se.data_demissao == row_data_excel.data_demissao:
+            nome_duplicado = True
+            logging.info(f"{row_data_excel.nome} já foi cadastrada")
+            break
+        elif  row_data_se.data_demissao != row_data_excel.data_demissao:
+                nome_duplicado = False  
+    if nome_duplicado:
+        continue
 
     transport = Transportation() # Create an instance of Transportation
     validation_api = ValidationAPI() # Instantiate the ValidationAPI class

@@ -19,7 +19,7 @@ class Transportation:
 
 
 
-
+        #Get the variables declared on main
     def edit_workflow(self, record_id, nome, data_admissao, data_demissao, cargo, iniciativa_desligamento, motivo_desligamento, avalia_fgm,
                              dms_consideracoes_01, avalia_estrutura_fgm, dms_consideracoes_02, avalia_ambiente_fgm, dms_consideracoes_03, avalia_setor, dms_consideracoes_04,
                              vale_transporte, vale_refeicao, plano_saude_medico, plano_saude_odontologico, convenio_farmacia, convenio_odonto, presente_aniversario,
@@ -332,8 +332,6 @@ class Transportation:
                         </soapenv:Body>
                         </soapenv:Envelope>
             """
-        
-        # print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
 
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
@@ -343,7 +341,7 @@ class Transportation:
             status = root.find('.//ns:Status', namespace).text
             code = root.find('.//ns:Code', namespace).text
             detail = root.find('.//ns:Detail', namespace).text
-            logging.info(f"Status: {status}, Code: {code}, Detail: {detail} - Transportation")
+            logging.info(f"Status: {status}, Code: {code}, Detail: {detail} de {nome} Transportation")
             return response.text
         else:
             logging.error(f"Error: {response.status_code}")

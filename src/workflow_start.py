@@ -2,7 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 from config import process_id,api_id,url,user
 import logging
-class ValidationAPI:
+class ValidationAPI: 
     def __init__(self):
         self.api_id = api_id
         self.url = url
