@@ -49,12 +49,15 @@ se_data = db_reader.get_se_row_data()
 
 counter = 0
 for row_data_excel in excel_data:
+    # Instance create only to make a bool to validade duplicates
     nome_duplicado = False
     for row_data_se in se_data:
+        # Valid if has a name and a data already in SE
         if row_data_se.nome_colaborador == row_data_excel.nome and row_data_se.data_demissao == row_data_excel.data_demissao:
             nome_duplicado = True
-            # logging.info(f"{row_data_excel.nome} já foi cadastrada")
+            logging.info(f"{row_data_excel.nome} already on SE")
             break
+        # If name is already in SE checking if the data is different, if is gonna reverse the instance to continue scripting
         elif  row_data_se.data_demissao != row_data_excel.data_demissao:
                 nome_duplicado = False  
     if nome_duplicado:
