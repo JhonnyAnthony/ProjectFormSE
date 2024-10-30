@@ -33,8 +33,8 @@ def logs():
 logs()
 
 # Downloader excel file
-# integration = IntegrationOneDrive(client_id, client_secret, authority)
-# integration.download()
+integration = IntegrationOneDrive(client_id, client_secret, authority)
+integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
@@ -53,7 +53,7 @@ for row_data_excel in excel_data:
     for row_data_se in se_data:
         if row_data_se.nome_colaborador == row_data_excel.nome and row_data_se.data_demissao == row_data_excel.data_demissao:
             nome_duplicado = True
-            logging.info(f"{row_data_excel.nome} já foi cadastrada")
+            # logging.info(f"{row_data_excel.nome} já foi cadastrada")
             break
         elif  row_data_se.data_demissao != row_data_excel.data_demissao:
                 nome_duplicado = False  
