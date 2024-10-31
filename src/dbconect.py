@@ -40,7 +40,7 @@ class DatabaseDataReader:
                 row_data_object = RowData(row)
                 row_data_list.append(row_data_object)
         except Exception as e:
-            logging.error(f"Error: {e}")
+            logging.error(f"Error: {e} - Dbconect")
         finally:
             self.cursor.close()
             self.conn.close()

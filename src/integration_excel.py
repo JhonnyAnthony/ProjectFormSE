@@ -52,5 +52,5 @@ class IntegrationOneDrive: #here is to declare token requirements
                 logging.error(f"Download URL not found.{response.status_code}:{response.text}")
         #If has a error print error code and text
         else:
-            logging.error(f"Error {response.status_code}: {response.text}")
+            logging.error(f"Error {response.status_code}: {response.text} - Integration")
 

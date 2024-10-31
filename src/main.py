@@ -147,6 +147,6 @@ for row_data_excel in excel_data:
         # )
         
     except Exception as e:
-        logging.error(f"An error occurred: {e}")
+        logging.error(f"An error occurred: {e} - Main")
 print("Script Finished!") #When loop finish stop and print finished
 
