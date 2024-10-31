@@ -4,7 +4,6 @@ import msal
 import requests
 import logging
 
-
 class IntegrationOneDrive: #here is to declare token requirements
     def __init__(self, client_id, client_secret, authority):
         self.client_id = client_id

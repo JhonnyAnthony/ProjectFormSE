@@ -33,7 +33,7 @@ class DatabaseDataReader:
                                     WFPROCESS WFP
                                     ON FORMREG.CDASSOC = WFP.CDASSOCREG
                                 WHERE
-                                    WFP.CDPROCESSMODEL = '2518';
+                                    WFP.CDPROCESSMODEL = '2553';
                                 """)
             rows = self.cursor.fetchall()
             for row in rows:

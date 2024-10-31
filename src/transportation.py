@@ -13,7 +13,7 @@ class Transportation:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#editEntityRecord",
             "Authorization": self.api_id,
-            "Host": "sesuiteqas.fgm.ind.br",
+            "Host": "sesuitev2.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
 
