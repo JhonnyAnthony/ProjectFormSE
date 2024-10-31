@@ -5,3 +5,4 @@ logs/
 Entrevista de Desligamento.xlsx
 .xlsx
 src/__pycache_
+*.pyc
