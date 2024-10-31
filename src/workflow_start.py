@@ -15,14 +15,14 @@ class ValidationAPI:
             "Connection": "Keep-Alive",
         }
 
-    def get_workflow(self):
+    def get_workflow(self,nome):
         soap_envelope = f'''<?xml version="1.0" encoding="UTF-8"?>
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Entrevista de Desligamento de </urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome}</urn:WorkflowTitle>
                     <urn:UserID>{user}</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
@@ -32,8 +32,7 @@ class ValidationAPI:
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
-            print(response.text)
-            record_id = root.find('.//urn:RecordId', namespaces={'urn': 'urn:workflow'})
+            record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
             if record_id is not None:
                 logging.info(f"RecordID: {record_id.text}")
                 return record_id.text
@@ -41,7 +40,5 @@ class ValidationAPI:
                 logging.error("RecordID not found")
                 return None
         else:
-            logging.error(f"Error: {response.status_code}: {response.content} - Workflow_Start")
+            logging.error(f"Error: {response.status_code}")
             return None
-teste = ValidationAPI()
-teste2 = teste.get_workflow()

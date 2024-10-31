@@ -33,8 +33,8 @@ def logs():
 logs()
 
 # Downloader excel file
-integration = IntegrationOneDrive(client_id, client_secret, authority)
-integration.download()
+# integration = IntegrationOneDrive(client_id, client_secret, authority)
+# integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
@@ -69,7 +69,7 @@ for row_data_excel in excel_data:
     
     try: # Here send to SE
         counter += 1
-        print(f"Executing Script - Wait Finish!, {counter}: Script Running")
+        logging.info(f"Executing Script - Wait Finish!, {counter}: Script Running")
         logs()
         
         
