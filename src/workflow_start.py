@@ -11,7 +11,7 @@ class ValidationAPI:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#getWorkflow",
             "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br",
+            "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
 
@@ -34,11 +34,11 @@ class ValidationAPI:
             root = ET.fromstring(response.content)
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
             if record_id is not None:
-                logging.info(f"RecordID: {record_id.text}")
+                logging.info(f"RecordId: {record_id.text}")
                 return record_id.text
             else:
                 logging.error("RecordID not found")
                 return None
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error: {response.status_code} - Workflow")
             return None

@@ -33,14 +33,15 @@ class DatabaseDataReader:
                                     WFPROCESS WFP
                                     ON FORMREG.CDASSOC = WFP.CDASSOCREG
                                 WHERE
-                                    WFP.CDPROCESSMODEL = '2553';
-                                """)
+                                    WFP.CDPROCESSMODEL = '2518';
+                                """) # 2518 = qas
+                                     # 2550 = prd
             rows = self.cursor.fetchall()
             for row in rows:
                 row_data_object = RowData(row)
                 row_data_list.append(row_data_object)
         except Exception as e:
-            logging.error(f"Error: {e}")
+            logging.error(f"Error: {e}  - Conection")
         finally:
             self.cursor.close()
             self.conn.close()

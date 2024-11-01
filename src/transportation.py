@@ -13,7 +13,7 @@ class Transportation:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#editEntityRecord",
             "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br",
+            "Host": "sesuiteqas.fgm.ind.br",
             "Connection": "Keep-Alive",
         }
 
@@ -345,7 +345,7 @@ class Transportation:
             logging.info(f"Status: {status}, Code: {code}, Detail: {detail} de {nome} Transportation")
             return response.text
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error: {response.status_code} - Transportation")
         return None
                 
                 

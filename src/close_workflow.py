@@ -48,5 +48,5 @@ class CloseWorkflow:
             logging.info(f"Status: {status}, Code: {code}, Detail: {detail} - Close Workflow")
             return response.text
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error: {response.status_code} - Close")
             return None
