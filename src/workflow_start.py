@@ -40,5 +40,5 @@ class ValidationAPI:
                 logging.error("RecordID not found")
                 return None
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error: {response.status_code} - {response.content} : Workflow")
             return None
