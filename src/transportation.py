@@ -345,7 +345,7 @@ class Transportation:
             logging.info(f"Status: {status}, Code: {code}, Detail: {detail} de {nome} Transportation")
             return response.text
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error {response.status_code}: {response.content} - Transportation")
         return None
                 
                 

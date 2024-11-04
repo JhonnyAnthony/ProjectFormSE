@@ -13,7 +13,7 @@ class CloseWorkflow:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#executeActivity",
             "Authorization": self.api_id,
-            "Host": "sesuiteqas.fgm.ind.br", # here is where the code is pushing
+            "Host": "sesuitev2.fgm.ind.br", # here is where the code is pushing
             "Connection": "Keep-Alive",
         }
 
@@ -48,5 +48,5 @@ class CloseWorkflow:
             logging.info(f"Status: {status}, Code: {code}, Detail: {detail} - Close Workflow")
             return response.text
         else:
-            logging.error(f"Error: {response.status_code}")
+            logging.error(f"Error {response.status_code}: {response.content} - Close_Workflow")
             return None

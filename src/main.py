@@ -142,9 +142,9 @@ for row_data_excel in excel_data:
             presente_casamento          =row_data_excel.presente_casamento
             )
         # Calls closer_workflow
-        # closer = close.close_workflow(
-        #     record_id = record_id,
-        # )
+        closer = close.close_workflow(
+            record_id = record_id,
+        )
         
     except Exception as e:
         logging.error(f"An error occurred: {e}")
