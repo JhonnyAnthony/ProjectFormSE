@@ -2,6 +2,5 @@ venv/
 .env
 helps/
 Entrevista de Desligamento.xlsx
-.xlsx
 src/__pycache_
 *.pyc
