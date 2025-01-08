@@ -1,6 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-from config import api_id,url
+from config import api_id,url,Host
 import logging
 
 class Transportation:
@@ -13,7 +13,7 @@ class Transportation:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#editEntityRecord",
             "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br",
+            "Host": Host,
             "Connection": "Keep-Alive",
         }
 

@@ -1,6 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-from config import process_id,api_id,url,user
+from config import process_id,api_id,url,user,Host
 import logging
 class ValidationAPI: 
     def __init__(self):
@@ -11,7 +11,7 @@ class ValidationAPI:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#getWorkflow",
             "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br",
+            "Host": Host,
             "Connection": "Keep-Alive",
         }
 

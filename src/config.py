@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
-
+Host = os.getenv("HOST")
 server = os.getenv('DB_SERVER')
 database = os.getenv('DB_DATABASE')
 username = os.getenv('DB_USER')
