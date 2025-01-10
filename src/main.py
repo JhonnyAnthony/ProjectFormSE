@@ -11,7 +11,7 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    log_directory = r"C:\Github\ProjectFormSE\Logs"
+    log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
@@ -90,61 +90,37 @@ for row_data_excel in excel_data:
 
         # Call edit_workflow method with the fetched record_id and row data
         transport.edit_workflow(
-            record_id                   =record_id,
-            nome                        =row_data_excel.nome,
-            data_admissao               =formatted_data_admissao,
-            data_demissao               =formatted_data_demissao,
-            setor                       =row_data_excel.setor,
-            cargo                       =row_data_excel.cargo,
-            iniciativa_desligamento     =row_data_excel.iniciativa_desligamento,
-            motivo_desligamento         =row_data_excel.motivo_desligamento,
-            avalia_fgm                  =row_data_excel.avalia_fgm,
-            dms_consideracoes_01        =row_data_excel.dms_consideracoes_01,
-            avalia_estrutura_fgm        =row_data_excel.avalia_estrutura_fgm,
-            dms_consideracoes_02        =row_data_excel.dms_consideracoes_02,
-            avalia_ambiente_fgm         =row_data_excel.avalia_ambiente_fgm,
-            dms_consideracoes_03        =row_data_excel.dms_consideracoes_03,
-            avalia_setor                =row_data_excel.avalia_setor,
-            dms_consideracoes_04        =row_data_excel.dms_consideracoes_04,
-            vale_transporte             =row_data_excel.vale_transporte,
-            vale_refeicao               =row_data_excel.vale_refeicao,
-            plano_saude_medico          =row_data_excel.plano_saude_medico,
-            plano_saude_odontologico    =row_data_excel.plano_saude_odontologico,
-            convenio_farmacia           =row_data_excel.convenio_farmacia,
-            convenio_odonto             =row_data_excel.convenio_odonto,
-            presente_aniversario        =row_data_excel.presente_aniversario,
-            vacina                      =row_data_excel.vacina,
-            seguro_vida                 =row_data_excel.seguro_vida,
-            bolsa_estudo                =row_data_excel.bolsa_estudo,
-            dms_consideracoes_05        =row_data_excel.dms_consideracoes_05,
-            avalia_atuacao_cargo        =row_data_excel.avalia_atuacao_cargo,
-            dms_consideracoes_06        =row_data_excel.dms_consideracoes_06,
-            avalia_recursos             =row_data_excel.avalia_recursos,
-            dms_consideracoes_07        =row_data_excel.dms_consideracoes_07,
-            avalia_gestao               =row_data_excel.avalia_gestao,
-            dms_consideracoes_08        =row_data_excel.dms_consideracoes_08,
-            avalia_comunicacao_interna  =row_data_excel.avalia_comunicacao_interna,
-            avalia_endomarketing        =row_data_excel.avalia_endomarketing,
-            avalia_treinamentos         =row_data_excel.avalia_treinamentos,
-            avalia_recrutamento_interno =row_data_excel.avalia_recrutamento_interno,
-            avalia_suporte_folhas       =row_data_excel.avalia_suporte_folhas,
-            avalia_segurança_trabalho   =row_data_excel.avalia_segurança_trabalho,
-            avalia_canal_ouvidoria      =row_data_excel.avalia_canal_ouvidoria,
-            avalia_ccq                  =row_data_excel.avalia_ccq,
-            avalia_Onboarding           =row_data_excel.avalia_Onboarding,
-            dms_consideracoes_09        =row_data_excel.dms_consideracoes_09,
-            voltaria_para_fgm           =row_data_excel.voltaria_para_fgm,
-            dms_consideracoes_10        =row_data_excel.dms_consideracoes_10,
-            indicaria_fgm               =row_data_excel.indicaria_fgm,
-            dms_consideracoes_11        =row_data_excel.dms_consideracoes_11,
-            mensagem_fgm                =row_data_excel.mensagem_fgm,
-            presente_nascimento         =row_data_excel.presente_nascimento,
-            presente_casamento          =row_data_excel.presente_casamento
+            record_id                           =record_id,
+            nome                                =row_data_excel.nome,
+            data_demissao                       =formatted_data_demissao,
+            setor                               =row_data_excel.setor,
+            cargo                               =row_data_excel.cargo,
+            iniciativa_desligamento             =row_data_excel.iniciativa_desligamento,
+            motivodesliga                       =row_data_excel.motivodesliga,
+            avaliacaojornada                    =row_data_excel.avaliacaojornada,
+            dms_consideracoes_01                =row_data_excel.dms_consideracoes_01,
+            beneficios                          =row_data_excel.beneficios,
+            beneficiostxt                       =row_data_excel.beneficiostxt,
+            avalia_ambiente_fgm                 =row_data_excel.avalia_ambiente_fgm,
+            dms_consideracoes_04                =row_data_excel.dms_consideracoes_04,
+            mudancastrab                        =row_data_excel.mudancastrab,
+            comunicacao                         =row_data_excel.comunicacao,
+            comunicatxt                         =row_data_excel.comunicatxt,
+            treinamentos                        =row_data_excel.treinamentos,
+            oportunidades                       =row_data_excel.oportunidades,
+            orientacao                          =row_data_excel.orientacao,
+            consilideranca                      =row_data_excel.consilideranca,
+            feedback                            =row_data_excel.feedback,
+            gestao                              =row_data_excel.gestao,
+            indicaria_fgm                       =row_data_excel.indicaria_fgm,
+            dms_consideracoes_11                =row_data_excel.dms_consideracoes_11,
+            mensagemparafgm                     =row_data_excel.nome,
+            nome                                =row_data_excel.mensagemparafgm,
             )
         # Calls closer_workflow
-        closer = close.close_workflow(
-            record_id = record_id,
-        )
+        # closer = close.close_workflow(
+        #     record_id = record_id,
+        # )
         
     except Exception as e:
         logging.error(f"An error occurred: {e}")

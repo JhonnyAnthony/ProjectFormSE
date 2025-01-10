@@ -1,2 +1,6 @@
 2025-01-08 13:35:08 INFO File downloaded successfully.200
 2025-01-08 13:35:08 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-08 13:40:20 INFO File downloaded successfully.200
+2025-01-08 13:40:20 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-08 13:41:21 INFO File downloaded successfully.200
+2025-01-08 13:41:21 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
