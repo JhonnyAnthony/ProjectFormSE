@@ -25,30 +25,30 @@ class ExcelDataReader: #Class to declare the variables who get the file path and
 
 class RowData: # Here declare the variables who will be defined about the row
     def __init__(self, sheet, row_idx): 
-        self.nome                               = sheet[f'G{row_idx}'].value
-        self.data_demissao                      = sheet[f'H{row_idx}'].value
-        self.setor                              = sheet[f'I{row_idx}'].value
-        self.cargo                              = sheet[f'J{row_idx}'].value
-        self.iniciativa_desligamento            = sheet[f'K{row_idx}'].value
-        self.motivodesliga                      = sheet[f'L{row_idx}'].value 
-        self.avaliacaojornada                   = sheet[f'M{row_idx}'].value
-        self.dms_consideracoes_01               = sheet[f'N{row_idx}'].value 
-        self.beneficios                         = sheet[f'O{row_idx}'].value
-        self.beneficiostxt                      = sheet[f'P{row_idx}'].value
-        self.avalia_ambiente_fgm                = sheet[f'Q{row_idx}'].value
-        self.dms_consideracoes_04               = sheet[f'R{row_idx}'].value
-        self.mudancastrab                       = sheet[f'S{row_idx}'].value
-        self.comunicacao                        = sheet[f'T{row_idx}'].value
-        self.comunicatxt                        = sheet[f'U{row_idx}'].value
-        self.treinamentos                       = sheet[f'V{row_idx}'].value
-        self.oportunidades                      = sheet[f'W{row_idx}'].value
-        self.orientacao                         = sheet[f'Y{row_idx}'].value
-        self.consilideranca                     = sheet[f'Z{row_idx}'].value
-        self.feedback                           = sheet[f'Z{row_idx}'].value
-        self.gestao                             = sheet[f'AA{row_idx}'].value
-        self.indicaria_fgm                      = sheet[f'AB{row_idx}'].value
-        self.dms_consideracoes_11               = sheet[f'AC{row_idx}'].value
-        self.mensagemparafgm                    = sheet[f'AD{row_idx}'].value
+        self.nome                               = sheet[f'F{row_idx}'].value
+        self.data_demissao                      = sheet[f'G{row_idx}'].value
+        self.setor                              = sheet[f'H{row_idx}'].value
+        self.cargo                              = sheet[f'I{row_idx}'].value
+        self.iniciativa_desligamento            = sheet[f'J{row_idx}'].value
+        self.motivodesliga                      = sheet[f'K{row_idx}'].value 
+        self.avaliacaojornada                   = sheet[f'L{row_idx}'].value
+        self.dms_consideracoes_01               = sheet[f'M{row_idx}'].value 
+        self.beneficios                         = sheet[f'N{row_idx}'].value
+        self.beneficiostxt                      = sheet[f'O{row_idx}'].value
+        self.avalia_ambiente_fgm                = sheet[f'P{row_idx}'].value
+        self.dms_consideracoes_04               = sheet[f'Q{row_idx}'].value
+        self.mudancastrab                       = sheet[f'R{row_idx}'].value
+        self.comunicacao                        = sheet[f'S{row_idx}'].value
+        self.comunicatxt                        = sheet[f'T{row_idx}'].value
+        self.treinamentos                       = sheet[f'U{row_idx}'].value
+        self.oportunidades                      = sheet[f'V{row_idx}'].value
+        self.orientacao                         = sheet[f'W{row_idx}'].value
+        self.consilideranca                     = sheet[f'X{row_idx}'].value
+        self.feedback                           = sheet[f'Y{row_idx}'].value
+        self.gestao                             = sheet[f'Z{row_idx}'].value
+        self.indicaria_fgm                      = sheet[f'AA{row_idx}'].value
+        self.dms_consideracoes_11               = sheet[f'AB{row_idx}'].value
+        self.mensagemparafgm                    = sheet[f'AC{row_idx}'].value
 
 
 

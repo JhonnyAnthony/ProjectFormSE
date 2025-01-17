@@ -21,11 +21,12 @@ class Transportation:
 
         #Get the variables declared on main
     def edit_workflow(self, record_id, nome,data_demissao,setor,cargo,iniciativa_desligamento,motivodesliga,
-                    beneficios,avalia_ambiente_fgm,dms_consideracoes_04,orientacao,gestao,indicaria_fgm,dms_consideracoes_11,
+                    beneficios,beneficiostxt,avalia_ambiente_fgm,dms_consideracoes_04,orientacao,gestao,indicaria_fgm,dms_consideracoes_11,
                     mensagemparafgm,comunicacao,avaliacaojornada,dms_consideracoes_01,mudancastrab,comunicatxt,treinamentos,
                     oportunidades,consilideranca,feedback,):
 
-        soap_envelope = f"""<?xml version="1.0" encoding="UTF-8"?>
+        soap_envelope = f"""~
+                    <?xml version="1.0" encoding="UTF-8"?>
                     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
                         <soapenv:Header/>
                         <soapenv:Body>
@@ -58,6 +59,10 @@ class Transportation:
                                     <urn:EntityAttribute>
                                     <urn:EntityAttributeID>demaisconsi11</urn:EntityAttributeID>
                                     <urn:EntityAttributeValue>{dms_consideracoes_11}</urn:EntityAttributeValue>
+                                    </urn:EntityAttribute>
+                                    <urn:EntityAttribute>
+                                    <urn:EntityAttributeID>beneficiostxt</urn:EntityAttributeID>
+                                    <urn:EntityAttributeValue>{beneficiostxt}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                     <urn:EntityAttributeID>mensagemparafgm</urn:EntityAttributeID>

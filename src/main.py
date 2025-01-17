@@ -11,7 +11,7 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
+    log_directory = r"C:/Github/ProjectFormSE/Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
@@ -72,17 +72,12 @@ for row_data_excel in excel_data:
         print(f"Testando {counter}")
         record_id = validation_api.get_workflow(row_data_excel.nome)# Fetch RecordID for each row if needed and put nome in workflow
         # record_id = '077939' #Just for tests
-        if isinstance(row_data_excel.data_admissao, str):
-            data_admissao = datetime.strptime(row_data_excel.data_admissao, "%Y-%m-%d")
-        else:
-            data_admissao = row_data_excel.data_admissao
-            
+                    
         if isinstance(row_data_excel.data_demissao, str):
             data_demissao = datetime.strptime(row_data_excel.data_demissao, "%Y-%m-%d")
         else:
             data_demissao = row_data_excel.data_demissao
         # Format dates to yyyy-MM-dd
-        formatted_data_admissao = row_data_excel.data_admissao.strftime("%Y-%m-%d")
         formatted_data_demissao = row_data_excel.data_demissao.strftime("%Y-%m-%d")
 
         # Call edit_workflow method with the fetched record_id and row data
