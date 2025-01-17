@@ -1,6 +1,6 @@
 import os
 import logging
-from config import server,database,username,sheet,file_name,password,client_id,client_secret,authority
+from config import server,database,username,sheet,file_name,password,client_id,client_secret,authority,driver
 from reader_xlsx import ExcelDataReader
 from transportation import Transportation
 from workflow_start import ValidationAPI
@@ -42,7 +42,7 @@ reader.excel_data()
 excel_data = reader.get_excel_row_data()
 
 # Connection string
-connection_string = f'DRIVER={{SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
 db_reader = DatabaseDataReader(connection_string)
 db_reader.load_database()
 se_data = db_reader.get_se_row_data()          
@@ -68,11 +68,8 @@ for row_data_excel in excel_data:
     close = CloseWorkflow() # Calls closeworkflow
     
     try: # Here send to SE
-        counter += 1
-        print(f"Executing Script - Wait Finish!, {counter}: Script Running")
-        logs()
-        
-        
+        counter += 1        
+        print(f"Testando {counter}")
         record_id = validation_api.get_workflow(row_data_excel.nome)# Fetch RecordID for each row if needed and put nome in workflow
         # record_id = '077939' #Just for tests
         if isinstance(row_data_excel.data_admissao, str):
@@ -114,8 +111,7 @@ for row_data_excel in excel_data:
             gestao                              =row_data_excel.gestao,
             indicaria_fgm                       =row_data_excel.indicaria_fgm,
             dms_consideracoes_11                =row_data_excel.dms_consideracoes_11,
-            mensagemparafgm                     =row_data_excel.nome,
-            nome                                =row_data_excel.mensagemparafgm,
+            mensagemparafgm                     =row_data_excel.mensagemparafgm,
             )
         # Calls closer_workflow
         # closer = close.close_workflow(

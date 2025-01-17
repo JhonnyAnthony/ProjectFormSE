@@ -1,0 +1,12 @@
+2025-01-17 08:24:37 INFO File downloaded successfully.200
+2025-01-17 08:24:52 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-17 08:29:53 INFO File downloaded successfully.200
+2025-01-17 08:30:08 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-17 08:39:02 INFO File downloaded successfully.200
+2025-01-17 08:39:03 INFO Connection successful!
+2025-01-17 08:44:57 INFO File downloaded successfully.200
+2025-01-17 08:44:57 INFO Connection successful!
+2025-01-17 08:49:33 INFO File downloaded successfully.200
+2025-01-17 08:49:33 INFO Connection successful!
+2025-01-17 08:50:00 INFO File downloaded successfully.200
+2025-01-17 08:50:00 INFO Connection successful!
