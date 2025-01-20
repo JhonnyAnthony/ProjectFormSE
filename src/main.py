@@ -105,7 +105,7 @@ for row_data_excel in excel_data:
             feedback                            =row_data_excel.feedback,
             gestao                              =row_data_excel.gestao,
             indicaria_fgm                       =row_data_excel.indicaria_fgm,
-            dms_consideracoes_11                =row_data_excel.dms_consideracoes_11,
+            recomendatxt                        =row_data_excel.recomendatxt,
             mensagemparafgm                     =row_data_excel.mensagemparafgm,
             )
         # Calls closer_workflow

@@ -47,7 +47,7 @@ class RowData: # Here declare the variables who will be defined about the row
         self.feedback                           = sheet[f'Y{row_idx}'].value
         self.gestao                             = sheet[f'Z{row_idx}'].value
         self.indicaria_fgm                      = sheet[f'AA{row_idx}'].value
-        self.dms_consideracoes_11               = sheet[f'AB{row_idx}'].value
+        self.recomendatxt                       = sheet[f'AB{row_idx}'].value
         self.mensagemparafgm                    = sheet[f'AC{row_idx}'].value
 
 
