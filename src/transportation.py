@@ -172,7 +172,7 @@ class Transportation:
                         </soapenv:Envelope>
             """
         soap_envelope = soap_envelope.replace("&", "&amp;")
-        print(soap_envelope)
+        # print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
 
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
