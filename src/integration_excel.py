@@ -52,6 +52,3 @@ class IntegrationOneDrive: #here is to declare token requirements
         #If has a error print error code and text
         else:
             logging.error(f"Error {response.status_code}: {response.text} - Integration_Excel")
-
-integration = IntegrationOneDrive(client_id, client_secret, authority)
-integration.download()
