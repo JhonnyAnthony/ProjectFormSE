@@ -11,7 +11,7 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    log_directory = r"C:/Github/ProjectFormSE/Logs"
+    log_directory = r"C:\ProjectFormSE\Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)

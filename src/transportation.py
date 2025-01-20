@@ -4,7 +4,6 @@ from config import api_id,url,Host
 import logging
 
 class Transportation:
-    # Function to declare API, URL variables and perform authorization
     def __init__(self):
         self.api_id = api_id
         self.url = url
@@ -25,8 +24,7 @@ class Transportation:
                     mensagemparafgm,comunicacao,avaliacaojornada,dms_consideracoes_01,mudancastrab,comunicatxt,treinamentos,
                     oportunidades,consilideranca,feedback,):
 
-        soap_envelope = f"""~
-                    <?xml version="1.0" encoding="UTF-8"?>
+        soap_envelope = f"""
                     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
                         <soapenv:Header/>
                         <soapenv:Body>
@@ -37,142 +35,14 @@ class Transportation:
                                     <urn:EntityAttribute>
                                     <urn:EntityAttributeID>nomcol</urn:EntityAttributeID>
                                     <urn:EntityAttributeValue>{nome}</urn:EntityAttributeValue>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>datademiss</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{data_demissao}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>setor</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{setor}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>cargo</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{cargo}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>motivodesliga</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{motivodesliga}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttributeID>demaisconsid4</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{dms_consideracoes_04}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>demaisconsi11</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{dms_consideracoes_11}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>beneficiostxt</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{beneficiostxt}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>mensagemparafgm</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{mensagemparafgm}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>avaliacaojornada</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{avaliacaojornada}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>demaisconsi1</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{dms_consideracoes_01}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>mudancastrab</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{mudancastrab}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>comunicatxt</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{comunicatxt}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>treinamentos</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{treinamentos}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>oportunidades</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{oportunidades}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>consilideranca</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{consilideranca}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>feedback</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{feedback}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                    <urn:EntityAttributeID>demaisconsi11</urn:EntityAttributeID>
-                                    <urn:EntityAttributeValue>{dms_consideracoes_11}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
                                 </urn:EntityAttributeList>
-                                <urn:RelationshipList>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>iniciativadesli</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{iniciativa_desligamento}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>avaliaambiente</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{avalia_ambiente_fgm}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>beneficios</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{beneficios}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>comunicacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{comunicacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>orientacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{orientacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>gestao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{gestao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>indicafgm</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                </urn:RelationshipList>
                             </urn:editEntityRecord>
                         </soapenv:Body>
                         </soapenv:Envelope>
             """
         soap_envelope = soap_envelope.replace("&", "&amp;")
-        print(soap_envelope)
+        # print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
 
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
