@@ -29,6 +29,7 @@ def logs():
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
+        encoding="utf-8",
         datefmt="%Y-%m-%d %H:%M:%S",
         filename=log_filename  # Use the generated filename within the log folder
     )
@@ -36,8 +37,8 @@ def logs():
 logs()
 
 # Downloader excel file
-# integration = IntegrationOneDrive(client_id, client_secret, authority)
-# integration.download()
+integration = IntegrationOneDrive(client_id, client_secret, authority)
+integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
