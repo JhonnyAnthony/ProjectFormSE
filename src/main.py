@@ -11,7 +11,10 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
+    # Define the directory path where logs will be stored
+    directory = os.getcwd()
+    log_directory = f"{directory}/Logs"
+    # log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
@@ -33,8 +36,8 @@ def logs():
 logs()
 
 # Downloader excel file
-integration = IntegrationOneDrive(client_id, client_secret, authority)
-integration.download()
+# integration = IntegrationOneDrive(client_id, client_secret, authority)
+# integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
@@ -81,9 +84,9 @@ for row_data_excel in excel_data:
         formatted_data_demissao = row_data_excel.data_demissao.strftime("%Y-%m-%d")
 
         # Call edit_workflow method with the fetched record_id and row data
-        print("teste")
+
         transport.edit_workflow(
-            # record_id                           =record_id,
+            record_id                           =record_id,
             nome                                =row_data_excel.nome,
             data_demissao                       =formatted_data_demissao,
             setor                               =row_data_excel.setor,
@@ -94,6 +97,7 @@ for row_data_excel in excel_data:
             dms_consideracoes_01                =row_data_excel.dms_consideracoes_01,
             beneficios                          =row_data_excel.beneficios,
             beneficiostxt                       =row_data_excel.beneficiostxt,
+            beneficiosrelev                     =row_data_excel.beneficiosrelev,
             avalia_ambiente_fgm                 =row_data_excel.avalia_ambiente_fgm,
             dms_consideracoes_04                =row_data_excel.dms_consideracoes_04,
             mudancastrab                        =row_data_excel.mudancastrab,
@@ -113,7 +117,7 @@ for row_data_excel in excel_data:
         # closer = close.close_workflow(
         #     record_id = record_id,
         # )
-        print("teste")
+
         
     except Exception as e:
         logging.error(f"An error occurred: {e} - MAIN" )

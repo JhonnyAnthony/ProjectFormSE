@@ -35,20 +35,21 @@ class RowData: # Here declare the variables who will be defined about the row
         self.dms_consideracoes_01               = sheet[f'M{row_idx}'].value 
         self.beneficios                         = sheet[f'N{row_idx}'].value
         self.beneficiostxt                      = sheet[f'O{row_idx}'].value
-        self.avalia_ambiente_fgm                = sheet[f'P{row_idx}'].value
-        self.dms_consideracoes_04               = sheet[f'Q{row_idx}'].value
-        self.mudancastrab                       = sheet[f'R{row_idx}'].value
-        self.comunicacao                        = sheet[f'S{row_idx}'].value
-        self.comunicatxt                        = sheet[f'T{row_idx}'].value
-        self.treinamentos                       = sheet[f'U{row_idx}'].value
-        self.oportunidades                      = sheet[f'V{row_idx}'].value
-        self.orientacao                         = sheet[f'W{row_idx}'].value
-        self.consilideranca                     = sheet[f'X{row_idx}'].value
-        self.feedback                           = sheet[f'Y{row_idx}'].value
-        self.gestao                             = sheet[f'Z{row_idx}'].value
-        self.indicaria_fgm                      = sheet[f'AA{row_idx}'].value
-        self.recomendatxt                       = sheet[f'AB{row_idx}'].value
-        self.mensagemparafgm                    = sheet[f'AC{row_idx}'].value
+        self.beneficiosrelev                    = sheet[f'P{row_idx}'].value
+        self.avalia_ambiente_fgm                = sheet[f'Q{row_idx}'].value
+        self.dms_consideracoes_04               = sheet[f'R{row_idx}'].value
+        self.mudancastrab                       = sheet[f'S{row_idx}'].value
+        self.comunicacao                        = sheet[f'T{row_idx}'].value
+        self.comunicatxt                        = sheet[f'U{row_idx}'].value
+        self.treinamentos                       = sheet[f'V{row_idx}'].value
+        self.oportunidades                      = sheet[f'W{row_idx}'].value
+        self.orientacao                         = sheet[f'X{row_idx}'].value
+        self.consilideranca                     = sheet[f'Y{row_idx}'].value
+        self.feedback                           = sheet[f'Z{row_idx}'].value
+        self.gestao                             = sheet[f'AA{row_idx}'].value
+        self.indicaria_fgm                      = sheet[f'AB{row_idx}'].value
+        self.recomendatxt                       = sheet[f'AC{row_idx}'].value
+        self.mensagemparafgm                    = sheet[f'AD{row_idx}'].value
 
 
 

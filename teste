@@ -77,61 +77,69 @@
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                 </urn:EntityAttributeList>
-                                <urn:RelationshipList>
-                                    <urn:Relationship>
+                                <urn:Relationship>
                                     <urn:RelationshipID>iniciativadesli</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
                                         <urn:RelationshipAttributeValue>{iniciativa_desligamento}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
+                                </urn:Relationship>
+                                <urn:Relationship>
+                                    <urn:RelationshipID>avaliacaojornad</urn:RelationshipID>
+                                    <urn:RelationshipAttribute>
+                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                        <urn:RelationshipAttributeValue>{avaliacaojornada}</urn:RelationshipAttributeValue>
+                                    </urn:RelationshipAttribute>
+                                </urn:Relationship>
+                                <urn:Relationship>
+                                    <urn:RelationshipID>avaliacaojornad</urn:RelationshipID>
+                                    <urn:RelationshipAttribute>
+                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                        <urn:RelationshipAttributeValue>{avaliacaojornada}</urn:RelationshipAttributeValue>
+                                    </urn:RelationshipAttribute>
+                                </urn:Relationship>
+                                <urn:Relationship>
+                                    <urn:RelationshipID>benefi</urn:RelationshipID>
+                                    <urn:RelationshipAttribute>
+                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                        <urn:RelationshipAttributeValue>{}</urn:RelationshipAttributeValue>
+                                    </urn:RelationshipAttribute>
+                                </urn:Relationship>
+                                <urn:Relationship>
                                     <urn:RelationshipID>avaliaambiente</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{avalia_ambiente_fgm}</urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{avaliacaojornada}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>beneficios</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{beneficios}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>comunicacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{comunicacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:RelationshipID>orientacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{orientacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
+                                </urn:Relationship>
+                                <urn:Relationship>
                                     <urn:RelationshipID>gestao</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{gestao}</urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                    <urn:Relationship>
+                                </urn:Relationship>
+                                <urn:Relationship>
+                                    <urn:RelationshipID>comunicacao</urn:RelationshipID>
+                                    <urn:RelationshipAttribute>
+                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                        <urn:RelationshipAttributeValue>{}</urn:RelationshipAttributeValue>
+                                    </urn:RelationshipAttribute>
+                                </urn:Relationship>
+                                <urn:Relationship>
+                                    <urn:RelationshipID>orientacao</urn:RelationshipID>
+                                    <urn:RelationshipAttribute>
+                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                        <urn:RelationshipAttributeValue>{}</urn:RelationshipAttributeValue>
+                                    </urn:RelationshipAttribute>
+                                </urn:Relationship>
+                                <urn:Relationship>
                                     <urn:RelationshipID>indicafgm</urn:RelationshipID>
                                     <urn:RelationshipAttribute>
                                         <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
+                                        <urn:RelationshipAttributeValue>{}</urn:RelationshipAttributeValue>
                                     </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
-                                </urn:RelationshipList>
+                                </urn:Relationship>
                             </urn:editEntityRecord>
                         </soapenv:Body>
                         </soapenv:Envelope>
