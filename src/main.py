@@ -11,7 +11,7 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    log_directory = r"C:/Github/ProjectFormSE/Logs"
+    log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
@@ -81,8 +81,9 @@ for row_data_excel in excel_data:
         formatted_data_demissao = row_data_excel.data_demissao.strftime("%Y-%m-%d")
 
         # Call edit_workflow method with the fetched record_id and row data
+        print("teste")
         transport.edit_workflow(
-            record_id                           =record_id,
+            # record_id                           =record_id,
             nome                                =row_data_excel.nome,
             data_demissao                       =formatted_data_demissao,
             setor                               =row_data_excel.setor,
@@ -112,6 +113,7 @@ for row_data_excel in excel_data:
         # closer = close.close_workflow(
         #     record_id = record_id,
         # )
+        print("teste")
         
     except Exception as e:
         logging.error(f"An error occurred: {e} - MAIN" )

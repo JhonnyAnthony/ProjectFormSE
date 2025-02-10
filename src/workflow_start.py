@@ -28,14 +28,17 @@ class ValidationAPI:
                 </urn:newWorkflow>
             </soapenv:Body>
         </soapenv:Envelope>'''
-        # print(soap_envelope)
+        print(soap_envelope)
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
         response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
+        print(response)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
+            print(root)
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
             if record_id is not None:
                 logging.info(f"RecordID: {record_id.text}")
+                print(record_id.text)
                 return record_id.text
             else:
                 logging.error("RecordID not found")

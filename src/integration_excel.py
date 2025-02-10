@@ -37,6 +37,7 @@ class IntegrationOneDrive: #here is to declare token requirements
         item_id = os.getenv("MY_ITEM_ID")
         # Search for the item on graphs using drive_id and item_id
         response = requests.get(f"https://graph.microsoft.com/v1.0/drives/{drive_id}/items/{item_id}", headers=headers)
+        
 
         if response.status_code == 200:
             item_details = response.json()

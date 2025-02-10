@@ -1,0 +1,59 @@
+2025-02-10 08:08:24 INFO File downloaded successfully.200
+2025-02-10 08:08:24 INFO Connection successful!
+2025-02-10 08:08:24 INFO Teste already on SE
+2025-02-10 08:08:24 INFO Teste2 already on SE
+2025-02-10 08:22:01 INFO File downloaded successfully.200
+2025-02-10 08:22:01 INFO Connection successful!
+2025-02-10 08:22:01 INFO Teste already on SE
+2025-02-10 08:22:01 INFO Teste2 already on SE
+2025-02-10 08:23:20 INFO File downloaded successfully.200
+2025-02-10 08:23:20 INFO Connection successful!
+2025-02-10 08:25:00 INFO File downloaded successfully.200
+2025-02-10 08:25:00 INFO Connection successful!
+2025-02-10 08:29:38 INFO File downloaded successfully.200
+2025-02-10 08:29:38 INFO Connection successful!
+2025-02-10 08:31:37 INFO File downloaded successfully.200
+2025-02-10 08:31:37 INFO Connection successful!
+2025-02-10 08:32:16 INFO File downloaded successfully.200
+2025-02-10 08:32:16 INFO Connection successful!
+2025-02-10 08:32:56 INFO File downloaded successfully.200
+2025-02-10 08:32:56 INFO Connection successful!
+2025-02-10 08:33:35 INFO File downloaded successfully.200
+2025-02-10 08:33:35 INFO Connection successful!
+2025-02-10 08:34:10 INFO File downloaded successfully.200
+2025-02-10 08:34:10 INFO Connection successful!
+2025-02-10 08:36:17 INFO File downloaded successfully.200
+2025-02-10 08:36:17 INFO Connection successful!
+2025-02-10 08:36:51 INFO File downloaded successfully.200
+2025-02-10 08:36:51 INFO Connection successful!
+2025-02-10 08:38:55 INFO File downloaded successfully.200
+2025-02-10 08:38:55 INFO Connection successful!
+2025-02-10 08:39:53 INFO File downloaded successfully.200
+2025-02-10 08:39:53 INFO Connection successful!
+2025-02-10 08:40:33 INFO File downloaded successfully.200
+2025-02-10 08:40:33 INFO Connection successful!
+2025-02-10 08:40:52 INFO File downloaded successfully.200
+2025-02-10 08:40:52 INFO Connection successful!
+2025-02-10 08:41:27 INFO File downloaded successfully.200
+2025-02-10 08:41:27 INFO Connection successful!
+2025-02-10 08:44:46 INFO File downloaded successfully.200
+2025-02-10 08:44:47 INFO Connection successful!
+2025-02-10 08:45:05 INFO File downloaded successfully.200
+2025-02-10 08:45:05 INFO Connection successful!
+2025-02-10 08:45:38 INFO File downloaded successfully.200
+2025-02-10 08:45:38 INFO Connection successful!
+2025-02-10 08:45:38 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
+2025-02-10 08:45:38 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
+2025-02-10 08:46:04 INFO File downloaded successfully.200
+2025-02-10 08:46:04 INFO Connection successful!
+2025-02-10 08:46:04 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
+2025-02-10 08:46:04 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
+2025-02-10 08:46:10 INFO File downloaded successfully.200
+2025-02-10 08:46:10 INFO Connection successful!
+2025-02-10 08:46:55 INFO File downloaded successfully.200
+2025-02-10 08:46:55 INFO Connection successful!
+2025-02-10 08:47:30 INFO File downloaded successfully.200
+2025-02-10 08:47:30 INFO Connection successful!
+2025-02-10 08:47:52 INFO File downloaded successfully.200
+2025-02-10 08:47:52 INFO Connection successful!
+2025-02-10 08:50:06 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f1a96caada0>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)')) - MAIN

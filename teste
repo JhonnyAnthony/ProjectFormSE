@@ -135,3 +135,32 @@
                             </urn:editEntityRecord>
                         </soapenv:Body>
                         </soapenv:Envelope>
+
+
+
+
+                        nomcol
+                        datademiss
+                        setor
+                        cargo
+                        motivodesliga
+                        demaisconsi1
+                        beneficiostxt
+                        demaisconsi4
+                        mudancastrab
+                        comunicatxt
+                        treinamentos
+                        oportunidades
+                        consilideranca
+                        feedback
+                        recomendatxt
+                        mensagemparafgm
+
+                        iniciativadesli - empregado
+                        avaliacaojornad - escolhas1
+                        benefi - escolhas
+                        avaliaambiente - escolhas
+                        gestao - escolhas
+                        comunicacao - escolhas
+                        orientacao - escolhas
+                        indicafgm - escolhas
