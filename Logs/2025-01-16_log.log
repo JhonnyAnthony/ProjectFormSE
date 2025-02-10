@@ -1,0 +1,41 @@
+2025-01-16 13:40:18 INFO File downloaded successfully.200
+2025-01-16 13:40:18 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 13:49:20 INFO File downloaded successfully.200
+2025-01-16 13:49:20 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 13:49:41 INFO File downloaded successfully.200
+2025-01-16 13:49:41 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 13:51:26 INFO File downloaded successfully.200
+2025-01-16 13:51:27 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 13:53:36 INFO File downloaded successfully.200
+2025-01-16 13:53:51 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 13:56:27 INFO File downloaded successfully.200
+2025-01-16 13:56:42 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:43:20 INFO File downloaded successfully.200
+2025-01-16 14:43:35 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:43:42 INFO File downloaded successfully.200
+2025-01-16 14:43:57 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:45:50 INFO File downloaded successfully.200
+2025-01-16 14:46:05 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:48:51 INFO File downloaded successfully.200
+2025-01-16 14:49:06 ERROR Error: <class 'pyodbc.Error'> returned a result with an exception set
+2025-01-16 14:52:54 INFO File downloaded successfully.200
+2025-01-16 14:53:09 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:53:29 INFO File downloaded successfully.200
+2025-01-16 14:53:44 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:54:23 INFO File downloaded successfully.200
+2025-01-16 14:54:38 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:54:38 ERROR No connection to the database.
+2025-01-16 14:55:36 INFO File downloaded successfully.200
+2025-01-16 14:55:52 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:55:52 ERROR No connection to the database.
+2025-01-16 14:56:56 INFO File downloaded successfully.200
+2025-01-16 14:56:57 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 14:56:57 ERROR No connection to the database.
+2025-01-16 14:58:09 INFO File downloaded successfully.200
+2025-01-16 14:58:09 ERROR Error: ('01000', "[01000] [unixODBC][Driver Manager]Can't open lib 'SQL Server' : file not found (0) (SQLDriverConnect)")
+2025-01-16 14:58:17 INFO File downloaded successfully.200
+2025-01-16 14:58:32 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 18 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 14:59:08 INFO File downloaded successfully.200
+2025-01-16 14:59:23 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-16 15:00:22 INFO File downloaded successfully.200
+2025-01-16 15:00:37 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')

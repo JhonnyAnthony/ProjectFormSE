@@ -1,6 +1,6 @@
 import requests
 import xml.etree.ElementTree as ET
-from config import api_id,url,user
+from config import api_id,url,user,Host
 import logging
 class CloseWorkflow:
     # Function to declare API, URL variables and perform authorization
@@ -13,7 +13,7 @@ class CloseWorkflow:
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#executeActivity",
             "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br", # here is where the code is pushing
+            "Host": Host, # here is where the code is pushing
             "Connection": "Keep-Alive",
         }
 

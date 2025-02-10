@@ -1,17 +1,16 @@
 import requests
 import xml.etree.ElementTree as ET
-from config import process_id,api_id,url,user
+from config import process_id,api_id,url,user,Host
 import logging
+
 class ValidationAPI: 
     def __init__(self):
-        self.api_id = api_id
-        self.url = url
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#getWorkflow",
-            "Authorization": self.api_id,
-            "Host": "sesuitev2.fgm.ind.br",
+            "Authorization": api_id,
+            "Host": Host,
             "Connection": "Keep-Alive",
         }
 
@@ -27,9 +26,8 @@ class ValidationAPI:
                 </urn:newWorkflow>
             </soapenv:Body>
         </soapenv:Envelope>'''
-
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
-        response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
+        response = requests.post(url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})

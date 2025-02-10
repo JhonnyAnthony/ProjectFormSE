@@ -6,9 +6,10 @@ from dotenv import load_dotenv
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'venv', '.env')
 load_dotenv(dotenv_path)
-
+Host = os.getenv("HOST")
 server = os.getenv('DB_SERVER')
 database = os.getenv('DB_DATABASE')
+driver = os.getenv("DRIVER")
 username = os.getenv('DB_USER')
 sheet = os.getenv("SHEET")
 file_name = os.getenv("FILE_NAME")

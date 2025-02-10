@@ -1,0 +1,38 @@
+2025-01-17 08:24:37 INFO File downloaded successfully.200
+2025-01-17 08:24:52 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-17 08:29:53 INFO File downloaded successfully.200
+2025-01-17 08:30:08 ERROR Error: ('HYT00', '[HYT00] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0) (SQLDriverConnect)')
+2025-01-17 08:39:02 INFO File downloaded successfully.200
+2025-01-17 08:39:03 INFO Connection successful!
+2025-01-17 08:44:57 INFO File downloaded successfully.200
+2025-01-17 08:44:57 INFO Connection successful!
+2025-01-17 08:49:33 INFO File downloaded successfully.200
+2025-01-17 08:49:33 INFO Connection successful!
+2025-01-17 08:50:00 INFO File downloaded successfully.200
+2025-01-17 08:50:00 INFO Connection successful!
+2025-01-17 08:56:34 INFO File downloaded successfully.200
+2025-01-17 08:56:34 INFO Connection successful!
+2025-01-17 08:57:59 INFO File downloaded successfully.200
+2025-01-17 08:57:59 INFO Connection successful!
+2025-01-17 08:58:28 INFO File downloaded successfully.200
+2025-01-17 08:58:28 INFO Connection successful!
+2025-01-17 09:00:41 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fe07cd82e30>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)'))
+2025-01-17 09:02:56 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fe07cd84a00>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)'))
+2025-01-17 11:40:36 INFO File downloaded successfully.200
+2025-01-17 11:40:36 INFO Connection successful!
+2025-01-17 11:53:33 INFO File downloaded successfully.200
+2025-01-17 11:53:33 INFO Connection successful!
+2025-01-17 11:55:47 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7d7d2e7040>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)'))
+2025-01-17 11:58:03 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f7d7d2f8c10>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)'))
+2025-01-17 13:17:01 INFO File downloaded successfully.200
+2025-01-17 13:17:01 INFO Connection successful!
+2025-01-17 13:17:16 INFO File downloaded successfully.200
+2025-01-17 13:17:16 INFO Connection successful!
+2025-01-17 13:23:35 INFO File downloaded successfully.200
+2025-01-17 13:23:35 INFO Connection successful!
+2025-01-17 13:25:17 INFO File downloaded successfully.200
+2025-01-17 13:25:17 INFO Connection successful!
+2025-01-17 13:31:26 INFO File downloaded successfully.200
+2025-01-17 13:31:26 INFO Connection successful!
+2025-01-17 13:33:41 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7eff6cb0ac50>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)')) - MAIN
+2025-01-17 13:35:56 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7eff6cb2c760>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)')) - MAIN
