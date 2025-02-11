@@ -1,1146 +1,234 @@
-2025-02-10 08:08:24 INFO File downloaded successfully.200
-2025-02-10 08:08:24 INFO Connection successful!
-2025-02-10 08:08:24 INFO Teste already on SE
-2025-02-10 08:08:24 INFO Teste2 already on SE
-2025-02-10 08:22:01 INFO File downloaded successfully.200
-2025-02-10 08:22:01 INFO Connection successful!
-2025-02-10 08:22:01 INFO Teste already on SE
-2025-02-10 08:22:01 INFO Teste2 already on SE
-2025-02-10 08:23:20 INFO File downloaded successfully.200
-2025-02-10 08:23:20 INFO Connection successful!
-2025-02-10 08:25:00 INFO File downloaded successfully.200
-2025-02-10 08:25:00 INFO Connection successful!
-2025-02-10 08:29:38 INFO File downloaded successfully.200
-2025-02-10 08:29:38 INFO Connection successful!
-2025-02-10 08:31:37 INFO File downloaded successfully.200
-2025-02-10 08:31:37 INFO Connection successful!
-2025-02-10 08:32:16 INFO File downloaded successfully.200
-2025-02-10 08:32:16 INFO Connection successful!
-2025-02-10 08:32:56 INFO File downloaded successfully.200
-2025-02-10 08:32:56 INFO Connection successful!
-2025-02-10 08:33:35 INFO File downloaded successfully.200
-2025-02-10 08:33:35 INFO Connection successful!
-2025-02-10 08:34:10 INFO File downloaded successfully.200
-2025-02-10 08:34:10 INFO Connection successful!
-2025-02-10 08:36:17 INFO File downloaded successfully.200
-2025-02-10 08:36:17 INFO Connection successful!
-2025-02-10 08:36:51 INFO File downloaded successfully.200
-2025-02-10 08:36:51 INFO Connection successful!
-2025-02-10 08:38:55 INFO File downloaded successfully.200
-2025-02-10 08:38:55 INFO Connection successful!
-2025-02-10 08:39:53 INFO File downloaded successfully.200
-2025-02-10 08:39:53 INFO Connection successful!
-2025-02-10 08:40:33 INFO File downloaded successfully.200
-2025-02-10 08:40:33 INFO Connection successful!
-2025-02-10 08:40:52 INFO File downloaded successfully.200
-2025-02-10 08:40:52 INFO Connection successful!
-2025-02-10 08:41:27 INFO File downloaded successfully.200
-2025-02-10 08:41:27 INFO Connection successful!
-2025-02-10 08:44:46 INFO File downloaded successfully.200
-2025-02-10 08:44:47 INFO Connection successful!
-2025-02-10 08:45:05 INFO File downloaded successfully.200
-2025-02-10 08:45:05 INFO Connection successful!
-2025-02-10 08:45:38 INFO File downloaded successfully.200
-2025-02-10 08:45:38 INFO Connection successful!
-2025-02-10 08:45:38 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:45:38 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:46:04 INFO File downloaded successfully.200
-2025-02-10 08:46:04 INFO Connection successful!
-2025-02-10 08:46:04 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:46:04 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:46:10 INFO File downloaded successfully.200
-2025-02-10 08:46:10 INFO Connection successful!
-2025-02-10 08:46:55 INFO File downloaded successfully.200
-2025-02-10 08:46:55 INFO Connection successful!
-2025-02-10 08:47:30 INFO File downloaded successfully.200
-2025-02-10 08:47:30 INFO Connection successful!
-2025-02-10 08:47:52 INFO File downloaded successfully.200
-2025-02-10 08:47:52 INFO Connection successful!
-2025-02-10 08:50:06 ERROR An error occurred: HTTPSConnectionPool(host='sesuitev2.fgm.ind.br', port=443): Max retries exceeded with url: /apigateway/se/ws/wf_ws.php (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f1a96caada0>, 'Connection to sesuitev2.fgm.ind.br timed out. (connect timeout=None)')) - MAIN
-2025-02-10 08:56:08 INFO File downloaded successfully.200
-2025-02-10 08:56:08 INFO Connection successful!
-2025-02-10 08:56:09 INFO RecordID: 081384
-2025-02-10 08:56:09 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:56:10 INFO RecordID: 081385
-2025-02-10 08:56:10 ERROR An error occurred: Transportation.edit_workflow() missing 1 required positional argument: 'record_id' - MAIN
-2025-02-10 08:56:33 INFO File downloaded successfully.200
-2025-02-10 08:56:33 INFO Connection successful!
-2025-02-10 08:56:34 INFO RecordID: 081386
-2025-02-10 08:56:34 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 2: Reserved XML Name</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 08:56:34 INFO RecordID: 081387
-2025-02-10 08:56:34 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 2: Reserved XML Name</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 08:57:07 INFO File downloaded successfully.200
-2025-02-10 08:57:07 INFO Connection successful!
-2025-02-10 08:57:08 INFO RecordID: 081388
-2025-02-10 08:57:08 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 08:57:08 INFO RecordID: 081389
-2025-02-10 08:57:08 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 08:58:24 INFO File downloaded successfully.200
-2025-02-10 08:58:24 INFO Connection successful!
-2025-02-10 08:58:25 INFO RecordID: 081390
-2025-02-10 08:58:25 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 08:58:25 INFO RecordID: 081391
-2025-02-10 08:58:25 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 08:59:55 INFO File downloaded successfully.200
-2025-02-10 08:59:56 INFO Connection successful!
-2025-02-10 08:59:56 INFO RecordID: 081392
-2025-02-10 08:59:56 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 08:59:57 INFO RecordID: 081393
-2025-02-10 08:59:57 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:00:45 INFO File downloaded successfully.200
-2025-02-10 09:00:45 INFO Connection successful!
-2025-02-10 09:00:45 INFO RecordID: 081394
-2025-02-10 09:00:46 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:00:46 INFO RecordID: 081395
-2025-02-10 09:00:46 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:01:33 INFO File downloaded successfully.200
-2025-02-10 09:01:33 INFO Connection successful!
-2025-02-10 09:01:33 INFO RecordID: 081396
-2025-02-10 09:01:33 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 126: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:01:34 INFO RecordID: 081397
-2025-02-10 09:01:34 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 126: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:01:55 INFO File downloaded successfully.200
-2025-02-10 09:01:55 INFO Connection successful!
-2025-02-10 09:01:55 INFO RecordID: 081398
-2025-02-10 09:01:55 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:01:56 INFO RecordID: 081399
-2025-02-10 09:01:56 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:02:22 INFO File downloaded successfully.200
-2025-02-10 09:02:22 INFO Connection successful!
-2025-02-10 09:02:23 INFO RecordID: 081400
-2025-02-10 09:02:23 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:02:23 INFO RecordID: 081401
-2025-02-10 09:02:24 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:03:02 INFO File downloaded successfully.200
-2025-02-10 09:03:03 INFO Connection successful!
-2025-02-10 09:03:03 INFO RecordID: 081402
-2025-02-10 09:03:03 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:03:04 INFO RecordID: 081403
-2025-02-10 09:03:04 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:03:36 INFO File downloaded successfully.200
-2025-02-10 09:03:36 INFO Connection successful!
-2025-02-10 09:03:36 INFO RecordID: 081404
-2025-02-10 09:03:37 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:03:37 INFO RecordID: 081405
-2025-02-10 09:03:37 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:04:04 INFO File downloaded successfully.200
-2025-02-10 09:04:04 INFO Connection successful!
-2025-02-10 09:04:04 INFO RecordID: 081406
-2025-02-10 09:04:04 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:04:05 INFO RecordID: 081407
-2025-02-10 09:04:05 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:04:31 INFO File downloaded successfully.200
-2025-02-10 09:04:31 INFO Connection successful!
-2025-02-10 09:04:31 INFO RecordID: 081408
-2025-02-10 09:04:31 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:04:31 INFO RecordID: 081409
-2025-02-10 09:04:31 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:04:56 INFO File downloaded successfully.200
-2025-02-10 09:04:56 INFO Connection successful!
-2025-02-10 09:04:56 INFO RecordID: 081410
-2025-02-10 09:04:56 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:04:57 INFO RecordID: 081411
-2025-02-10 09:04:57 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:05:26 INFO File downloaded successfully.200
-2025-02-10 09:05:26 INFO Connection successful!
-2025-02-10 09:05:27 INFO RecordID: 081412
-2025-02-10 09:05:27 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:05:27 INFO RecordID: 081413
-2025-02-10 09:05:27 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:05:50 INFO File downloaded successfully.200
-2025-02-10 09:05:50 INFO Connection successful!
-2025-02-10 09:05:51 INFO RecordID: 081414
-2025-02-10 09:05:51 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:05:51 INFO RecordID: 081415
-2025-02-10 09:05:51 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:07:34 INFO File downloaded successfully.200
-2025-02-10 09:07:34 INFO Connection successful!
-2025-02-10 09:07:35 INFO RecordID: 081416
-2025-02-10 09:07:35 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:07:35 INFO RecordID: 081417
-2025-02-10 09:07:35 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:08:55 INFO File downloaded successfully.200
-2025-02-10 09:08:56 INFO Connection successful!
-2025-02-10 09:08:56 INFO RecordID: 081418
-2025-02-10 09:08:56 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 129: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:08:57 INFO RecordID: 081419
-2025-02-10 09:08:57 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 129: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:09:22 INFO File downloaded successfully.200
-2025-02-10 09:09:22 INFO Connection successful!
-2025-02-10 09:09:22 INFO RecordID: 081420
-2025-02-10 09:09:22 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 129: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:09:23 INFO RecordID: 081421
-2025-02-10 09:09:23 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 129: Mismatched tag</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
-2025-02-10 09:10:46 INFO File downloaded successfully.200
-2025-02-10 09:10:46 INFO Connection successful!
-2025-02-10 09:10:47 INFO RecordID: 081422
-2025-02-10 09:10:47 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:10:47 INFO RecordID: 081423
-2025-02-10 09:10:48 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de Teste2 Transportation
-2025-02-10 09:12:53 INFO File downloaded successfully.200
-2025-02-10 09:12:53 INFO Connection successful!
-2025-02-10 09:12:54 INFO RecordID: 081424
-2025-02-10 09:12:54 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:12:55 INFO RecordID: 081425
-2025-02-10 09:12:55 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de Teste2 Transportation
-2025-02-10 09:14:46 INFO File downloaded successfully.200
-2025-02-10 09:14:46 INFO Connection successful!
-2025-02-10 09:14:46 INFO RecordID: 081427
-2025-02-10 09:14:46 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:14:46 INFO RecordID: 081428
-2025-02-10 09:14:47 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:26:04 INFO File downloaded successfully.200
-2025-02-10 09:26:04 INFO Connection successful!
-2025-02-10 09:26:04 INFO Teste already on SE
-2025-02-10 09:26:04 INFO Teste2 already on SE
-2025-02-10 09:26:16 INFO File downloaded successfully.200
-2025-02-10 09:26:17 INFO Connection successful!
-2025-02-10 09:26:17 INFO RecordID: 081429
-2025-02-10 09:26:17 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:26:18 INFO RecordID: 081430
-2025-02-10 09:26:18 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:53:34 INFO Connection successful!
-2025-02-10 09:53:34 INFO RecordID: 081431
-2025-02-10 09:53:34 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:53:35 INFO RecordID: 081432
-2025-02-10 09:53:35 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:54:03 INFO Connection successful!
-2025-02-10 09:54:04 INFO RecordID: 081433
-2025-02-10 09:54:04 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:54:04 INFO RecordID: 081434
-2025-02-10 09:54:04 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:55:20 INFO Connection successful!
-2025-02-10 09:55:20 INFO RecordID: 081435
-2025-02-10 09:55:20 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:55:21 INFO RecordID: 081436
-2025-02-10 09:55:21 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 09:56:24 INFO Connection successful!
-2025-02-10 09:56:25 INFO RecordID: 081437
-2025-02-10 09:56:25 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:56:25 INFO RecordID: 081438
-2025-02-10 09:56:25 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:57:47 INFO Connection successful!
-2025-02-10 09:57:48 INFO RecordID: 081439
-2025-02-10 09:57:48 INFO Status: FAILURE, Code: -46, Detail: Não foi encontrado o relacionamento [avalijornada] de Teste Transportation
-2025-02-10 09:57:49 INFO RecordID: 081440
-2025-02-10 09:57:49 INFO Status: FAILURE, Code: -46, Detail: Não foi encontrado o relacionamento [avalijornada] de Teste2 Transportation
-2025-02-10 09:58:29 INFO Connection successful!
-2025-02-10 09:58:29 INFO RecordID: 081441
-2025-02-10 09:58:29 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste Transportation
-2025-02-10 09:58:30 INFO RecordID: 081442
-2025-02-10 09:58:30 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Teste2 Transportation
-2025-02-10 09:58:40 INFO Connection successful!
-2025-02-10 09:58:40 INFO RecordID: 081443
-2025-02-10 09:58:40 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
-2025-02-10 09:58:41 INFO RecordID: 081444
-2025-02-10 09:58:41 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste2 Transportation
-2025-02-10 10:17:48 INFO Connection successful!
-2025-02-10 10:17:48 INFO Brenno  already on SE
-2025-02-10 10:17:48 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:17:48 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:17:48 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:17:48 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:17:48 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:17:48 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:17:48 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:17:48 INFO Franciele Pagno already on SE
-2025-02-10 10:17:48 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:17:48 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:17:48 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:17:48 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:17:48 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:17:48 INFO Aline Souza da Luz already on SE
-2025-02-10 10:17:48 INFO Maxmaihor Marques already on SE
-2025-02-10 10:17:48 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:17:48 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:17:48 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:17:48 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:17:48 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:17:48 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:17:48 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:17:48 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:17:48 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:17:48 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:17:48 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:17:48 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:17:48 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:17:48 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:17:48 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:17:48 INFO RENAN REZENDE already on SE
-2025-02-10 10:17:48 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:17:48 INFO Felipe  Souza already on SE
-2025-02-10 10:17:48 INFO Igor Butzke already on SE
-2025-02-10 10:17:48 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:17:48 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:17:48 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:17:48 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:17:48 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:17:48 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:17:48 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:17:48 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:17:48 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:17:48 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:17:48 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:17:48 INFO Vitor Quintino  already on SE
-2025-02-10 10:17:48 INFO Josicler Turassi  already on SE
-2025-02-10 10:17:48 INFO Andreia Costa Sá already on SE
-2025-02-10 10:17:48 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:17:48 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:17:48 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:17:48 INFO JHONY DE MORAES already on SE
-2025-02-10 10:17:48 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:17:48 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:17:48 INFO Patricia Rosa Will already on SE
-2025-02-10 10:17:48 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:17:48 INFO Martinha kruger  already on SE
-2025-02-10 10:17:48 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:17:48 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:17:48 INFO Jeferson Sobral  already on SE
-2025-02-10 10:17:48 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:17:48 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:17:48 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:17:48 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:17:48 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:17:48 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:17:48 INFO Cintia Mendes  already on SE
-2025-02-10 10:17:48 INFO Eliane mara cercal already on SE
-2025-02-10 10:17:48 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:17:48 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:17:48 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:17:48 INFO Karina Carvalho  already on SE
-2025-02-10 10:17:48 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:17:48 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:17:48 INFO Elaine Muller  already on SE
-2025-02-10 10:17:48 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:17:48 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:17:48 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:17:48 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:17:48 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:17:48 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:17:48 INFO Eliete Alves  already on SE
-2025-02-10 10:17:48 INFO Themístocles Duarte  already on SE
-2025-02-10 10:17:48 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:17:48 INFO Giani Gonçalves  already on SE
-2025-02-10 10:17:48 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:17:48 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:17:48 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:17:48 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:17:49 INFO RecordID: 081445
-2025-02-10 10:17:49 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:49 INFO RecordID: 081446
-2025-02-10 10:17:49 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:49 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:17:49 INFO Claudemir Siqueira already on SE
-2025-02-10 10:17:49 INFO Fernando de Leão already on SE
-2025-02-10 10:17:49 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:17:49 INFO Aliana Haritsch already on SE
-2025-02-10 10:17:49 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:17:49 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:17:49 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:17:49 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:17:49 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:17:49 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:17:49 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:17:49 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:17:50 INFO RecordID: 081447
-2025-02-10 10:17:50 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:50 INFO RecordID: 081448
-2025-02-10 10:17:50 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:50 INFO RecordID: 081449
-2025-02-10 10:17:50 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:50 INFO RecordID: 081450
-2025-02-10 10:17:50 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:51 INFO RecordID: 081451
-2025-02-10 10:17:51 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:51 INFO RecordID: 081452
-2025-02-10 10:17:51 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:51 INFO RecordID: 081453
-2025-02-10 10:17:51 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:52 INFO RecordID: 081454
-2025-02-10 10:17:52 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:52 INFO RecordID: 081455
-2025-02-10 10:17:52 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:53 INFO RecordID: 081456
-2025-02-10 10:17:53 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:53 INFO RecordID: 081457
-2025-02-10 10:17:53 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:17:54 INFO RecordID: 081458
-2025-02-10 10:17:54 ERROR An error occurred: 'RowData' object has no attribute 'beneficiosrelev' - MAIN
-2025-02-10 10:18:08 INFO Connection successful!
-2025-02-10 10:18:08 INFO Brenno  already on SE
-2025-02-10 10:18:08 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:18:08 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:18:08 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:18:08 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:18:08 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:18:08 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:18:08 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:18:08 INFO Franciele Pagno already on SE
-2025-02-10 10:18:08 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:18:08 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:18:08 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:18:08 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:18:08 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:18:08 INFO Aline Souza da Luz already on SE
-2025-02-10 10:18:08 INFO Maxmaihor Marques already on SE
-2025-02-10 10:18:08 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:18:08 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:18:08 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:18:08 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:18:08 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:18:08 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:18:08 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:18:08 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:18:08 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:18:08 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:18:08 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:18:08 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:18:08 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:18:08 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:18:08 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:18:08 INFO RENAN REZENDE already on SE
-2025-02-10 10:18:08 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:18:08 INFO Felipe  Souza already on SE
-2025-02-10 10:18:08 INFO Igor Butzke already on SE
-2025-02-10 10:18:08 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:18:08 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:18:08 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:18:08 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:18:08 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:18:08 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:18:08 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:18:08 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:18:08 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:18:08 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:18:08 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:18:08 INFO Vitor Quintino  already on SE
-2025-02-10 10:18:08 INFO Josicler Turassi  already on SE
-2025-02-10 10:18:08 INFO Andreia Costa Sá already on SE
-2025-02-10 10:18:08 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:18:08 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:18:08 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:18:08 INFO JHONY DE MORAES already on SE
-2025-02-10 10:18:08 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:18:08 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:18:08 INFO Patricia Rosa Will already on SE
-2025-02-10 10:18:08 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:18:08 INFO Martinha kruger  already on SE
-2025-02-10 10:18:08 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:18:08 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:18:08 INFO Jeferson Sobral  already on SE
-2025-02-10 10:18:08 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:18:08 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:18:08 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:18:08 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:18:08 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:18:08 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:18:08 INFO Cintia Mendes  already on SE
-2025-02-10 10:18:08 INFO Eliane mara cercal already on SE
-2025-02-10 10:18:08 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:18:08 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:18:08 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:18:08 INFO Karina Carvalho  already on SE
-2025-02-10 10:18:08 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:18:08 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:18:08 INFO Elaine Muller  already on SE
-2025-02-10 10:18:08 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:18:08 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:18:08 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:18:08 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:18:08 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:18:08 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:18:08 INFO Eliete Alves  already on SE
-2025-02-10 10:18:08 INFO Themístocles Duarte  already on SE
-2025-02-10 10:18:08 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:18:08 INFO Giani Gonçalves  already on SE
-2025-02-10 10:18:08 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:18:08 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:18:08 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:18:08 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:18:08 INFO RecordID: 081459
-2025-02-10 10:18:09 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de teste Transportation
-2025-02-10 10:18:09 INFO RecordID: 081460
-2025-02-10 10:18:09 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de testes Transportation
-2025-02-10 10:18:09 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:18:09 INFO Claudemir Siqueira already on SE
-2025-02-10 10:18:09 INFO Fernando de Leão already on SE
-2025-02-10 10:18:09 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:18:09 INFO Aliana Haritsch already on SE
-2025-02-10 10:18:09 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:18:09 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:18:09 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:18:09 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:18:09 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:18:09 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:18:09 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:18:09 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:18:09 INFO RecordID: 081461
-2025-02-10 10:18:09 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Vitória Ferreira Quinor Transportation
-2025-02-10 10:18:10 INFO RecordID: 081462
-2025-02-10 10:18:10 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Graziela stainsack  Transportation
-2025-02-10 10:18:10 INFO RecordID: 081463
-2025-02-10 10:18:11 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de wellison da Silva  Transportation
-2025-02-10 10:18:11 INFO RecordID: 081464
-2025-02-10 10:18:11 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Pedro maffei junior Transportation
-2025-02-10 10:18:11 INFO RecordID: 081465
-2025-02-10 10:18:12 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:18:12 INFO RecordID: 081466
-2025-02-10 10:18:12 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ricardo Raitz souza Transportation
-2025-02-10 10:18:12 INFO RecordID: 081467
-2025-02-10 10:18:12 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:18:13 INFO RecordID: 081468
-2025-02-10 10:18:13 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ana Larissa dos Anjos Transportation
-2025-02-10 10:18:13 INFO RecordID: 081469
-2025-02-10 10:18:13 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Leticia Tais Kormann  Transportation
-2025-02-10 10:18:13 INFO RecordID: 081470
-2025-02-10 10:18:14 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Geovana Silva Viterbo  Transportation
-2025-02-10 10:18:14 INFO RecordID: 081471
-2025-02-10 10:18:14 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Danielle Paula Barros  Transportation
-2025-02-10 10:18:14 INFO RecordID: 081472
-2025-02-10 10:18:14 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Débora Transportation
-2025-02-10 10:18:54 INFO Connection successful!
-2025-02-10 10:18:54 INFO Brenno  already on SE
-2025-02-10 10:18:54 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:18:54 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:18:54 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:18:54 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:18:54 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:18:54 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:18:54 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:18:54 INFO Franciele Pagno already on SE
-2025-02-10 10:18:54 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:18:54 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:18:54 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:18:54 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:18:54 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:18:54 INFO Aline Souza da Luz already on SE
-2025-02-10 10:18:54 INFO Maxmaihor Marques already on SE
-2025-02-10 10:18:54 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:18:54 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:18:54 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:18:54 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:18:54 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:18:54 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:18:54 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:18:54 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:18:54 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:18:54 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:18:54 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:18:54 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:18:54 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:18:54 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:18:54 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:18:54 INFO RENAN REZENDE already on SE
-2025-02-10 10:18:54 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:18:54 INFO Felipe  Souza already on SE
-2025-02-10 10:18:54 INFO Igor Butzke already on SE
-2025-02-10 10:18:54 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:18:54 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:18:54 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:18:54 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:18:54 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:18:54 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:18:54 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:18:54 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:18:54 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:18:54 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:18:54 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:18:54 INFO Vitor Quintino  already on SE
-2025-02-10 10:18:54 INFO Josicler Turassi  already on SE
-2025-02-10 10:18:54 INFO Andreia Costa Sá already on SE
-2025-02-10 10:18:54 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:18:54 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:18:54 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:18:54 INFO JHONY DE MORAES already on SE
-2025-02-10 10:18:54 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:18:54 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:18:54 INFO Patricia Rosa Will already on SE
-2025-02-10 10:18:54 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:18:54 INFO Martinha kruger  already on SE
-2025-02-10 10:18:54 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:18:54 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:18:54 INFO Jeferson Sobral  already on SE
-2025-02-10 10:18:54 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:18:54 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:18:54 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:18:54 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:18:54 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:18:54 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:18:54 INFO Cintia Mendes  already on SE
-2025-02-10 10:18:54 INFO Eliane mara cercal already on SE
-2025-02-10 10:18:54 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:18:54 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:18:54 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:18:54 INFO Karina Carvalho  already on SE
-2025-02-10 10:18:54 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:18:54 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:18:54 INFO Elaine Muller  already on SE
-2025-02-10 10:18:54 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:18:54 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:18:54 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:18:54 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:18:54 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:18:54 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:18:54 INFO Eliete Alves  already on SE
-2025-02-10 10:18:54 INFO Themístocles Duarte  already on SE
-2025-02-10 10:18:54 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:18:54 INFO Giani Gonçalves  already on SE
-2025-02-10 10:18:54 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:18:54 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:18:54 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:18:54 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:18:55 INFO RecordID: 081473
-2025-02-10 10:18:55 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de teste Transportation
-2025-02-10 10:18:55 INFO RecordID: 081474
-2025-02-10 10:18:56 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de testes Transportation
-2025-02-10 10:18:56 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:18:56 INFO Claudemir Siqueira already on SE
-2025-02-10 10:18:56 INFO Fernando de Leão already on SE
-2025-02-10 10:18:56 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:18:56 INFO Aliana Haritsch already on SE
-2025-02-10 10:18:56 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:18:56 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:18:56 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:18:56 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:18:56 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:18:56 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:18:56 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:18:56 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:18:56 INFO RecordID: 081475
-2025-02-10 10:18:56 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Vitória Ferreira Quinor Transportation
-2025-02-10 10:18:56 INFO RecordID: 081476
-2025-02-10 10:18:56 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Graziela stainsack  Transportation
-2025-02-10 10:18:57 INFO RecordID: 081477
-2025-02-10 10:18:57 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de wellison da Silva  Transportation
-2025-02-10 10:18:57 INFO RecordID: 081478
-2025-02-10 10:18:57 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Pedro maffei junior Transportation
-2025-02-10 10:18:58 INFO RecordID: 081479
-2025-02-10 10:18:58 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:18:58 INFO RecordID: 081480
-2025-02-10 10:18:58 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ricardo Raitz souza Transportation
-2025-02-10 10:18:58 INFO RecordID: 081481
-2025-02-10 10:18:58 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:18:59 INFO RecordID: 081482
-2025-02-10 10:18:59 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Larissa dos Anjos Transportation
-2025-02-10 10:18:59 INFO RecordID: 081483
-2025-02-10 10:18:59 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Leticia Tais Kormann  Transportation
-2025-02-10 10:18:59 INFO RecordID: 081484
-2025-02-10 10:19:00 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Geovana Silva Viterbo  Transportation
-2025-02-10 10:19:00 INFO RecordID: 081485
-2025-02-10 10:19:00 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Danielle Paula Barros  Transportation
-2025-02-10 10:19:00 INFO RecordID: 081486
-2025-02-10 10:19:00 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Débora Transportation
-2025-02-10 10:19:41 INFO Connection successful!
-2025-02-10 10:19:41 INFO Brenno  already on SE
-2025-02-10 10:19:41 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:19:41 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:19:41 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:19:41 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:19:41 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:19:41 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:19:41 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:19:41 INFO Franciele Pagno already on SE
-2025-02-10 10:19:41 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:19:41 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:19:41 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:19:41 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:19:41 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:19:41 INFO Aline Souza da Luz already on SE
-2025-02-10 10:19:41 INFO Maxmaihor Marques already on SE
-2025-02-10 10:19:41 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:19:41 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:19:41 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:19:41 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:19:41 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:19:41 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:19:41 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:19:41 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:19:41 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:19:41 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:19:41 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:19:41 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:19:41 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:19:41 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:19:41 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:19:41 INFO RENAN REZENDE already on SE
-2025-02-10 10:19:41 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:19:41 INFO Felipe  Souza already on SE
-2025-02-10 10:19:41 INFO Igor Butzke already on SE
-2025-02-10 10:19:41 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:19:41 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:19:41 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:19:41 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:19:41 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:19:41 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:19:41 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:19:41 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:19:41 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:19:41 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:19:41 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:19:41 INFO Vitor Quintino  already on SE
-2025-02-10 10:19:41 INFO Josicler Turassi  already on SE
-2025-02-10 10:19:41 INFO Andreia Costa Sá already on SE
-2025-02-10 10:19:41 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:19:41 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:19:41 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:19:41 INFO JHONY DE MORAES already on SE
-2025-02-10 10:19:41 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:19:41 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:19:41 INFO Patricia Rosa Will already on SE
-2025-02-10 10:19:41 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:19:41 INFO Martinha kruger  already on SE
-2025-02-10 10:19:41 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:19:41 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:19:41 INFO Jeferson Sobral  already on SE
-2025-02-10 10:19:41 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:19:41 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:19:41 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:19:41 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:19:41 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:19:41 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:19:41 INFO Cintia Mendes  already on SE
-2025-02-10 10:19:41 INFO Eliane mara cercal already on SE
-2025-02-10 10:19:41 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:19:41 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:19:41 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:19:41 INFO Karina Carvalho  already on SE
-2025-02-10 10:19:41 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:19:41 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:19:41 INFO Elaine Muller  already on SE
-2025-02-10 10:19:41 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:19:41 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:19:41 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:19:41 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:19:41 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:19:41 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:19:41 INFO Eliete Alves  already on SE
-2025-02-10 10:19:41 INFO Themístocles Duarte  already on SE
-2025-02-10 10:19:41 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:19:41 INFO Giani Gonçalves  already on SE
-2025-02-10 10:19:41 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:19:41 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:19:41 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:19:41 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:19:41 INFO RecordID: 081487
-2025-02-10 10:19:41 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de teste Transportation
-2025-02-10 10:19:42 INFO RecordID: 081488
-2025-02-10 10:19:42 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de testes Transportation
-2025-02-10 10:19:42 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:19:42 INFO Claudemir Siqueira already on SE
-2025-02-10 10:19:42 INFO Fernando de Leão already on SE
-2025-02-10 10:19:42 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:19:42 INFO Aliana Haritsch already on SE
-2025-02-10 10:19:42 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:19:42 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:19:42 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:19:42 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:19:42 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:19:42 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:19:42 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:19:42 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:19:43 INFO RecordID: 081489
-2025-02-10 10:19:43 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Vitória Ferreira Quinor Transportation
-2025-02-10 10:19:43 INFO RecordID: 081490
-2025-02-10 10:19:43 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Graziela stainsack  Transportation
-2025-02-10 10:19:43 INFO RecordID: 081491
-2025-02-10 10:19:43 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de wellison da Silva  Transportation
-2025-02-10 10:19:44 INFO RecordID: 081492
-2025-02-10 10:19:44 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Pedro maffei junior Transportation
-2025-02-10 10:19:44 INFO RecordID: 081493
-2025-02-10 10:19:44 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:19:45 INFO RecordID: 081494
-2025-02-10 10:19:45 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ricardo Raitz souza Transportation
-2025-02-10 10:19:45 INFO RecordID: 081495
-2025-02-10 10:19:45 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:19:46 INFO RecordID: 081496
-2025-02-10 10:19:46 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Ana Larissa dos Anjos Transportation
-2025-02-10 10:19:46 INFO RecordID: 081497
-2025-02-10 10:19:46 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Leticia Tais Kormann  Transportation
-2025-02-10 10:19:47 INFO RecordID: 081498
-2025-02-10 10:19:47 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Geovana Silva Viterbo  Transportation
-2025-02-10 10:19:47 INFO RecordID: 081499
-2025-02-10 10:19:47 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Danielle Paula Barros  Transportation
-2025-02-10 10:19:48 INFO RecordID: 081500
-2025-02-10 10:19:48 INFO Status: FAILURE, Code: -41, Detail: Não foi encontrado um campo da tabela de formulário com este identificador de Débora Transportation
-2025-02-10 10:21:43 INFO Connection successful!
-2025-02-10 10:21:43 INFO Brenno  already on SE
-2025-02-10 10:21:43 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:21:43 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:21:43 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:21:43 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:21:43 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:21:43 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:21:43 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:21:43 INFO Franciele Pagno already on SE
-2025-02-10 10:21:43 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:21:43 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:21:43 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:21:43 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:21:43 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:21:43 INFO Aline Souza da Luz already on SE
-2025-02-10 10:21:43 INFO Maxmaihor Marques already on SE
-2025-02-10 10:21:43 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:21:43 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:21:43 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:21:43 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:21:43 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:21:43 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:21:43 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:21:43 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:21:43 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:21:43 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:21:43 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:21:43 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:21:43 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:21:43 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:21:43 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:21:43 INFO RENAN REZENDE already on SE
-2025-02-10 10:21:43 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:21:43 INFO Felipe  Souza already on SE
-2025-02-10 10:21:43 INFO Igor Butzke already on SE
-2025-02-10 10:21:43 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:21:43 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:21:43 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:21:43 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:21:43 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:21:43 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:21:43 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:21:43 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:21:43 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:21:43 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:21:43 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:21:43 INFO Vitor Quintino  already on SE
-2025-02-10 10:21:43 INFO Josicler Turassi  already on SE
-2025-02-10 10:21:43 INFO Andreia Costa Sá already on SE
-2025-02-10 10:21:43 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:21:43 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:21:43 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:21:43 INFO JHONY DE MORAES already on SE
-2025-02-10 10:21:43 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:21:43 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:21:43 INFO Patricia Rosa Will already on SE
-2025-02-10 10:21:43 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:21:43 INFO Martinha kruger  already on SE
-2025-02-10 10:21:43 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:21:43 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:21:43 INFO Jeferson Sobral  already on SE
-2025-02-10 10:21:43 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:21:43 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:21:43 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:21:43 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:21:43 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:21:43 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:21:43 INFO Cintia Mendes  already on SE
-2025-02-10 10:21:43 INFO Eliane mara cercal already on SE
-2025-02-10 10:21:43 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:21:43 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:21:43 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:21:43 INFO Karina Carvalho  already on SE
-2025-02-10 10:21:43 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:21:43 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:21:43 INFO Elaine Muller  already on SE
-2025-02-10 10:21:43 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:21:43 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:21:43 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:21:43 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:21:43 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:21:43 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:21:43 INFO Eliete Alves  already on SE
-2025-02-10 10:21:43 INFO Themístocles Duarte  already on SE
-2025-02-10 10:21:43 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:21:43 INFO Giani Gonçalves  already on SE
-2025-02-10 10:21:43 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:21:43 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:21:43 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:21:43 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:21:44 INFO RecordID: 081501
-2025-02-10 10:21:44 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de teste Transportation
-2025-02-10 10:21:44 INFO RecordID: 081502
-2025-02-10 10:21:44 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de testes Transportation
-2025-02-10 10:21:44 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:21:44 INFO Claudemir Siqueira already on SE
-2025-02-10 10:21:44 INFO Fernando de Leão already on SE
-2025-02-10 10:21:44 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:21:44 INFO Aliana Haritsch already on SE
-2025-02-10 10:21:44 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:21:44 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:21:44 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:21:44 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:21:44 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:21:44 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:21:44 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:21:44 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:21:45 INFO RecordID: 081503
-2025-02-10 10:21:46 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Vitória Ferreira Quinor Transportation
-2025-02-10 10:21:46 INFO RecordID: 081504
-2025-02-10 10:21:46 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Graziela stainsack  Transportation
-2025-02-10 10:21:47 INFO RecordID: 081505
-2025-02-10 10:21:47 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de wellison da Silva  Transportation
-2025-02-10 10:21:47 INFO RecordID: 081506
-2025-02-10 10:21:47 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Pedro maffei junior Transportation
-2025-02-10 10:21:47 INFO RecordID: 081507
-2025-02-10 10:21:47 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:21:48 INFO RecordID: 081508
-2025-02-10 10:21:48 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ricardo Raitz souza Transportation
-2025-02-10 10:21:48 INFO RecordID: 081509
-2025-02-10 10:21:48 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:22:31 INFO Connection successful!
-2025-02-10 10:22:31 INFO Brenno  already on SE
-2025-02-10 10:22:31 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:22:31 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:22:31 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:22:31 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:22:31 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:22:31 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:22:31 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:22:31 INFO Franciele Pagno already on SE
-2025-02-10 10:22:31 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:22:31 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:22:31 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:22:31 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:22:31 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:22:31 INFO Aline Souza da Luz already on SE
-2025-02-10 10:22:31 INFO Maxmaihor Marques already on SE
-2025-02-10 10:22:31 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:22:31 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:22:31 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:22:31 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:22:31 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:22:31 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:22:31 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:22:31 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:22:31 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:22:31 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:22:31 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:22:31 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:22:31 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:22:31 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:22:31 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:22:31 INFO RENAN REZENDE already on SE
-2025-02-10 10:22:31 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:22:31 INFO Felipe  Souza already on SE
-2025-02-10 10:22:31 INFO Igor Butzke already on SE
-2025-02-10 10:22:31 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:22:31 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:22:31 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:22:31 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:22:31 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:22:31 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:22:31 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:22:31 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:22:31 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:22:31 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:22:31 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:22:31 INFO Vitor Quintino  already on SE
-2025-02-10 10:22:31 INFO Josicler Turassi  already on SE
-2025-02-10 10:22:31 INFO Andreia Costa Sá already on SE
-2025-02-10 10:22:31 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:22:31 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:22:31 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:22:31 INFO JHONY DE MORAES already on SE
-2025-02-10 10:22:31 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:22:31 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:22:31 INFO Patricia Rosa Will already on SE
-2025-02-10 10:22:31 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:22:31 INFO Martinha kruger  already on SE
-2025-02-10 10:22:31 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:22:31 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:22:31 INFO Jeferson Sobral  already on SE
-2025-02-10 10:22:31 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:22:31 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:22:31 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:22:31 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:22:31 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:22:31 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:22:31 INFO Cintia Mendes  already on SE
-2025-02-10 10:22:31 INFO Eliane mara cercal already on SE
-2025-02-10 10:22:31 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:22:31 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:22:31 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:22:31 INFO Karina Carvalho  already on SE
-2025-02-10 10:22:31 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:22:31 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:22:31 INFO Elaine Muller  already on SE
-2025-02-10 10:22:31 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:22:31 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:22:31 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:22:31 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:22:31 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:22:31 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:22:31 INFO Eliete Alves  already on SE
-2025-02-10 10:22:31 INFO Themístocles Duarte  already on SE
-2025-02-10 10:22:31 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:22:31 INFO Giani Gonçalves  already on SE
-2025-02-10 10:22:31 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:22:31 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:22:31 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:22:31 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:22:32 INFO RecordID: 081511
-2025-02-10 10:22:32 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de teste Transportation
-2025-02-10 10:22:32 INFO RecordID: 081512
-2025-02-10 10:22:32 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de testes Transportation
-2025-02-10 10:22:32 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:22:32 INFO Claudemir Siqueira already on SE
-2025-02-10 10:22:32 INFO Fernando de Leão already on SE
-2025-02-10 10:22:32 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:22:32 INFO Aliana Haritsch already on SE
-2025-02-10 10:22:32 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:22:32 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:22:32 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:22:32 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:22:32 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:22:32 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:22:32 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:22:32 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:22:33 INFO RecordID: 081513
-2025-02-10 10:22:33 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Vitória Ferreira Quinor Transportation
-2025-02-10 10:22:33 INFO RecordID: 081514
-2025-02-10 10:22:33 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Graziela stainsack  Transportation
-2025-02-10 10:22:34 INFO RecordID: 081515
-2025-02-10 10:22:34 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de wellison da Silva  Transportation
-2025-02-10 10:22:34 INFO RecordID: 081516
-2025-02-10 10:22:34 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Pedro maffei junior Transportation
-2025-02-10 10:22:35 INFO RecordID: 081517
-2025-02-10 10:22:35 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:22:35 INFO RecordID: 081518
-2025-02-10 10:22:35 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ricardo Raitz souza Transportation
-2025-02-10 10:22:36 INFO RecordID: 081519
-2025-02-10 10:22:36 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:22:37 INFO RecordID: 081520
-2025-02-10 10:22:37 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Larissa dos Anjos Transportation
-2025-02-10 10:22:37 INFO RecordID: 081521
-2025-02-10 10:22:37 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Leticia Tais Kormann  Transportation
-2025-02-10 10:22:37 INFO RecordID: 081522
-2025-02-10 10:22:38 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Geovana Silva Viterbo  Transportation
-2025-02-10 10:24:05 INFO Connection successful!
-2025-02-10 10:24:05 INFO Brenno  already on SE
-2025-02-10 10:24:05 INFO Daniel Bairros Perrone already on SE
-2025-02-10 10:24:05 INFO Thaise Cardoso Cavalcante already on SE
-2025-02-10 10:24:05 INFO Jairo de Faria Barros Filho. already on SE
-2025-02-10 10:24:05 INFO Cleisson cordeiro dos santos  already on SE
-2025-02-10 10:24:05 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
-2025-02-10 10:24:05 INFO Carlos Eduardo Beluco already on SE
-2025-02-10 10:24:05 INFO Kethleen Lanna Lima Pinheiro  already on SE
-2025-02-10 10:24:05 INFO Franciele Pagno already on SE
-2025-02-10 10:24:05 INFO Pedro Vilson Fernandes Júnior already on SE
-2025-02-10 10:24:05 INFO THIAGO CARLOS DE ALENCAR already on SE
-2025-02-10 10:24:05 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
-2025-02-10 10:24:05 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
-2025-02-10 10:24:05 INFO LEONARDO CARDOSO SANTOS already on SE
-2025-02-10 10:24:05 INFO Aline Souza da Luz already on SE
-2025-02-10 10:24:05 INFO Maxmaihor Marques already on SE
-2025-02-10 10:24:05 INFO Moises Daniel medina abreu already on SE
-2025-02-10 10:24:05 INFO Matheus Gonçalves Enes  already on SE
-2025-02-10 10:24:05 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
-2025-02-10 10:24:05 INFO GLEIVIANE DA SILVA COSTA already on SE
-2025-02-10 10:24:05 INFO ELUISA EYNG ROMANHA already on SE
-2025-02-10 10:24:05 INFO ISABEL CRISTINA LEITE FURTADO already on SE
-2025-02-10 10:24:05 INFO EDER JEAN GONÇALVES already on SE
-2025-02-10 10:24:05 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
-2025-02-10 10:24:05 INFO Caroline Vieira Schmidt  already on SE
-2025-02-10 10:24:05 INFO Nayara Angélica Struziatto Motta  already on SE
-2025-02-10 10:24:05 INFO Rafael de Santana Teixeira Rinaldi already on SE
-2025-02-10 10:24:05 INFO João Carlos Bonetti  already on SE
-2025-02-10 10:24:05 INFO Patrícia Silva Rodrigues  already on SE
-2025-02-10 10:24:05 INFO João Felipe Grosskopf already on SE
-2025-02-10 10:24:05 INFO Claudia Jakelin Martinez Carrasquel  already on SE
-2025-02-10 10:24:05 INFO RENAN REZENDE already on SE
-2025-02-10 10:24:05 INFO Fabiana Sabino de Souza already on SE
-2025-02-10 10:24:05 INFO Felipe  Souza already on SE
-2025-02-10 10:24:05 INFO Igor Butzke already on SE
-2025-02-10 10:24:05 INFO Michel Barboza Burilli  already on SE
-2025-02-10 10:24:05 INFO Luiz Filipe Mafra  already on SE
-2025-02-10 10:24:05 INFO Lucas Feitosa Silva already on SE
-2025-02-10 10:24:05 INFO VALDIR PEDRO SCHWAAB already on SE
-2025-02-10 10:24:05 INFO CARLOS EDUARDO DE BARROS already on SE
-2025-02-10 10:24:05 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
-2025-02-10 10:24:05 INFO VILMA GONÇALVES CORRA SOARES already on SE
-2025-02-10 10:24:05 INFO Matheus william Gonçalves  already on SE
-2025-02-10 10:24:05 INFO Mychelle Cordeiro de Oliveira already on SE
-2025-02-10 10:24:05 INFO Cristiane Francine Tantsch da Silva  already on SE
-2025-02-10 10:24:05 INFO Simone dos Santos Luciano  already on SE
-2025-02-10 10:24:05 INFO Vitor Quintino  already on SE
-2025-02-10 10:24:05 INFO Josicler Turassi  already on SE
-2025-02-10 10:24:05 INFO Andreia Costa Sá already on SE
-2025-02-10 10:24:05 INFO Tainá Do Nascimento correa dos Santos  already on SE
-2025-02-10 10:24:05 INFO Gracilene Abigail de Souza  already on SE
-2025-02-10 10:24:05 INFO ADRIANA REGINA HOLZ SELL already on SE
-2025-02-10 10:24:05 INFO JHONY DE MORAES already on SE
-2025-02-10 10:24:05 INFO Maria Luiza Pavoski Porto already on SE
-2025-02-10 10:24:05 INFO Flávia Cheila Ternoski  already on SE
-2025-02-10 10:24:05 INFO Patricia Rosa Will already on SE
-2025-02-10 10:24:05 INFO Maria Luiza Melo Ferreira  already on SE
-2025-02-10 10:24:05 INFO Martinha kruger  already on SE
-2025-02-10 10:24:05 INFO Juan Carlos dos Santos  already on SE
-2025-02-10 10:24:05 INFO PRISCILA DOS SANTOS MIGUEL already on SE
-2025-02-10 10:24:05 INFO Jeferson Sobral  already on SE
-2025-02-10 10:24:05 INFO Carine Rodrigues dos Santos  already on SE
-2025-02-10 10:24:05 INFO Emmanuel Delfino dos Passos  already on SE
-2025-02-10 10:24:05 INFO JAILSON DA SILVA already on SE
-2025-02-10 10:24:05 INFO NAYARA MILENE ALVES already on SE
-2025-02-10 10:24:05 INFO Maicon Alexandre de Oliveira  already on SE
-2025-02-10 10:24:05 INFO Jefferson William Alves da Silva  already on SE
-2025-02-10 10:24:05 INFO Cintia Mendes  already on SE
-2025-02-10 10:24:05 INFO Eliane mara cercal already on SE
-2025-02-10 10:24:05 INFO Juliane Belo Puccinelli already on SE
-2025-02-10 10:24:05 INFO Rosana roque da Cunha Silva  already on SE
-2025-02-10 10:24:05 INFO Schirley Dellandrea Hoffmann  already on SE
-2025-02-10 10:24:05 INFO Karina Carvalho  already on SE
-2025-02-10 10:24:05 INFO Wesley Miguel de Amorim already on SE
-2025-02-10 10:24:05 INFO Rubens Vitório Lins Batista already on SE
-2025-02-10 10:24:05 INFO Elaine Muller  already on SE
-2025-02-10 10:24:05 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
-2025-02-10 10:24:05 INFO Bruno Eduardo de Souza  already on SE
-2025-02-10 10:24:05 INFO Manuela Silva Souza Simão  already on SE
-2025-02-10 10:24:05 INFO Marcos Antônio Sandrini already on SE
-2025-02-10 10:24:05 INFO Dayana Martins Ramos  already on SE
-2025-02-10 10:24:05 INFO Vivian Maria Linhares  already on SE
-2025-02-10 10:24:05 INFO Eliete Alves  already on SE
-2025-02-10 10:24:05 INFO Themístocles Duarte  already on SE
-2025-02-10 10:24:05 INFO Nancy Esperanza Patino Castellanos  already on SE
-2025-02-10 10:24:05 INFO Giani Gonçalves  already on SE
-2025-02-10 10:24:05 INFO Luiza Karine de Jesus already on SE
-2025-02-10 10:24:05 INFO Grazieli ines cervo  already on SE
-2025-02-10 10:24:05 INFO Helena Lemos Simon  already on SE
-2025-02-10 10:24:05 INFO Alessandra Avelino de Oliveira already on SE
-2025-02-10 10:24:06 INFO RecordID: 081524
-2025-02-10 10:24:06 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de teste Transportation
-2025-02-10 10:24:06 INFO RecordID: 081525
-2025-02-10 10:24:06 INFO Status: FAILURE, Code: -49, Detail: Não foi encontrado um registro através dos filtros informados para o relacionamento [iniciativadesli] de testes Transportation
-2025-02-10 10:24:06 INFO Yasmin de Oliveira dos Santos already on SE
-2025-02-10 10:24:06 INFO Claudemir Siqueira already on SE
-2025-02-10 10:24:06 INFO Fernando de Leão already on SE
-2025-02-10 10:24:06 INFO Laila Juliana da Silva  already on SE
-2025-02-10 10:24:06 INFO Aliana Haritsch already on SE
-2025-02-10 10:24:06 INFO Fábio Gustavo Lindner  already on SE
-2025-02-10 10:24:06 INFO Thais Evelin pinto  already on SE
-2025-02-10 10:24:06 INFO Jeffrey Aleksei Alves Maia Filho already on SE
-2025-02-10 10:24:06 INFO Fabio Gustavo Lindner already on SE
-2025-02-10 10:24:06 INFO Pamella de Mattos Gomes  already on SE
-2025-02-10 10:24:06 INFO Guilherme Cavalcante Luz  already on SE
-2025-02-10 10:24:06 INFO Karla Adriana Leitzke already on SE
-2025-02-10 10:24:06 INFO Leandro Santana da Costa. already on SE
-2025-02-10 10:24:07 INFO RecordID: 081526
-2025-02-10 10:24:07 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Vitória Ferreira Quinor Transportation
-2025-02-10 10:24:07 INFO RecordID: 081527
-2025-02-10 10:24:07 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Graziela stainsack  Transportation
-2025-02-10 10:24:07 INFO RecordID: 081528
-2025-02-10 10:24:08 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de wellison da Silva  Transportation
-2025-02-10 10:24:08 INFO RecordID: 081529
-2025-02-10 10:24:08 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Pedro maffei junior Transportation
-2025-02-10 10:24:08 INFO RecordID: 081530
-2025-02-10 10:24:08 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Julia Pereira Soares  Transportation
-2025-02-10 10:24:09 INFO RecordID: 081531
-2025-02-10 10:24:09 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ricardo Raitz souza Transportation
-2025-02-10 10:24:09 INFO RecordID: 081532
-2025-02-10 10:24:09 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Kauã Henrique Machado Leal  Transportation
-2025-02-10 10:24:10 INFO RecordID: 081533
-2025-02-10 10:24:10 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Ana Larissa dos Anjos Transportation
-2025-02-10 10:24:10 INFO RecordID: 081534
-2025-02-10 10:24:10 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Leticia Tais Kormann  Transportation
-2025-02-10 10:24:10 INFO RecordID: 081535
-2025-02-10 10:24:11 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Geovana Silva Viterbo  Transportation
-2025-02-10 10:24:11 INFO RecordID: 081536
-2025-02-10 10:24:11 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Danielle Paula Barros  Transportation
-2025-02-10 10:24:12 INFO RecordID: 081537
-2025-02-10 10:24:12 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Débora Transportation
+2025-02-10 13:51:51 ERROR Download URL not found.200:{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#Collection(driveItem)/$entity","createdDateTime":"2025-01-19T03:11:45Z","id":"01S4IWBY56Y2GOVW7725BZO354PWSELRRZ","lastModifiedDateTime":"2025-02-10T16:16:41Z","name":"root","parentReference":{"driveType":"business","driveId":"b!FYHYwquSFEGsJID7X9l_BRMqzxrWRbBBvZL-a4goiCX73O_NJI46QpV_Kl_mafxJ"},"webUrl":"https://fgmjvl-my.sharepoint.com/personal/sesuite_fgm_ind_br1/Documents","fileSystemInfo":{"createdDateTime":"2025-01-19T03:11:45Z","lastModifiedDateTime":"2025-02-10T16:16:41Z"},"folder":{"childCount":3},"root":{},"size":12583}
+2025-02-10 13:51:51 INFO Connection successful!
+2025-02-10 13:51:51 INFO Brenno  already on SE
+2025-02-10 13:51:51 INFO Daniel Bairros Perrone already on SE
+2025-02-10 13:51:51 INFO Thaise Cardoso Cavalcante already on SE
+2025-02-10 13:51:51 INFO Jairo de Faria Barros Filho. already on SE
+2025-02-10 13:51:51 INFO Cleisson cordeiro dos santos  already on SE
+2025-02-10 13:51:51 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
+2025-02-10 13:51:51 INFO Carlos Eduardo Beluco already on SE
+2025-02-10 13:51:51 INFO Kethleen Lanna Lima Pinheiro  already on SE
+2025-02-10 13:51:51 INFO Franciele Pagno already on SE
+2025-02-10 13:51:51 INFO Pedro Vilson Fernandes Jï¿½nior already on SE
+2025-02-10 13:51:51 INFO THIAGO CARLOS DE ALENCAR already on SE
+2025-02-10 13:51:51 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
+2025-02-10 13:51:51 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
+2025-02-10 13:51:51 INFO LEONARDO CARDOSO SANTOS already on SE
+2025-02-10 13:51:51 INFO Aline Souza da Luz already on SE
+2025-02-10 13:51:51 INFO Maxmaihor Marques already on SE
+2025-02-10 13:51:51 INFO Moises Daniel medina abreu already on SE
+2025-02-10 13:51:51 INFO Matheus Gonï¿½alves Enes  already on SE
+2025-02-10 13:51:51 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
+2025-02-10 13:51:51 INFO GLEIVIANE DA SILVA COSTA already on SE
+2025-02-10 13:51:51 INFO ELUISA EYNG ROMANHA already on SE
+2025-02-10 13:51:51 INFO ISABEL CRISTINA LEITE FURTADO already on SE
+2025-02-10 13:51:51 INFO EDER JEAN GONï¿½ALVES already on SE
+2025-02-10 13:51:51 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
+2025-02-10 13:51:51 INFO Caroline Vieira Schmidt  already on SE
+2025-02-10 13:51:51 INFO Nayara Angï¿½lica Struziatto Motta  already on SE
+2025-02-10 13:51:51 INFO Rafael de Santana Teixeira Rinaldi already on SE
+2025-02-10 13:51:51 INFO Joï¿½o Carlos Bonetti  already on SE
+2025-02-10 13:51:51 INFO Patrï¿½cia Silva Rodrigues  already on SE
+2025-02-10 13:51:51 INFO Joï¿½o Felipe Grosskopf already on SE
+2025-02-10 13:51:51 INFO Claudia Jakelin Martinez Carrasquel  already on SE
+2025-02-10 13:51:51 INFO RENAN REZENDE already on SE
+2025-02-10 13:51:51 INFO Fabiana Sabino de Souza already on SE
+2025-02-10 13:51:51 INFO Felipe  Souza already on SE
+2025-02-10 13:51:51 INFO Igor Butzke already on SE
+2025-02-10 13:51:51 INFO Michel Barboza Burilli  already on SE
+2025-02-10 13:51:51 INFO Luiz Filipe Mafra  already on SE
+2025-02-10 13:51:51 INFO Lucas Feitosa Silva already on SE
+2025-02-10 13:51:51 INFO VALDIR PEDRO SCHWAAB already on SE
+2025-02-10 13:51:51 INFO CARLOS EDUARDO DE BARROS already on SE
+2025-02-10 13:51:51 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
+2025-02-10 13:51:51 INFO VILMA GONï¿½ALVES CORRA SOARES already on SE
+2025-02-10 13:51:51 INFO Matheus william Gonï¿½alves  already on SE
+2025-02-10 13:51:51 INFO Mychelle Cordeiro de Oliveira already on SE
+2025-02-10 13:51:51 INFO Cristiane Francine Tantsch da Silva  already on SE
+2025-02-10 13:51:51 INFO Simone dos Santos Luciano  already on SE
+2025-02-10 13:51:51 INFO Vitor Quintino  already on SE
+2025-02-10 13:51:51 INFO Josicler Turassi  already on SE
+2025-02-10 13:51:51 INFO Andreia Costa Sï¿½ already on SE
+2025-02-10 13:51:51 INFO Tainï¿½ Do Nascimento correa dos Santos  already on SE
+2025-02-10 13:51:51 INFO Gracilene Abigail de Souza  already on SE
+2025-02-10 13:51:51 INFO ADRIANA REGINA HOLZ SELL already on SE
+2025-02-10 13:51:51 INFO JHONY DE MORAES already on SE
+2025-02-10 13:51:51 INFO Maria Luiza Pavoski Porto already on SE
+2025-02-10 13:51:51 INFO Flï¿½via Cheila Ternoski  already on SE
+2025-02-10 13:51:51 INFO Patricia Rosa Will already on SE
+2025-02-10 13:51:51 INFO Maria Luiza Melo Ferreira  already on SE
+2025-02-10 13:51:51 INFO Martinha kruger  already on SE
+2025-02-10 13:51:51 INFO Juan Carlos dos Santos  already on SE
+2025-02-10 13:51:51 INFO PRISCILA DOS SANTOS MIGUEL already on SE
+2025-02-10 13:51:51 INFO Jeferson Sobral  already on SE
+2025-02-10 13:51:51 INFO Carine Rodrigues dos Santos  already on SE
+2025-02-10 13:51:51 INFO Emmanuel Delfino dos Passos  already on SE
+2025-02-10 13:51:51 INFO JAILSON DA SILVA already on SE
+2025-02-10 13:51:51 INFO NAYARA MILENE ALVES already on SE
+2025-02-10 13:51:51 INFO Maicon Alexandre de Oliveira  already on SE
+2025-02-10 13:51:51 INFO Jefferson William Alves da Silva  already on SE
+2025-02-10 13:51:51 INFO Cintia Mendes  already on SE
+2025-02-10 13:51:51 INFO Eliane mara cercal already on SE
+2025-02-10 13:51:51 INFO Juliane Belo Puccinelli already on SE
+2025-02-10 13:51:51 INFO Rosana roque da Cunha Silva  already on SE
+2025-02-10 13:51:51 INFO Schirley Dellandrea Hoffmann  already on SE
+2025-02-10 13:51:51 INFO Karina Carvalho  already on SE
+2025-02-10 13:51:51 INFO Wesley Miguel de Amorim already on SE
+2025-02-10 13:51:51 INFO Rubens Vitï¿½rio Lins Batista already on SE
+2025-02-10 13:51:51 INFO Elaine Muller  already on SE
+2025-02-10 13:51:51 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
+2025-02-10 13:51:51 INFO Bruno Eduardo de Souza  already on SE
+2025-02-10 13:51:51 INFO Manuela Silva Souza Simï¿½o  already on SE
+2025-02-10 13:51:51 INFO Marcos Antï¿½nio Sandrini already on SE
+2025-02-10 13:51:51 INFO Dayana Martins Ramos  already on SE
+2025-02-10 13:51:51 INFO Vivian Maria Linhares  already on SE
+2025-02-10 13:51:51 INFO Eliete Alves  already on SE
+2025-02-10 13:51:51 INFO Themï¿½stocles Duarte  already on SE
+2025-02-10 13:51:51 INFO Nancy Esperanza Patino Castellanos  already on SE
+2025-02-10 13:51:51 INFO Giani Gonï¿½alves  already on SE
+2025-02-10 13:51:51 INFO Luiza Karine de Jesus already on SE
+2025-02-10 13:51:51 INFO Grazieli ines cervo  already on SE
+2025-02-10 13:51:51 INFO Helena Lemos Simon  already on SE
+2025-02-10 13:51:51 INFO Alessandra Avelino de Oliveira already on SE
+2025-02-10 13:51:51 INFO Yasmin de Oliveira dos Santos already on SE
+2025-02-10 13:51:51 INFO Claudemir Siqueira already on SE
+2025-02-10 13:51:51 INFO Fernando de Leï¿½o already on SE
+2025-02-10 13:51:51 INFO Laila Juliana da Silva  already on SE
+2025-02-10 13:51:51 INFO Aliana Haritsch already on SE
+2025-02-10 13:51:51 INFO Fï¿½bio Gustavo Lindner  already on SE
+2025-02-10 13:51:51 INFO Thais Evelin pinto  already on SE
+2025-02-10 13:51:51 INFO Jeffrey Aleksei Alves Maia Filho already on SE
+2025-02-10 13:51:51 INFO Fabio Gustavo Lindner already on SE
+2025-02-10 13:51:51 INFO Pamella de Mattos Gomes  already on SE
+2025-02-10 13:51:51 INFO Guilherme Cavalcante Luz  already on SE
+2025-02-10 13:51:51 INFO Karla Adriana Leitzke already on SE
+2025-02-10 13:51:51 INFO Leandro Santana da Costa. already on SE
+2025-02-10 13:51:51 INFO Vitï¿½ria Ferreira Quinor already on SE
+2025-02-10 13:51:51 INFO Graziela stainsack  already on SE
+2025-02-10 13:51:51 INFO wellison da Silva  already on SE
+2025-02-10 13:51:51 INFO Pedro maffei junior already on SE
+2025-02-10 13:51:51 INFO Ana Julia Pereira Soares  already on SE
+2025-02-10 13:51:51 INFO Ricardo Raitz souza already on SE
+2025-02-10 13:51:51 INFO Kauï¿½ Henrique Machado Leal  already on SE
+2025-02-10 13:51:51 INFO Ana Larissa dos Anjos already on SE
+2025-02-10 13:51:51 INFO Leticia Tais Kormann  already on SE
+2025-02-10 13:51:51 INFO Geovana Silva Viterbo  already on SE
+2025-02-10 13:51:51 INFO Danielle Paula Barros  already on SE
+2025-02-10 13:51:51 INFO Dï¿½bora already on SE
+2025-02-10 13:54:41 ERROR Download URL not found.200:{"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#Collection(driveItem)/$entity","createdDateTime":"2025-01-19T03:11:45Z","id":"01S4IWBY56Y2GOVW7725BZO354PWSELRRZ","lastModifiedDateTime":"2025-02-10T16:16:41Z","name":"root","parentReference":{"driveType":"business","driveId":"b!FYHYwquSFEGsJID7X9l_BRMqzxrWRbBBvZL-a4goiCX73O_NJI46QpV_Kl_mafxJ"},"webUrl":"https://fgmjvl-my.sharepoint.com/personal/sesuite_fgm_ind_br1/Documents","fileSystemInfo":{"createdDateTime":"2025-01-19T03:11:45Z","lastModifiedDateTime":"2025-02-10T16:16:41Z"},"folder":{"childCount":3},"root":{},"size":12583}
+2025-02-10 13:54:41 INFO Connection successful!
+2025-02-10 13:54:41 INFO Brenno  already on SE
+2025-02-10 13:54:41 INFO Daniel Bairros Perrone already on SE
+2025-02-10 13:54:41 INFO Thaise Cardoso Cavalcante already on SE
+2025-02-10 13:54:41 INFO Jairo de Faria Barros Filho. already on SE
+2025-02-10 13:54:41 INFO Cleisson cordeiro dos santos  already on SE
+2025-02-10 13:54:41 INFO ANA CAROLINE DE BORBA PETROSKI already on SE
+2025-02-10 13:54:41 INFO Carlos Eduardo Beluco already on SE
+2025-02-10 13:54:41 INFO Kethleen Lanna Lima Pinheiro  already on SE
+2025-02-10 13:54:41 INFO Franciele Pagno already on SE
+2025-02-10 13:54:41 INFO Pedro Vilson Fernandes JÃºnior already on SE
+2025-02-10 13:54:41 INFO THIAGO CARLOS DE ALENCAR already on SE
+2025-02-10 13:54:41 INFO DIANA VALLERY OLIVEIRA MOREIRA already on SE
+2025-02-10 13:54:41 INFO PEDRO ANTONIO TESTONI BRUNKEN already on SE
+2025-02-10 13:54:41 INFO LEONARDO CARDOSO SANTOS already on SE
+2025-02-10 13:54:41 INFO Aline Souza da Luz already on SE
+2025-02-10 13:54:41 INFO Maxmaihor Marques already on SE
+2025-02-10 13:54:41 INFO Moises Daniel medina abreu already on SE
+2025-02-10 13:54:41 INFO Matheus GonÃ§alves Enes  already on SE
+2025-02-10 13:54:41 INFO AMANDA ESPINDOLA GODINHO DOS SANTOS already on SE
+2025-02-10 13:54:41 INFO GLEIVIANE DA SILVA COSTA already on SE
+2025-02-10 13:54:41 INFO ELUISA EYNG ROMANHA already on SE
+2025-02-10 13:54:41 INFO ISABEL CRISTINA LEITE FURTADO already on SE
+2025-02-10 13:54:41 INFO EDER JEAN GONÃ‡ALVES already on SE
+2025-02-10 13:54:41 INFO ANA PAULA ARAUJO DE OLIVEIRA already on SE
+2025-02-10 13:54:41 INFO Caroline Vieira Schmidt  already on SE
+2025-02-10 13:54:41 INFO Nayara AngÃ©lica Struziatto Motta  already on SE
+2025-02-10 13:54:41 INFO Rafael de Santana Teixeira Rinaldi already on SE
+2025-02-10 13:54:41 INFO JoÃ£o Carlos Bonetti  already on SE
+2025-02-10 13:54:41 INFO PatrÃ­cia Silva Rodrigues  already on SE
+2025-02-10 13:54:41 INFO JoÃ£o Felipe Grosskopf already on SE
+2025-02-10 13:54:41 INFO Claudia Jakelin Martinez Carrasquel  already on SE
+2025-02-10 13:54:41 INFO RENAN REZENDE already on SE
+2025-02-10 13:54:41 INFO Fabiana Sabino de Souza already on SE
+2025-02-10 13:54:41 INFO Felipe  Souza already on SE
+2025-02-10 13:54:41 INFO Igor Butzke already on SE
+2025-02-10 13:54:41 INFO Michel Barboza Burilli  already on SE
+2025-02-10 13:54:41 INFO Luiz Filipe Mafra  already on SE
+2025-02-10 13:54:41 INFO Lucas Feitosa Silva already on SE
+2025-02-10 13:54:41 INFO VALDIR PEDRO SCHWAAB already on SE
+2025-02-10 13:54:41 INFO CARLOS EDUARDO DE BARROS already on SE
+2025-02-10 13:54:41 INFO VITORIA EMANUELLE BATISTA VIEIRA  already on SE
+2025-02-10 13:54:41 INFO VILMA GONÃ‡ALVES CORRA SOARES already on SE
+2025-02-10 13:54:41 INFO Matheus william GonÃ§alves  already on SE
+2025-02-10 13:54:41 INFO Mychelle Cordeiro de Oliveira already on SE
+2025-02-10 13:54:41 INFO Cristiane Francine Tantsch da Silva  already on SE
+2025-02-10 13:54:41 INFO Simone dos Santos Luciano  already on SE
+2025-02-10 13:54:41 INFO Vitor Quintino  already on SE
+2025-02-10 13:54:41 INFO Josicler Turassi  already on SE
+2025-02-10 13:54:41 INFO Andreia Costa SÃ¡ already on SE
+2025-02-10 13:54:41 INFO TainÃ¡ Do Nascimento correa dos Santos  already on SE
+2025-02-10 13:54:41 INFO Gracilene Abigail de Souza  already on SE
+2025-02-10 13:54:41 INFO ADRIANA REGINA HOLZ SELL already on SE
+2025-02-10 13:54:41 INFO JHONY DE MORAES already on SE
+2025-02-10 13:54:41 INFO Maria Luiza Pavoski Porto already on SE
+2025-02-10 13:54:41 INFO FlÃ¡via Cheila Ternoski  already on SE
+2025-02-10 13:54:41 INFO Patricia Rosa Will already on SE
+2025-02-10 13:54:41 INFO Maria Luiza Melo Ferreira  already on SE
+2025-02-10 13:54:41 INFO Martinha kruger  already on SE
+2025-02-10 13:54:41 INFO Juan Carlos dos Santos  already on SE
+2025-02-10 13:54:41 INFO PRISCILA DOS SANTOS MIGUEL already on SE
+2025-02-10 13:54:41 INFO Jeferson Sobral  already on SE
+2025-02-10 13:54:41 INFO Carine Rodrigues dos Santos  already on SE
+2025-02-10 13:54:41 INFO Emmanuel Delfino dos Passos  already on SE
+2025-02-10 13:54:41 INFO JAILSON DA SILVA already on SE
+2025-02-10 13:54:41 INFO NAYARA MILENE ALVES already on SE
+2025-02-10 13:54:41 INFO Maicon Alexandre de Oliveira  already on SE
+2025-02-10 13:54:41 INFO Jefferson William Alves da Silva  already on SE
+2025-02-10 13:54:41 INFO Cintia Mendes  already on SE
+2025-02-10 13:54:41 INFO Eliane mara cercal already on SE
+2025-02-10 13:54:41 INFO Juliane Belo Puccinelli already on SE
+2025-02-10 13:54:41 INFO Rosana roque da Cunha Silva  already on SE
+2025-02-10 13:54:41 INFO Schirley Dellandrea Hoffmann  already on SE
+2025-02-10 13:54:41 INFO Karina Carvalho  already on SE
+2025-02-10 13:54:41 INFO Wesley Miguel de Amorim already on SE
+2025-02-10 13:54:41 INFO Rubens VitÃ³rio Lins Batista already on SE
+2025-02-10 13:54:41 INFO Elaine Muller  already on SE
+2025-02-10 13:54:41 INFO Janaina Fortunato Pereira Lima de Souza  already on SE
+2025-02-10 13:54:41 INFO Bruno Eduardo de Souza  already on SE
+2025-02-10 13:54:41 INFO Manuela Silva Souza SimÃ£o  already on SE
+2025-02-10 13:54:41 INFO Marcos AntÃ´nio Sandrini already on SE
+2025-02-10 13:54:41 INFO Dayana Martins Ramos  already on SE
+2025-02-10 13:54:41 INFO Vivian Maria Linhares  already on SE
+2025-02-10 13:54:41 INFO Eliete Alves  already on SE
+2025-02-10 13:54:41 INFO ThemÃ­stocles Duarte  already on SE
+2025-02-10 13:54:41 INFO Nancy Esperanza Patino Castellanos  already on SE
+2025-02-10 13:54:41 INFO Giani GonÃ§alves  already on SE
+2025-02-10 13:54:41 INFO Luiza Karine de Jesus already on SE
+2025-02-10 13:54:41 INFO Grazieli ines cervo  already on SE
+2025-02-10 13:54:41 INFO Helena Lemos Simon  already on SE
+2025-02-10 13:54:41 INFO Alessandra Avelino de Oliveira already on SE
+2025-02-10 13:54:41 INFO Yasmin de Oliveira dos Santos already on SE
+2025-02-10 13:54:41 INFO Claudemir Siqueira already on SE
+2025-02-10 13:54:41 INFO Fernando de LeÃ£o already on SE
+2025-02-10 13:54:41 INFO Laila Juliana da Silva  already on SE
+2025-02-10 13:54:41 INFO Aliana Haritsch already on SE
+2025-02-10 13:54:41 INFO FÃ¡bio Gustavo Lindner  already on SE
+2025-02-10 13:54:41 INFO Thais Evelin pinto  already on SE
+2025-02-10 13:54:41 INFO Jeffrey Aleksei Alves Maia Filho already on SE
+2025-02-10 13:54:41 INFO Fabio Gustavo Lindner already on SE
+2025-02-10 13:54:41 INFO Pamella de Mattos Gomes  already on SE
+2025-02-10 13:54:41 INFO Guilherme Cavalcante Luz  already on SE
+2025-02-10 13:54:41 INFO Karla Adriana Leitzke already on SE
+2025-02-10 13:54:41 INFO Leandro Santana da Costa. already on SE
+2025-02-10 13:54:41 INFO VitÃ³ria Ferreira Quinor already on SE
+2025-02-10 13:54:41 INFO Graziela stainsack  already on SE
+2025-02-10 13:54:41 INFO wellison da Silva  already on SE
+2025-02-10 13:54:41 INFO Pedro maffei junior already on SE
+2025-02-10 13:54:41 INFO Ana Julia Pereira Soares  already on SE
+2025-02-10 13:54:41 INFO Ricardo Raitz souza already on SE
+2025-02-10 13:54:41 INFO KauÃ£ Henrique Machado Leal  already on SE
+2025-02-10 13:54:41 INFO Ana Larissa dos Anjos already on SE
+2025-02-10 13:54:41 INFO Leticia Tais Kormann  already on SE
+2025-02-10 13:54:41 INFO Geovana Silva Viterbo  already on SE
+2025-02-10 13:54:41 INFO Danielle Paula Barros  already on SE
+2025-02-10 13:54:41 INFO DÃ©bora already on SE
