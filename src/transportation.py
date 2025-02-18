@@ -5,13 +5,11 @@ import logging
 
 class Transportation:
     def __init__(self):
-        self.api_id = api_id
-        self.url = url
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#editEntityRecord",
-            "Authorization": self.api_id,
+            "Authorization": api_id,
             "Host": Host,
             "Connection": "Keep-Alive",
         }
@@ -108,55 +106,54 @@ class Transportation:
                                 </urn:EntityAttributeList>
                                 <urn:RelationshipList>
                                     <urn:Relationship>
-                                    <urn:RelationshipID>iniciativadesli</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{iniciativa_desligamento}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                <urn:Relationship>
-                                    <urn:RelationshipID>avaliacaojornad</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas1</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{avaliacaojornada}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                <urn:Relationship>
-                                    <urn:RelationshipID>benefi</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{beneficios}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                <urn:Relationship>
-                                    <urn:RelationshipID>avaliaambiente</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{avalia_ambiente_fgm}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                
-                                <urn:Relationship>
-                                    <urn:RelationshipID>comunicacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{comunicacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                <urn:Relationship>
-                                    <urn:RelationshipID>orientacao</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{orientacao}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
-                                <urn:Relationship>
-                                    <urn:RelationshipID>indicafgm</urn:RelationshipID>
-                                    <urn:RelationshipAttribute>
-                                        <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                        <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
-                                    </urn:RelationshipAttribute>
-                                </urn:Relationship>
+                                        <urn:RelationshipID>iniciativadesli</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>empregado</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{iniciativa_desligamento}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>avaliacaojornad</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas1</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{avaliacaojornada}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>benefi</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{beneficios}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>avaliaambiente</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{avalia_ambiente_fgm}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>comunicacao</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{comunicacao}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>orientacao</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{orientacao}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
+                                    <urn:Relationship>
+                                        <urn:RelationshipID>indicafgm</urn:RelationshipID>
+                                        <urn:RelationshipAttribute>
+                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
+                                            <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
+                                        </urn:RelationshipAttribute>
+                                    </urn:Relationship>
                                 </urn:RelationshipList>                                
                             </urn:editEntityRecord>
                         </soapenv:Body>
@@ -164,7 +161,7 @@ class Transportation:
             '''
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
 
-        response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
+        response = requests.post(url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
             namespace = {'soap': 'http://schemas.xmlsoap.org/soap/envelope/', 'ns': 'urn:workflow'}

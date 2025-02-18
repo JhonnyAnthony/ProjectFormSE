@@ -11,7 +11,6 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    # Define the directory path where logs will be stored
     directory = os.getcwd()
     log_directory = f"{directory}/Logs"
     # log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
@@ -29,6 +28,7 @@ def logs():
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
+        encoding="utf-8",
         datefmt="%Y-%m-%d %H:%M:%S",
         filename=log_filename  # Use the generated filename within the log folder
     )
@@ -73,7 +73,7 @@ for row_data_excel in excel_data:
     try: # Here send to SE
         counter += 1        
         print(f"Testando {counter}")
-        record_id = validation_api.get_workflow(row_data_excel.nome)# Fetch RecordID for each row if needed and put nome in workflow
+        record_id = validation_api.get_workflow(row_data_excel.nome.title())# Fetch RecordID for each row if needed and put nome in workflow
         # record_id = '077939' #Just for tests
                     
         if isinstance(row_data_excel.data_demissao, str):
