@@ -23,7 +23,7 @@ class ValidationAPI:
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome}</urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome.title()}</urn:WorkflowTitle>
                     <urn:UserID>{user}</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>

@@ -36,8 +36,8 @@ def logs():
 logs()
 
 # Downloader excel file
-# integration = IntegrationOneDrive(client_id, client_secret, authority)
-# integration.download()
+integration = IntegrationOneDrive(client_id, client_secret, authority)
+integration.download()
 
 # Create an instance of ExcelDataReader
 reader = ExcelDataReader(f'{file_name}', f'{sheet}')
@@ -87,7 +87,7 @@ for row_data_excel in excel_data:
 
         transport.edit_workflow(
             record_id                           =record_id,
-            nome                                =row_data_excel.nome,
+            nome                                =row_data_excel.nome.title(),
             data_demissao                       =formatted_data_demissao,
             setor                               =row_data_excel.setor,
             cargo                               =row_data_excel.cargo,
