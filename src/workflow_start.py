@@ -5,11 +5,13 @@ import logging
 
 class ValidationAPI: 
     def __init__(self):
+        self.api_id = api_id
+        self.url = url
         self.headers = {
             "Content-Type": "text/xml;charset=UTF-8",
             "Content-Length": "287",
             "SOAPAction": "urn:workflow#getWorkflow",
-            "Authorization": api_id,
+            "Authorization": self.api_id,
             "Host": Host,
             "Connection": "Keep-Alive",
         }
@@ -21,13 +23,13 @@ class ValidationAPI:
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome}</urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome.title()}</urn:WorkflowTitle>
                     <urn:UserID>{user}</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>
         </soapenv:Envelope>'''
         self.headers["Content-Length"] = str(len(soap_envelope.encode('utf-8')))
-        response = requests.post(url, data=soap_envelope.encode('utf-8'), headers=self.headers)
+        response = requests.post(self.url, data=soap_envelope.encode('utf-8'), headers=self.headers)
         if response.status_code == 200:
             root = ET.fromstring(response.content)
             record_id = root.find('.//urn:RecordID', namespaces={'urn': 'urn:workflow'})
