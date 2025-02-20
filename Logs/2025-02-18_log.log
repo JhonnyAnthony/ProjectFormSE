@@ -38,3 +38,67 @@
 2025-02-18 14:45:59 INFO Connection successful!
 2025-02-18 14:45:59 INFO RecordID: 081667
 2025-02-18 14:46:00 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:48:42 INFO File downloaded successfully.200
+2025-02-18 14:48:42 INFO Connection successful!
+2025-02-18 14:48:42 INFO RecordID: 081668
+2025-02-18 14:48:42 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:50:02 INFO File downloaded successfully.200
+2025-02-18 14:50:02 INFO Connection successful!
+2025-02-18 14:50:03 INFO RecordID: 081669
+2025-02-18 14:50:03 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:50:54 INFO File downloaded successfully.200
+2025-02-18 14:50:54 INFO Connection successful!
+2025-02-18 14:50:54 INFO RecordID: 081670
+2025-02-18 14:50:54 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:51:12 INFO File downloaded successfully.200
+2025-02-18 14:51:12 INFO Connection successful!
+2025-02-18 14:51:13 INFO RecordID: 081671
+2025-02-18 14:51:13 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 12: &gt; required</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
+2025-02-18 14:51:37 INFO File downloaded successfully.200
+2025-02-18 14:51:37 INFO Connection successful!
+2025-02-18 14:51:37 INFO RecordID: 081672
+2025-02-18 14:51:37 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:51:44 INFO File downloaded successfully.200
+2025-02-18 14:51:44 INFO Connection successful!
+2025-02-18 14:51:44 INFO RecordID: 081673
+2025-02-18 14:51:45 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de Teste Transportation
+2025-02-18 14:51:55 INFO File downloaded successfully.200
+2025-02-18 14:51:55 INFO Connection successful!
+2025-02-18 14:51:56 INFO RecordID: 081674
+2025-02-18 14:51:56 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 12: &gt; required</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
+2025-02-18 14:52:18 INFO File downloaded successfully.200
+2025-02-18 14:52:18 INFO Connection successful!
+2025-02-18 14:52:19 INFO RecordID: 081675
+2025-02-18 14:52:19 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 12: &gt; required</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
+2025-02-18 14:52:26 INFO File downloaded successfully.200
+2025-02-18 14:52:26 INFO Connection successful!
+2025-02-18 14:52:26 INFO RecordID: 081676
+2025-02-18 14:52:26 ERROR Error 500: b'<?xml version="1.0" encoding="ISO-8859-1"?><SOAP-ENV:Envelope SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"\n  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"\n  xmlns:xsd="http://www.w3.org/2001/XMLSchema"\n  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/">\n<SOAP-ENV:Body><SOAP-ENV:Fault><faultcode xsi:type="xsd:string">SOAP-ENV:Client</faultcode><faultactor xsi:type="xsd:string"></faultactor><faultstring xsi:type="xsd:string">error in msg parsing:\nXML error parsing SOAP payload on line 12: &gt; required</faultstring><detail xsi:type="xsd:string"></detail></SOAP-ENV:Fault></SOAP-ENV:Body></SOAP-ENV:Envelope>' - Transportation
+2025-02-18 14:52:40 INFO File downloaded successfully.200
+2025-02-18 14:52:40 INFO Connection successful!
+2025-02-18 14:52:41 INFO RecordID: 081677
+2025-02-18 14:52:41 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de teste Transportation
+2025-02-18 14:52:46 INFO File downloaded successfully.200
+2025-02-18 14:52:46 INFO Connection successful!
+2025-02-18 14:52:46 INFO teste already on SE
+2025-02-18 14:53:22 INFO File downloaded successfully.200
+2025-02-18 14:53:22 INFO Connection successful!
+2025-02-18 14:53:22 INFO RecordID: 081678
+2025-02-18 14:53:23 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de teste Transportation
+2025-02-18 14:53:27 INFO File downloaded successfully.200
+2025-02-18 14:53:27 INFO Connection successful!
+2025-02-18 14:53:27 INFO teste already on SE
+2025-02-18 14:54:13 INFO File downloaded successfully.200
+2025-02-18 14:54:13 INFO Connection successful!
+2025-02-18 14:54:13 INFO Teste already on SE
+2025-02-18 14:55:16 INFO File downloaded successfully.200
+2025-02-18 14:55:16 INFO Connection successful!
+2025-02-18 14:55:16 INFO teste already on SE
+2025-02-18 14:56:14 INFO File downloaded successfully.200
+2025-02-18 14:56:14 INFO Connection successful!
+2025-02-18 14:56:14 INFO teste already on SE
+2025-02-18 14:58:11 INFO File downloaded successfully.200
+2025-02-18 14:58:11 INFO Connection successful!
+2025-02-18 14:58:11 INFO teste already on SE
+2025-02-18 14:58:11 INFO RecordID: 081679
+2025-02-18 14:58:12 INFO Status: SUCCESS, Code: 1, Detail: Registro alterado com sucesso de testeeeeeeeeee Transportation
