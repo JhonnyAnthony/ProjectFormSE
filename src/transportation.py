@@ -17,10 +17,10 @@ class Transportation:
 
 
         #Get the variables declared on main
-    def edit_workflow(self, record_id, nome,data_demissao,setor,cargo,iniciativa_desligamento,motivodesliga,
-                    beneficios,beneficiostxt,avalia_ambiente_fgm,dms_consideracoes_04,orientacao,gestao,indicaria_fgm,recomendatxt,
-                    mensagemparafgm,comunicacao,avaliacaojornada,dms_consideracoes_01,mudancastrab,comunicatxt,treinamentos,
-                    oportunidades,consilideranca,feedback,beneficiosrelev):
+    def edit_workflow(self, record_id,data_demissao,setor,cargo,iniciativa_desligamento,motivodesliga,
+                    beneficios,beneficiostxt,avalia_ambiente_fgm,sugestaoMudancas,indicaria_fgm,recomendatxt,
+                    mensagemparafgm,comunicacao,avaliacaojornada,dms_consideracoes_01,comunicatxt,treinamentos,
+                    oportunidades,buscarlideranca,feedback,beneficiosrelev,gestaoacessibil,treinado):
 
         soap_envelope = f''' 
                 
@@ -31,10 +31,6 @@ class Transportation:
                                 <urn:WorkflowID>{record_id}</urn:WorkflowID>
                                 <urn:EntityID>dlc02</urn:EntityID>
                                 <urn:EntityAttributeList>
-                                    <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>nomcol</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{nome}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                         <urn:EntityAttributeID>datademiss</urn:EntityAttributeID>
                                         <urn:EntityAttributeValue>{data_demissao}</urn:EntityAttributeValue>
@@ -60,12 +56,16 @@ class Transportation:
                                         <urn:EntityAttributeValue>{beneficiostxt}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>demaisconsi4</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{dms_consideracoes_04}</urn:EntityAttributeValue>
+                                        <urn:EntityAttributeID>beneficiosrelev</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{beneficiosrelev}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>mudancastrab</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{mudancastrab}</urn:EntityAttributeValue>
+                                        <urn:EntityAttributeID>sugestaomudanca</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{sugestaoMudancas}</urn:EntityAttributeValue>
+                                    </urn:EntityAttribute>
+                                    <urn:EntityAttribute>
+                                        <urn:EntityAttributeID>feedback</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{feedback}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                         <urn:EntityAttributeID>comunicatxt</urn:EntityAttributeID>
@@ -80,12 +80,16 @@ class Transportation:
                                         <urn:EntityAttributeValue>{oportunidades}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>consiliderenca</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{consilideranca}</urn:EntityAttributeValue>
+                                        <urn:EntityAttributeID>buscarlideranca</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{buscarlideranca}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>feedback</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{feedback}</urn:EntityAttributeValue>
+                                        <urn:EntityAttributeID>gestaoacessibil</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{gestaoacessibil}</urn:EntityAttributeValue>
+                                    </urn:EntityAttribute>
+                                    <urn:EntityAttribute>
+                                        <urn:EntityAttributeID>treinado</urn:EntityAttributeID>
+                                        <urn:EntityAttributeValue>{treinado}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                     <urn:EntityAttribute>
                                         <urn:EntityAttributeID>recomendatxt</urn:EntityAttributeID>
@@ -94,14 +98,6 @@ class Transportation:
                                     <urn:EntityAttribute>
                                         <urn:EntityAttributeID>mensagemparafgm</urn:EntityAttributeID>
                                         <urn:EntityAttributeValue>{mensagemparafgm}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>gestaopessoas</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{gestao}</urn:EntityAttributeValue>
-                                    </urn:EntityAttribute>
-                                    <urn:EntityAttribute>
-                                        <urn:EntityAttributeID>beneficiosrelev</urn:EntityAttributeID>
-                                        <urn:EntityAttributeValue>{beneficiosrelev}</urn:EntityAttributeValue>
                                     </urn:EntityAttribute>
                                 </urn:EntityAttributeList>
                                 <urn:RelationshipList>
@@ -141,20 +137,13 @@ class Transportation:
                                         </urn:RelationshipAttribute>
                                     </urn:Relationship>
                                     <urn:Relationship>
-                                        <urn:RelationshipID>orientacao</urn:RelationshipID>
-                                        <urn:RelationshipAttribute>
-                                            <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
-                                            <urn:RelationshipAttributeValue>{orientacao}</urn:RelationshipAttributeValue>
-                                        </urn:RelationshipAttribute>
-                                    </urn:Relationship>
-                                    <urn:Relationship>
                                         <urn:RelationshipID>indicafgm</urn:RelationshipID>
                                         <urn:RelationshipAttribute>
                                             <urn:RelationshipAttributeID>escolhas</urn:RelationshipAttributeID>
                                             <urn:RelationshipAttributeValue>{indicaria_fgm}</urn:RelationshipAttributeValue>
                                         </urn:RelationshipAttribute>
                                     </urn:Relationship>
-                                </urn:RelationshipList>                                
+                                </urn:RelationshipList>                           
                             </urn:editEntityRecord>
                         </soapenv:Body>
                     </soapenv:Envelope>
@@ -168,10 +157,10 @@ class Transportation:
             status = root.find('.//ns:Status', namespace).text
             code = root.find('.//ns:Code', namespace).text
             detail = root.find('.//ns:Detail', namespace).text
-            logging.info(f"Status: {status}, Code: {code}, Detail: {detail} de {nome} Transportation")
+            logging.info(f"Status: {status}, Code: {code}, Detail: {detail} - Transportation")
             return response.text
         else:
-            logging.error(f"Error {response.status_code}: {response.content} - Transportation")
+            logging.error(f"Error {response.status_code}: {response.content} {response.text} {response.history}- Transportation")
         return None
 
                 

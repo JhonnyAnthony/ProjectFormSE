@@ -16,14 +16,14 @@ class ValidationAPI:
             "Connection": "Keep-Alive",
         }
 
-    def get_workflow(self, nome):
+    def get_workflow(self,setor):
         soap_envelope = f'''<?xml version="1.0" encoding="UTF-8"?>
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:workflow">
             <soapenv:Header/>
             <soapenv:Body>
                 <urn:newWorkflow>
                     <urn:ProcessID>{process_id}</urn:ProcessID>
-                    <urn:WorkflowTitle>Entrevista de Desligamento de {nome.title()}</urn:WorkflowTitle>
+                    <urn:WorkflowTitle>Entrevista de Desligamento de {setor.title()}</urn:WorkflowTitle>
                     <urn:UserID>{user}</urn:UserID>
                 </urn:newWorkflow>
             </soapenv:Body>

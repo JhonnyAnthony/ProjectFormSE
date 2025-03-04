@@ -11,10 +11,9 @@ from close_workflow import CloseWorkflow
 
 def logs():
     # Define the directory path where logs will be stored
-    # Define the directory path where logs will be stored
-    directory = os.getcwd()
-    log_directory = f"{directory}/Logs"
-    # log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
+    # directory = os.getcwd()
+    # log_directory = f"{directory}/Logs"
+    log_directory = r"/home/fgm/Scripts/ProjectFormSE/Logs"
         # Create the log directory if it doesn't exist
     if not os.path.exists(log_directory):
             os.makedirs(log_directory)
@@ -56,13 +55,12 @@ for row_data_excel in excel_data:
     nome_duplicado = False
     for row_data_se in se_data:
         # Valid if has a name and a data already in SE
-        if row_data_se.nome_colaborador == row_data_excel.nome and row_data_se.data_demissao == row_data_excel.data_demissao:
-            nome_duplicado = True
-            logging.info(f"{row_data_excel.nome} already on SE")
+        if row_data_se.data_demissao == row_data_excel.data_demissao:
+            logging.info(f"already on SE")
             break
         # If name is already in SE checking if the data is different, if is gonna reverse the instance to continue scripting
         elif  row_data_se.data_demissao != row_data_excel.data_demissao:
-                nome_duplicado = False  
+            logging.info(f"test on SE")
     if nome_duplicado:
         continue
 
@@ -73,7 +71,7 @@ for row_data_excel in excel_data:
     try: # Here send to SE
         counter += 1        
         print(f"Testando {counter}")
-        record_id = validation_api.get_workflow(row_data_excel.nome)# Fetch RecordID for each row if needed and put nome in workflow
+        record_id = validation_api.get_workflow(row_data_excel.setor)# Fetch RecordID for each row if needed and put nome in workflow
         # record_id = '077939' #Just for tests
                     
         if isinstance(row_data_excel.data_demissao, str):
@@ -87,7 +85,6 @@ for row_data_excel in excel_data:
 
         transport.edit_workflow(
             record_id                           =record_id,
-            nome                                =row_data_excel.nome,
             data_demissao                       =formatted_data_demissao,
             setor                               =row_data_excel.setor,
             cargo                               =row_data_excel.cargo,
@@ -99,16 +96,15 @@ for row_data_excel in excel_data:
             beneficiostxt                       =row_data_excel.beneficiostxt,
             beneficiosrelev                     =row_data_excel.beneficiosrelev,
             avalia_ambiente_fgm                 =row_data_excel.avalia_ambiente_fgm,
-            dms_consideracoes_04                =row_data_excel.dms_consideracoes_04,
-            mudancastrab                        =row_data_excel.mudancastrab,
+            sugestaoMudancas                    =row_data_excel.sugestaoMudancas,
+            feedback                            =row_data_excel.feedback,
             comunicacao                         =row_data_excel.comunicacao,
             comunicatxt                         =row_data_excel.comunicatxt,
             treinamentos                        =row_data_excel.treinamentos,
             oportunidades                       =row_data_excel.oportunidades,
-            orientacao                          =row_data_excel.orientacao,
-            consilideranca                      =row_data_excel.consilideranca,
-            feedback                            =row_data_excel.feedback,
-            gestao                              =row_data_excel.gestao,
+            buscarlideranca                     =row_data_excel.buscarlideranca,
+            gestaoacessibil                     =row_data_excel.gestaoacessibil,
+            treinado                            =row_data_excel.treinado,
             indicaria_fgm                       =row_data_excel.indicaria_fgm,
             recomendatxt                        =row_data_excel.recomendatxt,
             mensagemparafgm                     =row_data_excel.mensagemparafgm,
